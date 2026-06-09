@@ -3,224 +3,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Sterneborn | Cybersecurity Homelab Portfolio</title>
-  <meta name="description" content="Cybersecurity and network engineering portfolio showcasing a hands-on homelab with OpenWrt, VLANs, WireGuard, Cloudflare DDNS and technical documentation." />
+  <title>Christian Sterneborn | Network & Cybersecurity Portfolio</title>
+  <meta name="description" content="Professional cybersecurity and networking portfolio by Christian Sterneborn, showcasing a hands-on homelab with OpenWrt, VLANs, WireGuard, Cloudflare DDNS and technical documentation." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-  <header class="hero">
-    <nav class="navbar">
-      <a href="#" class="logo">Christian Sterneborn</a>
+  <header class="site-header" id="home">
+    <nav class="nav">
+      <a href="#home" class="logo">Christian Sterneborn</a>
 
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#project">Project</a>
-        <a href="#topology">Topology</a>
+        <a href="#projects">Projects</a>
+        <a href="#network">Network</a>
         <a href="#skills">Skills</a>
         <a href="#roadmap">Roadmap</a>
-        <a href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">GitHub</a>
+        <a href="#documentation">Documentation</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <section class="hero-content">
-      <p class="tag">Network & Cybersecurity Homelab</p>
-      <h1>Building real infrastructure to learn real cybersecurity.</h1>
-      <p class="intro">
-        I am transitioning into networking and cybersecurity by building, securing,
-        troubleshooting and documenting a hands-on homelab environment.
-      </p>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Network & Cybersecurity Portfolio</p>
+        <h1>Christian Sterneborn</h1>
+        <h2>Aspiring Network & Cybersecurity Engineer</h2>
+        <p class="hero-description">
+          Building practical skills through hands-on infrastructure, network segmentation,
+          secure remote access, Linux learning and technical documentation.
+        </p>
 
-      <div class="buttons">
-        <a class="primary" href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">
-          View GitHub Project
-        </a>
-        <a class="secondary" href="#project">Explore Homelab</a>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Project</a>
+          <a class="button secondary" href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">
+            GitHub Repository
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <h3>Current Focus</h3>
+        <ul>
+          <li>OpenWrt router and firewall</li>
+          <li>VLAN-based network segmentation</li>
+          <li>WireGuard remote access VPN</li>
+          <li>Cloudflare DDNS and custom domain</li>
+          <li>Technical documentation on GitHub</li>
+        </ul>
       </div>
     </section>
 
-    <section class="stats" aria-label="Project statistics">
-      <div>
-        <strong>4</strong>
-        <span>VLANs Configured</span>
-      </div>
-      <div>
-        <strong>1</strong>
-        <span>WireGuard VPN</span>
-      </div>
-      <div>
-        <strong>OpenWrt</strong>
-        <span>Router & Firewall</span>
-      </div>
-      <div>
-        <strong>Cloudflare</strong>
-        <span>Dynamic DNS</span>
-      </div>
+    <section class="tech-strip" aria-label="Core technologies">
+      <span>OpenWrt</span>
+      <span>VLANs</span>
+      <span>WireGuard</span>
+      <span>Cloudflare</span>
+      <span>Linux</span>
+      <span>GitHub</span>
     </section>
   </header>
 
   <main>
-    <section id="about" class="section">
-      <div class="section-label">About</div>
-      <h2>Practical cybersecurity learning through real infrastructure.</h2>
-      <p>
-        This portfolio documents my practical learning journey into networking,
-        Linux administration, infrastructure and cybersecurity. The goal is to
-        demonstrate hands-on ability, structured troubleshooting and clear technical documentation.
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Practical learning with real infrastructure.</h2>
+      </div>
+
+      <p class="section-text">
+        I am transitioning into networking and cybersecurity by building a hands-on homelab
+        environment. The goal is to develop practical skills that translate into professional
+        IT environments: network design, troubleshooting, documentation, Linux administration,
+        remote access and security monitoring.
       </p>
     </section>
 
-    <section id="project" class="section">
-      <div class="section-label">Featured Project</div>
-      <h2>Cybersecurity Homelab</h2>
-      <p>
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Project</p>
+        <h2>Cybersecurity Homelab</h2>
+      </div>
+
+      <p class="section-text">
         A segmented home network built with OpenWrt, VLANs, WireGuard VPN and Cloudflare DDNS.
-        The project is documented publicly to show both technical implementation and learning progression.
+        The project is documented publicly to show both implementation and learning progression.
       </p>
 
-      <div class="cards">
-        <article class="card">
-          <span class="card-number">01</span>
+      <div class="project-grid">
+        <article class="project-card">
           <h3>OpenWrt Router</h3>
           <p>
-            Configured OpenWrt on a Netgear R7800 as the core router and firewall platform.
+            Configured a Netgear R7800 with OpenWrt as the core router and firewall platform.
           </p>
-          <ul>
-            <li>Router configuration</li>
-            <li>Firewall zones</li>
-            <li>Network services</li>
-          </ul>
+          <dl>
+            <dt>Demonstrates</dt>
+            <dd>Router configuration, firewall zones, network services and infrastructure ownership.</dd>
+          </dl>
         </article>
 
-        <article class="card">
-          <span class="card-number">02</span>
+        <article class="project-card">
           <h3>VLAN Segmentation</h3>
           <p>
             Designed separate networks for trusted devices, guests, lab systems and rescue access.
           </p>
-          <ul>
-            <li>Trusted LAN</li>
-            <li>Guest network</li>
-            <li>Lab isolation</li>
-          </ul>
+          <dl>
+            <dt>Demonstrates</dt>
+            <dd>Network segmentation, isolation, IP planning and security-focused design.</dd>
+          </dl>
         </article>
 
-        <article class="card">
-          <span class="card-number">03</span>
+        <article class="project-card">
           <h3>WireGuard VPN</h3>
           <p>
             Implemented secure remote access using a dedicated VPN subnet.
           </p>
-          <ul>
-            <li>Remote access</li>
-            <li>VPN routing</li>
-            <li>Secure tunneling</li>
-          </ul>
+          <dl>
+            <dt>Demonstrates</dt>
+            <dd>VPN deployment, routing, remote access and secure connectivity.</dd>
+          </dl>
         </article>
 
-        <article class="card">
-          <span class="card-number">04</span>
+        <article class="project-card">
           <h3>Cloudflare DDNS</h3>
           <p>
             Configured dynamic DNS for a stable VPN endpoint using a custom domain.
           </p>
-          <ul>
-            <li>DNS management</li>
-            <li>Cloudflare</li>
-            <li>Custom domain</li>
-          </ul>
+          <dl>
+            <dt>Demonstrates</dt>
+            <dd>DNS, custom domains, Cloudflare configuration and operational reliability.</dd>
+          </dl>
         </article>
       </div>
     </section>
 
-    <section id="topology" class="section">
-      <div class="section-label">Architecture</div>
-      <h2>Network Topology</h2>
-      <p>
-        The topology shows the segmented network design, including trusted devices,
-        guest access, lab systems, rescue network and VPN connectivity.
+    <section class="section" id="network">
+      <div class="section-heading">
+        <p class="eyebrow">Network Topology</p>
+        <h2>Segmented homelab architecture.</h2>
+      </div>
+
+      <p class="section-text">
+        The network is separated into dedicated VLANs for trusted devices, guest access,
+        lab systems and rescue access. Remote connectivity is handled through WireGuard.
       </p>
 
-      <div class="topology-wrapper">
-        <img class="topology" src="assets/img/network-topology.png" alt="Cybersecurity homelab network topology diagram" />
+      <div class="topology-box">
+        <img src="assets/img/network-topology.png" alt="Cybersecurity homelab network topology diagram" />
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <div class="section-label">Skills</div>
-      <h2>Skills Demonstrated</h2>
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>Technical skills demonstrated.</h2>
+      </div>
 
-      <div class="skill-groups">
-        <div class="skill-box">
+      <div class="skills-grid">
+        <div class="skill-group">
           <h3>Networking</h3>
-          <div class="skills">
-            <span>VLANs</span>
-            <span>TCP/IP</span>
-            <span>DNS</span>
-            <span>DHCP</span>
-            <span>Routing</span>
-            <span>NAT</span>
-          </div>
+          <ul>
+            <li>VLANs</li>
+            <li>TCP/IP</li>
+            <li>DNS</li>
+            <li>DHCP</li>
+            <li>Routing</li>
+            <li>NAT</li>
+          </ul>
         </div>
 
-        <div class="skill-box">
+        <div class="skill-group">
           <h3>Security</h3>
-          <div class="skills">
-            <span>WireGuard</span>
-            <span>Firewall Zones</span>
-            <span>Segmentation</span>
-            <span>Access Control</span>
-          </div>
+          <ul>
+            <li>WireGuard VPN</li>
+            <li>Firewall zones</li>
+            <li>Network segmentation</li>
+            <li>Access control</li>
+            <li>Secure remote access</li>
+          </ul>
         </div>
 
-        <div class="skill-box">
-          <h3>Tools</h3>
-          <div class="skills">
-            <span>OpenWrt</span>
-            <span>Cloudflare</span>
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Documentation</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="roadmap" class="section">
-      <div class="section-label">Roadmap</div>
-      <h2>Learning Roadmap</h2>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <span>Completed</span>
-          <p>OpenWrt, VLANs, WireGuard VPN, Cloudflare DDNS and GitHub documentation.</p>
+        <div class="skill-group">
+          <h3>Systems & Tools</h3>
+          <ul>
+            <li>OpenWrt</li>
+            <li>Linux</li>
+            <li>Cloudflare</li>
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul>
         </div>
 
-        <div class="timeline-item">
-          <span>Next</span>
-          <p>Proxmox, Ubuntu Server, Docker, Grafana and Prometheus.</p>
-        </div>
-
-        <div class="timeline-item">
-          <span>Future</span>
-          <p>Security Onion, Suricata, log analysis, SIEM workflows and incident detection.</p>
+        <div class="skill-group">
+          <h3>Professional Skills</h3>
+          <ul>
+            <li>Documentation</li>
+            <li>Troubleshooting</li>
+            <li>Project ownership</li>
+            <li>Structured learning</li>
+            <li>Technical communication</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section cta">
+    <section class="section" id="roadmap">
+      <div class="section-heading">
+        <p class="eyebrow">Roadmap</p>
+        <h2>Learning progression.</h2>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <h3>Completed</h3>
+          <ul>
+            <li>OpenWrt router setup</li>
+            <li>VLAN segmentation</li>
+            <li>WireGuard VPN</li>
+            <li>Cloudflare DDNS</li>
+            <li>GitHub documentation</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-card">
+          <h3>In Progress</h3>
+          <ul>
+            <li>Linux administration</li>
+            <li>Git workflow</li>
+            <li>Portfolio development</li>
+            <li>Technical documentation</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-card">
+          <h3>Planned</h3>
+          <ul>
+            <li>Proxmox</li>
+            <li>Ubuntu Server</li>
+            <li>Docker</li>
+            <li>Grafana & Prometheus</li>
+            <li>Security Onion & Suricata</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section documentation" id="documentation">
       <div>
-        <div class="section-label">Documentation</div>
-        <h2>Full technical documentation is available on GitHub.</h2>
+        <p class="eyebrow">Documentation</p>
+        <h2>Full project documentation is available on GitHub.</h2>
         <p>
-          The repository includes screenshots, diagrams, configuration notes,
-          project journal entries and implementation documentation.
+          The repository includes configuration notes, screenshots, network diagrams,
+          learning notes and project journal entries.
         </p>
       </div>
 
-      <a class="primary" href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">
-        Open Repository
+      <a class="button primary" href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">
+        View Documentation
       </a>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Connect with me.</h2>
+      </div>
+
+      <div class="contact-links">
+        <a href="https://github.com/sterneborn" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:your.email@example.com">Email</a>
+      </div>
+
+      <p class="note">
+        Replace the LinkedIn and email links with your real contact details when ready.
+      </p>
     </section>
   </main>
 
