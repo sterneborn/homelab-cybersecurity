@@ -1,0 +1,55 @@
+site_name: Cybersecurity Homelab Documentation
+site_description: Technical documentation for a hands-on cybersecurity and networking homelab.
+site_author: Christian Sterneborn
+site_url: https://cv.sterneborn.org/docs/
+
+docs_dir: documentation
+site_dir: docs
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: light blue
+
+extra:
+  homepage: https://cv.sterneborn.org
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Career Journey: 50-Career-Journey.md
+  - Network:
+      - Overview: 00-Network-Overview.md
+      - OpenWrt: 01-OpenWrt.md
+      - VLANs: 02-VLANs.md
+      - WireGuard: 03-WireGuard.md
+      - Cloudflare DDNS: 04-Cloudflare-DDNS.md
+  - Infrastructure:
+      - Proxmox: 10-Proxmox.md
+      - Virtual Networking: 11-Virtual-Networking.md
+      - Backup Strategy: 12-Backup-Strategy.md
+  - Containers:
+      - Docker: 20-Docker.md
+      - AdGuard Home: 21-AdGuard-Home.md
+  - Monitoring:
+      - Prometheus: 30-Prometheus.md
+      - Grafana: 31-Grafana.md
+      - Alerting: 32-Alerting.md
+  - Security:
+      - Security Onion: 40-Security-Onion.md
+      - Suricata: 41-Suricata.md
+      - Log Analysis: 42-Log-Analysis.md
+  - Methodology: 99-Learning-Methodology.md
+  - Project Journal: Project-Journal.md
