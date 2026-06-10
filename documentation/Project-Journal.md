@@ -56,35 +56,34 @@ Additional testing focused on Smart Queue Management (SQM) using CAKE. Multiple 
 
 ---
 
-## 2026-06-09 - Portfolio Website Deployment
+## 2026-06-10 - Documentation Platform Integration
 
 ### Completed Tasks
 
-* Created a custom portfolio website using HTML and CSS
-* Published the portfolio using GitHub Pages
-* Configured a custom domain (cv.sterneborn.org)
-* Configured Cloudflare DNS records
-* Added project documentation links
-* Added GitHub and LinkedIn integration
-* Added a professional profile image
-* Linked the portfolio to the Cybersecurity Homelab repository
+* Deployed MkDocs Material documentation portal
+* Moved technical documentation into a dedicated documentation structure
+* Published documentation under the /docs path
+* Added screenshots to technical documentation pages
+* Redesigned the network topology diagram
+* Improved navigation between portfolio, documentation and GitHub repository
+* Added direct links from project cards to technical documentation
+* Refined portfolio layout and user experience
 
 ### Notes
 
-To improve the presentation of the homelab project, I initially published the documentation using MkDocs and GitHub Pages. While the documentation structure worked well, the result felt more like a technical documentation site than a professional portfolio.
+Following the deployment of the portfolio website, the next step was improving the technical documentation experience.
 
-After evaluating the user experience from a recruiter perspective, I decided to create a separate portfolio landing page using HTML and CSS. The goal was to provide a clearer overview of the project, technical skills, learning roadmap and supporting documentation while maintaining easy access to the full technical documentation.
+The documentation was migrated into a dedicated MkDocs Material environment and published alongside the portfolio under the /docs path. This approach allowed the portfolio to serve as a recruiter-friendly landing page while maintaining detailed technical documentation for projects, configurations, troubleshooting activities and learning notes.
 
-The portfolio was published using GitHub Pages and connected to the custom domain cv.sterneborn.org through Cloudflare DNS. The site includes project summaries, network topology diagrams, technical skills, a learning roadmap and links to supporting documentation hosted on GitHub.
+Screenshots were added throughout the documentation to provide visual evidence of completed work and configuration steps. The network topology diagram was also redesigned to improve readability and create a more professional presentation.
 
-This decision improved the overall presentation of the project and provided a more professional way to showcase practical networking and cybersecurity work.
+Additional improvements focused on navigation and usability, creating clearer connections between the portfolio, technical documentation and GitHub repository.
 
 ### Key Learnings
 
-* GitHub Pages deployment and hosting
-* Custom domain configuration
-* Cloudflare DNS management
-* HTML and CSS fundamentals
-* Portfolio design for technical projects
-* Git workflow and version control
-* Troubleshooting Git synchronization and deployment issues
+* MkDocs Material deployment and configuration
+* Documentation structure and information architecture
+* Technical documentation publishing workflows
+* Screenshot integration and asset management
+* Navigation design and user experience improvements
+* Maintaining separate presentation and documentation layers
