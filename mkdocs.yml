@@ -22,7 +22,10 @@ theme:
       accent: light blue
 
 extra:
-  homepage: https://cv.sterneborn.org
+  social:
+    - icon: fontawesome/solid/house
+      link: https://cv.sterneborn.org
+      name: Back to Portfolio
 
 extra_css:
   - assets/stylesheets/extra.css
