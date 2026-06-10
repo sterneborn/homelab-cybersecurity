@@ -2,7 +2,7 @@
 
 ## Network Topology
 
-![Network Topology](assets/network-topology.png)
+![Network Topology](assets/network-topology-v2.png)
 
 
 ## Objective

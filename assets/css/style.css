@@ -270,18 +270,16 @@ main {
 }
 
 .topology-box {
-  margin-top: 26px;
-  padding: 12px;
-  background: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 14px;
+  margin-top: 24px;
 }
 
 .topology-box img {
   display: block;
   width: 100%;
-  border-radius: 10px;
-  background: #020617;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
 }
 
 .skill-group ul,
