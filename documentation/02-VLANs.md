@@ -1,6 +1,8 @@
-# 02-VLANs.md
+# VLAN Segmentation
 
-# VLAN Design
+## VLAN Filtering Configuration
+
+![VLAN Filtering](assets/screenshots/vlan-filtering.png)
 
 ## Objective
 

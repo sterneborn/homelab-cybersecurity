@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#02-vlansmd" class="md-skip">
+        <a href="#vlan-segmentation" class="md-skip">
           Skip to content
         </a>
       
@@ -591,6 +591,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VLANs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -607,6 +625,124 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-filtering-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Filtering Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-1-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 1 - Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-10-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 10 - LAN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-20-guest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 20 - Guest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-30-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 30 - Lab
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall Logic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1294,6 +1430,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-filtering-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Filtering Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-1-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 1 - Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-10-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 10 - LAN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-20-guest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 20 - Guest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-30-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN 30 - Lab
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall Logic
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1309,8 +1552,9 @@
 
 
 
-<h1 id="02-vlansmd">02-VLANs.md</h1>
-<h1 id="vlan-design">VLAN Design</h1>
+<h1 id="vlan-segmentation">VLAN Segmentation</h1>
+<h2 id="vlan-filtering-configuration">VLAN Filtering Configuration</h2>
+<p><img alt="VLAN Filtering" src="../assets/screenshots/vlan-filtering.png" /></p>
 <h2 id="objective">Objective</h2>
 <p>The purpose of VLAN segmentation is to separate trusted devices, guest devices, and lab systems into different network zones.</p>
 <p>This improves security, reduces unnecessary network exposure, and creates a more realistic enterprise-style network design.</p>

@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#04-cloudflare-ddnsmd" class="md-skip">
+        <a href="#cloudflare-dynamic-dns" class="md-skip">
           Skip to content
         </a>
       
@@ -647,6 +647,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudflare DDNS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -663,6 +681,146 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-ddns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare DDNS Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Provider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-dynamic-dns-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Dynamic DNS Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openwrt-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenWrt Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Token
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1294,6 +1452,135 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-ddns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare DDNS Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objective
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Provider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vpn-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-dynamic-dns-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Dynamic DNS Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openwrt-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OpenWrt Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Token
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1309,8 +1596,9 @@
 
 
 
-<h1 id="04-cloudflare-ddnsmd">04-Cloudflare-DDNS.md</h1>
 <h1 id="cloudflare-dynamic-dns">Cloudflare Dynamic DNS</h1>
+<h2 id="cloudflare-ddns-configuration">Cloudflare DDNS Configuration</h2>
+<p><img alt="Cloudflare DDNS" src="../assets/screenshots/ddns-cloudflare.png" /></p>
 <h2 id="objective">Objective</h2>
 <p>The purpose of Dynamic DNS is to keep the VPN hostname updated when the public WAN IP address changes.</p>
 <p>This allows WireGuard clients to connect using a stable domain name instead of a changing public IP address.</p>

@@ -1,6 +1,8 @@
-# 01-OpenWrt.md
-
 # OpenWrt Router Documentation
+
+## OpenWrt Dashboard
+
+![OpenWrt Overview](assets/screenshots/openwrt-overview.png)
 
 ## Overview
 

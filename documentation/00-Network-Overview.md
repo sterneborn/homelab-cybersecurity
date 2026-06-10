@@ -1,6 +1,9 @@
-# 00-Network-Overview.md
-
 # Homelab Network Overview
+
+## Network Topology
+
+![Network Topology](assets/network-topology.png)
+
 
 ## Objective
 

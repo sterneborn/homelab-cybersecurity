@@ -1,6 +1,8 @@
-# 03-WireGuard.md
-
 # WireGuard VPN Deployment
+
+## WireGuard Interface
+
+![WireGuard Interface](assets/screenshots/interfaces-wan-wireguard.png)
 
 ## Objective
 

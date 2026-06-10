@@ -1,6 +1,8 @@
-# 04-Cloudflare-DDNS.md
-
 # Cloudflare Dynamic DNS
+
+## Cloudflare DDNS Configuration
+
+![Cloudflare DDNS](assets/screenshots/ddns-cloudflare.png)
 
 ## Objective
 
