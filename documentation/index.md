@@ -45,7 +45,7 @@ This environment serves as the foundation for future virtualization, monitoring,
 
 ## Network Topology
 
-![Network Topology](assets/network-topology.png)
+![Network Topology](assets/network-topology-v2.png)
 
 ---
 
