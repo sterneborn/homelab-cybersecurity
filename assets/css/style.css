@@ -405,3 +405,48 @@ footer {
     padding: 18px;
   }
 }
+/* Final portfolio refinements */
+
+main {
+  padding: 48px 7%;
+}
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto 54px;
+}
+
+.project-card {
+  display: block;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover,
+.skill-group:hover,
+.roadmap-card:hover,
+.profile-card:hover {
+  border-color: #38bdf8;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+}
+
+.topology-box {
+  margin-top: 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.topology-box img {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  background: #020617;
+}
