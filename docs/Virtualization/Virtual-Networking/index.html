@@ -1668,7 +1668,7 @@ Docker Services
 <pre><code class="language-text">vmbr0
 </code></pre>
 <p>The bridge connects the physical network adapter to virtual machines running on the host.</p>
-<p><img alt="Proxmox Network Bridge" src="../assets/screenshots/proxmox-vmbr0.png" /></p>
+<p><img alt="Proxmox Network Bridge" src="../../assets/screenshots/proxmox-vmbr0.png" /></p>
 <p>The bridge acts similarly to a Layer 2 switch and allows virtual machines to access the network without requiring additional routing configuration.</p>
 <h3 id="benefits">Benefits</h3>
 <ul>
@@ -1680,12 +1680,12 @@ Docker Services
 <hr />
 <h2 id="ubuntu-virtual-machine-network-configuration">Ubuntu Virtual Machine Network Configuration</h2>
 <p>The Ubuntu Server virtual machine is connected to the Proxmox bridge through a virtual network adapter.</p>
-<p><img alt="Ubuntu VM Network Device" src="../assets/screenshots/ubuntu-vm-network.png" /></p>
+<p><img alt="Ubuntu VM Network Device" src="../../assets/screenshots/ubuntu-vm-network.png" /></p>
 <p>The virtual network adapter is attached to the <code>vmbr0</code> bridge, allowing the virtual machine to communicate directly with devices on VLAN 30.</p>
 <hr />
 <h2 id="network-verification">Network Verification</h2>
 <p>Network connectivity was verified from the Ubuntu Server virtual machine.</p>
-<p><img alt="Ubuntu Network Routing" src="../assets/screenshots/ubuntu-network-route.png" /></p>
+<p><img alt="Ubuntu Network Routing" src="../../assets/screenshots/ubuntu-network-route.png" /></p>
 <p>The routing table confirms:</p>
 <ul>
 <li>Ubuntu Server IP address: <code>192.168.30.20</code></li>
