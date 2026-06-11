@@ -21,6 +21,7 @@
 
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#environment">Environment</a>
         <a href="#projects">Projects</a>
         <a href="#network">Network</a>
         <a href="#skills">Skills</a>
@@ -43,20 +44,13 @@
 
       <div class="hero-actions">
         <a class="button primary" href="#projects">View Homelab</a>
-
-        <a
-          class="button secondary"
-          href="/docs/"
-          rel="noopener"
-        >
-          Browse Documentation
-        </a>
+        <a class="button secondary" href="/docs/">Browse Documentation</a>
       </div>
 
       <div class="stats">
         <div>
           <strong>4</strong>
-          <span>VLANs</span>
+          <span>Network Segments</span>
         </div>
 
         <div>
@@ -85,10 +79,10 @@
         <h2>Building practical cybersecurity and infrastructure skills.</h2>
 
         <p class="section-text about-text">
-          I am transitioning into networking and cybersecurity by building a hands-on homelab
-          environment. The project has grown from a segmented OpenWrt network into a broader
-          infrastructure lab covering virtualization, Linux administration, Docker services,
-          monitoring, documentation and troubleshooting.
+          I am transitioning into networking and cybersecurity by building and documenting
+          a hands-on homelab environment. The project has grown from a segmented OpenWrt
+          network into a broader infrastructure lab covering virtualization, Linux administration,
+          Docker services, monitoring, troubleshooting and technical documentation.
         </p>
       </div>
 
@@ -108,6 +102,59 @@
       </aside>
     </section>
 
+    <section class="section" id="environment">
+      <p class="eyebrow">Current Environment</p>
+
+      <h2>Homelab infrastructure overview.</h2>
+
+      <p class="section-text">
+        The current environment combines segmented networking, virtualization, Linux servers,
+        containerized services, DNS filtering and availability monitoring.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Network</h3>
+          <ul>
+            <li>OpenWrt</li>
+            <li>VLAN Segmentation</li>
+            <li>WireGuard VPN</li>
+            <li>Cloudflare DDNS</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Virtualization</h3>
+          <ul>
+            <li>Proxmox VE</li>
+            <li>Virtual Networking</li>
+            <li>Backup Strategy</li>
+            <li>VM Management</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Services</h3>
+          <ul>
+            <li>Ubuntu Server</li>
+            <li>Docker</li>
+            <li>Portainer</li>
+            <li>AdGuard Home</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Monitoring</h3>
+          <ul>
+            <li>Uptime Kuma</li>
+            <li>Service Checks</li>
+            <li>Troubleshooting</li>
+            <li>Documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="projects">
       <p class="eyebrow">Featured Project</p>
 
@@ -120,7 +167,7 @@
       </p>
 
       <div class="phase-block">
-        <h3>Phase 1 · Network Foundation</h3>
+        <h3>Network</h3>
 
         <div class="project-grid">
           <a class="project-card" href="/docs/01-OpenWrt/">
@@ -150,7 +197,7 @@
       </div>
 
       <div class="phase-block">
-        <h3>Phase 2 · Virtualization & Infrastructure</h3>
+        <h3>Virtualization</h3>
 
         <div class="project-grid">
           <a class="project-card" href="/docs/10-Proxmox/">
@@ -159,6 +206,24 @@
             <span>Virtualization · Storage · VM management</span>
           </a>
 
+          <a class="project-card" href="/docs/11-Virtual-Networking/">
+            <h3>Virtual Networking</h3>
+            <p>Network configuration for virtual machines, bridges and homelab connectivity.</p>
+            <span>Bridges · VM networking · Connectivity</span>
+          </a>
+
+          <a class="project-card" href="/docs/12-Backup-Strategy/">
+            <h3>Backup Strategy</h3>
+            <p>Backup and recovery planning for virtualization and infrastructure services.</p>
+            <span>Recovery · Resilience · Documentation</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="phase-block">
+        <h3>Services</h3>
+
+        <div class="project-grid">
           <a class="project-card" href="/docs/20-Docker/">
             <h3>Docker</h3>
             <p>Container platform used to deploy and manage self-hosted services.</p>
@@ -171,18 +236,6 @@
             <span>Docker management · Web UI · Operations</span>
           </a>
 
-          <a class="project-card" href="/docs/">
-            <h3>Ubuntu Server</h3>
-            <p>Primary Linux server used for infrastructure and service hosting.</p>
-            <span>Linux · SSH · Server administration</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="phase-block">
-        <h3>Phase 3 · Core Services</h3>
-
-        <div class="project-grid">
           <a class="project-card" href="/docs/21-AdGuard-Home/">
             <h3>AdGuard Home</h3>
             <p>Network-wide DNS filtering and ad blocking service.</p>
@@ -229,20 +282,10 @@
         <div class="skill-group">
           <h3>Networking</h3>
           <ul>
-            <li>VLANs</li>
-            <li>TCP/IP</li>
-            <li>DNS & DHCP</li>
-            <li>Routing & NAT</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Security</h3>
-          <ul>
+            <li>OpenWrt</li>
+            <li>VLAN Design</li>
             <li>WireGuard VPN</li>
-            <li>Firewall zones</li>
-            <li>Network segmentation</li>
-            <li>DNS filtering</li>
+            <li>Cloudflare DDNS</li>
           </ul>
         </div>
 
@@ -251,18 +294,28 @@
           <ul>
             <li>Proxmox VE</li>
             <li>Ubuntu Server</li>
-            <li>Docker</li>
-            <li>Portainer</li>
+            <li>Virtual Networking</li>
+            <li>Backup Planning</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3>Monitoring & Documentation</h3>
+          <h3>Services</h3>
           <ul>
+            <li>Docker</li>
+            <li>Portainer</li>
+            <li>AdGuard Home</li>
             <li>Uptime Kuma</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Professional</h3>
+          <ul>
             <li>Git & GitHub</li>
             <li>MkDocs</li>
-            <li>Technical documentation</li>
+            <li>Troubleshooting</li>
+            <li>Technical Documentation</li>
           </ul>
         </div>
       </div>
@@ -276,15 +329,25 @@
       <div class="roadmap-grid">
         <div class="roadmap-card">
           <h3>Completed</h3>
+
+          <h4>Networking</h4>
           <ul>
             <li>OpenWrt</li>
             <li>VLAN Segmentation</li>
             <li>WireGuard VPN</li>
             <li>Cloudflare DDNS</li>
+          </ul>
+
+          <h4>Infrastructure</h4>
+          <ul>
             <li>Proxmox VE</li>
             <li>Ubuntu Server</li>
             <li>Docker</li>
             <li>Portainer</li>
+          </ul>
+
+          <h4>Services</h4>
+          <ul>
             <li>AdGuard Home</li>
             <li>Uptime Kuma</li>
           </ul>
