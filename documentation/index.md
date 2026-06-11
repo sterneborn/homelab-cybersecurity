@@ -4,13 +4,13 @@
 
 Welcome to my cybersecurity homelab portfolio.
 
-This project documents my journey from industrial work into networking and cybersecurity through hands-on learning, practical projects, structured troubleshooting, and continuous documentation.
+This repository documents my transition from industrial work into networking and cybersecurity through hands-on projects, practical implementation, structured troubleshooting, and technical documentation.
 
-My goal is to develop real-world technical skills by designing, building, securing, monitoring, and documenting infrastructure rather than relying solely on theoretical learning.
+The goal of this homelab is to develop real-world skills by designing, deploying, securing, monitoring, and documenting infrastructure rather than relying solely on theoretical learning.
 
 ---
 
-## Current Focus
+# Current Focus
 
 I am currently focused on developing practical skills in:
 
@@ -18,70 +18,112 @@ I am currently focused on developing practical skills in:
 * OpenWrt Administration
 * VLAN Design and Segmentation
 * Linux Administration
-* WireGuard VPN
+* Proxmox Virtualization
+* Docker Containerization
+* Infrastructure Monitoring
 * Infrastructure Documentation
 * Git and GitHub Workflows
 * Cybersecurity Fundamentals
 
 ---
 
-## Featured Homelab Project
+# Homelab Overview
 
-### OpenWrt Network Infrastructure
+Current environment:
 
-Current implementation includes:
-
-* OpenWrt 24.10
+* OpenWrt 24.10 Router
 * VLAN Segmentation
-* Firewall Zones
 * WireGuard VPN
 * Cloudflare Dynamic DNS
-* Secure Remote Access
-* Network Documentation
+* Proxmox Virtualization
+* Ubuntu Server VM
+* Docker Engine
+* Portainer
+* AdGuard Home
+* Uptime Kuma
 
-This environment serves as the foundation for future virtualization, monitoring, and security projects.
+This environment serves as the foundation for future monitoring, logging, and security operations projects.
 
 ---
 
+# Current Infrastructure
 
+## Network
 
-## Skills Demonstrated
+* OpenWrt 24.10
+* VLAN 1 – Rescue Network
+* VLAN 10 – Trusted LAN
+* VLAN 20 – Guest Network
+* VLAN 30 – Lab Network
+* WireGuard VPN
+* Cloudflare Dynamic DNS
 
-### Networking
+## Virtualization
+
+* Proxmox VE
+* Ubuntu Server VM
+* Virtual Networking
+* Snapshot Strategy
+
+## Services
+
+* Docker
+* Portainer
+* AdGuard Home
+* Uptime Kuma
+
+## Planned Services
+
+* Prometheus
+* Grafana
+* Alerting
+* Security Onion
+* Suricata
+* Centralized Logging
+
+---
+
+# Skills Demonstrated
+
+## Networking
 
 * VLAN Configuration
-* Layer 2 Segmentation
 * DHCP Configuration
 * DNS Configuration
 * Routing Concepts
 * Firewall Design
+* Network Segmentation
+* VPN Deployment
 
-### Linux & Infrastructure
+## Linux & Infrastructure
 
-* OpenWrt Administration
+* Ubuntu Server Administration
+* Docker Deployment
+* Service Management
 * Command Line Operations
-* System Configuration
-* Configuration Management
+* Virtualization Fundamentals
 
-### Security
+## Security
 
 * Network Segmentation
 * Secure Remote Access
 * VPN Deployment
 * Firewall Policy Design
+* DNS Filtering
 
-### Documentation
+## Documentation
 
 * Technical Documentation
-* Network Diagrams
+* Infrastructure Documentation
 * Troubleshooting Records
+* Change Tracking
 * Project Journaling
 
 ---
 
-## Technology Stack
+# Technology Stack
 
-### Networking
+## Networking
 
 * OpenWrt
 * WireGuard
@@ -90,31 +132,30 @@ This environment serves as the foundation for future virtualization, monitoring,
 * DHCP
 * DNS
 
-### Operating Systems
+## Virtualization
 
-* Linux
-* OpenWrt
+* Proxmox VE
+* Ubuntu Server
 
-### Version Control
+## Containerization
+
+* Docker
+* Portainer
+
+## Monitoring
+
+* Uptime Kuma
+
+## Version Control
 
 * Git
 * GitHub
 
-### Planned Technologies
-
-* Proxmox
-* Docker
-* Grafana
-* Prometheus
-* Security Onion
-* Suricata
-* Centralized Logging
-
 ---
 
-## Project Roadmap
+# Project Roadmap
 
-### Phase 1 - Network Foundation
+## Phase 1 – Network Foundation
 
 * [x] OpenWrt Deployment
 * [x] VLAN Segmentation
@@ -122,20 +163,23 @@ This environment serves as the foundation for future virtualization, monitoring,
 * [x] WireGuard VPN
 * [x] Cloudflare DDNS
 
-### Phase 2 - Virtualization
+## Phase 2 – Infrastructure & Virtualization
 
-* [ ] Proxmox Installation
-* [ ] Virtual Machine Deployment
-* [ ] Virtual Networking
+* [x] Proxmox Installation
+* [x] Ubuntu Server VM
+* [x] Docker Deployment
+* [x] Portainer Deployment
+* [x] AdGuard Home Deployment
+* [x] Uptime Kuma Deployment
 
-### Phase 3 - Monitoring
+## Phase 3 – Monitoring & Observability
 
 * [ ] Prometheus
 * [ ] Grafana
 * [ ] Alerting
-* [ ] Network Monitoring
+* [ ] Metrics Collection
 
-### Phase 4 - Security Operations
+## Phase 4 – Security Operations
 
 * [ ] Security Onion
 * [ ] Suricata IDS
@@ -144,40 +188,69 @@ This environment serves as the foundation for future virtualization, monitoring,
 
 ---
 
-## Featured Documentation
+# Documentation
 
-### Networking
+## Overview
 
 * [Network Overview](00-Network-Overview.md)
-* [OpenWrt Configuration](01-OpenWrt.md)
-* [VLAN Design](02-VLANs.md)
-* [WireGuard VPN](03-WireGuard.md)
-* [Cloudflare DDNS](04-Cloudflare-DDNS.md)
 
-### Personal Development
+## Network
 
-* [Career Journey](50-Career-Journey.md)
-* [Learning Methodology](99-Learning-Methodology.md)
+* [OpenWrt](Network/OpenWrt.md)
+* [VLANs](Network/VLANs.md)
+* [WireGuard](Network/WireGuard.md)
+* [Cloudflare DDNS](Network/Cloudflare-DDNS.md)
+
+## Virtualization
+
+* [Proxmox](Virtualization/Proxmox.md)
+* [Virtual Networking](Virtualization/Virtual-Networking.md)
+* [Backup Strategy](Virtualization/Backup-Strategy.md)
+
+## Services
+
+* [Docker](Services/Docker.md)
+* [Portainer](Services/Portainer.md)
+* [AdGuard Home](Services/AdGuard-Home.md)
+* [Uptime Kuma](Services/Uptime-Kuma.md)
+* [Prometheus](Services/Prometheus.md)
+* [Grafana](Services/Grafana.md)
+* [Alerting](Services/Alerting.md)
+
+## Security
+
+* [Security Onion](Security/Security-Onion.md)
+* [Suricata](Security/Suricata.md)
+* [Log Analysis](Security/Log-Analysis.md)
+
+## Career Development
+
+* [Career Journey](Career/Career-Journey.md)
+* [Learning Methodology](Career/Learning-Methodology.md)
+
+## Journal
+
 * [Project Journal](Project-Journal.md)
 
 ---
 
-## Learning Philosophy
+# Learning Philosophy
 
-I believe the best way to learn technology is through practical implementation, structured troubleshooting, and documentation.
+I believe the best way to learn technology is through practical implementation, structured troubleshooting, validation, and documentation.
 
 This repository is intended to demonstrate not only technical knowledge, but also the ability to:
 
 * Solve problems methodically
+* Design infrastructure
 * Document technical systems
 * Learn independently
-* Verify information through testing
-* Continuously improve existing infrastructure
+* Verify solutions through testing
+* Continuously improve existing environments
 
 ---
 
-## Contact
+# Contact
 
 GitHub:
 
-**https://github.com/sterneborn**
+https://github.com/sterneborn
