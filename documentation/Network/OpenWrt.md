@@ -2,7 +2,7 @@
 
 ## OpenWrt Dashboard
 
-![OpenWrt Overview](assets/screenshots/openwrt-overview.png)
+![OpenWrt Overview](../assets/screenshots/openwrt-overview.png)
 
 ## Overview
 

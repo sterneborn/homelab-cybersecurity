@@ -2,7 +2,7 @@
 
 ## VLAN Filtering Configuration
 
-![VLAN Filtering](assets/screenshots/vlan-filtering.png)
+![VLAN Filtering](../assets/screenshots/vlan-filtering.png)
 
 ## Objective
 

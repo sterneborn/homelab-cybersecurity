@@ -2,7 +2,7 @@
 
 ## WireGuard Interface
 
-![WireGuard Interface](assets/screenshots/interfaces-wan-wireguard.png)
+![WireGuard Interface](../assets/screenshots/interfaces-wan-wireguard.png)
 
 ## Objective
 

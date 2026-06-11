@@ -33,28 +33,35 @@ extra_css:
 nav:
   - ← Portfolio: https://cv.sterneborn.org
   - Home: index.md
-  - Career Journey: 50-Career-Journey.md
+
   - Network:
-      - Overview: 00-Network-Overview.md
-      - OpenWrt: 01-OpenWrt.md
-      - VLANs: 02-VLANs.md
-      - WireGuard: 03-WireGuard.md
-      - Cloudflare DDNS: 04-Cloudflare-DDNS.md
-  - Infrastructure:
-      - Proxmox: 10-Proxmox.md
-      - Virtual Networking: 11-Virtual-Networking.md
-      - Backup Strategy: 12-Backup-Strategy.md
-  - Containers:
-      - Docker: 20-Docker.md
-      - AdGuard Home: 21-AdGuard-Home.md
-  - Monitoring:
-      - Prometheus: 30-Prometheus.md
-      - Grafana: 31-Grafana.md
-      - Alerting: 32-Alerting.md
+      - Overview: Network-Overview.md
+      - OpenWrt: Network/OpenWrt.md
+      - VLANs: Network/VLANs.md
+      - WireGuard: Network/WireGuard.md
+      - Cloudflare DDNS: Network/Cloudflare-DDNS.md
+
+  - Virtualization:
+      - Proxmox: Virtualization/Proxmox.md
+      - Virtual Networking: Virtualization/Virtual-Networking.md
+      - Backup Strategy: Virtualization/Backup-Strategy.md
+
+  - Services:
+      - Docker: Services/Docker.md
+      - Portainer: Services/Portainer.md
+      - AdGuard Home: Services/AdGuard-Home.md
+      - Uptime Kuma: Services/Uptime-Kuma.md
+      - Prometheus: Services/Prometheus.md
+      - Grafana: Services/Grafana.md
+      - Alerting: Services/Alerting.md
+
   - Security:
-      - Security Onion: 40-Security-Onion.md
-      - Suricata: 41-Suricata.md
-      - Log Analysis: 42-Log-Analysis.md
-  - Methodology: 99-Learning-Methodology.md
+      - Security Onion: Security/Security-Onion.md
+      - Suricata: Security/Suricata.md
+      - Log Analysis: Security/Log-Analysis.md
+
+  - About:
+      - My Journey: Career/Career-Journey.md
+      - Learning Methodology: Career/Learning-Methodology.md
+
   - Project Journal: Project-Journal.md
- 

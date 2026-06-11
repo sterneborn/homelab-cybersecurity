@@ -2,7 +2,7 @@
 
 ## Cloudflare DDNS Configuration
 
-![Cloudflare DDNS](assets/screenshots/ddns-cloudflare.png)
+![Cloudflare DDNS](../assets/screenshots/ddns-cloudflare.png)
 
 ## Objective
 
