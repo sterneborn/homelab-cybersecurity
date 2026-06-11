@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Network and cybersecurity portfolio showcasing a hands-on homelab with OpenWrt, VLANs, WireGuard, Cloudflare DDNS and technical documentation."
+    content="Network and cybersecurity portfolio showcasing a hands-on homelab with OpenWrt, VLANs, WireGuard, Proxmox, Docker, Linux infrastructure, monitoring and technical documentation."
   />
 
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -37,20 +37,19 @@
       <h1>Aspiring Network & Cybersecurity Engineer</h1>
 
       <p class="hero-description">
-        Building practical cybersecurity skills through hands-on infrastructure,
-        network segmentation, VPN deployment, Linux learning and technical documentation.
+        Building a hands-on cybersecurity homelab covering networking, virtualization,
+        Linux administration, Docker services, monitoring and technical documentation.
       </p>
 
       <div class="hero-actions">
-        <a class="button primary" href="#projects">View Project</a>
+        <a class="button primary" href="#projects">View Homelab</a>
 
         <a
           class="button secondary"
-          href="https://github.com/sterneborn/homelab-cybersecurity"
-          target="_blank"
+          href="/docs/"
           rel="noopener"
         >
-          GitHub Repository
+          Browse Documentation
         </a>
       </div>
 
@@ -61,18 +60,18 @@
         </div>
 
         <div>
-          <strong>WireGuard</strong>
-          <span>Remote Access VPN</span>
+          <strong>Proxmox</strong>
+          <span>Virtualization</span>
         </div>
 
         <div>
-          <strong>Cloudflare</strong>
-          <span>Dynamic DNS</span>
+          <strong>Docker</strong>
+          <span>Container Platform</span>
         </div>
 
         <div>
-          <strong>GitHub</strong>
-          <span>Public Documentation</span>
+          <strong>6+</strong>
+          <span>Services Documented</span>
         </div>
       </div>
     </section>
@@ -83,13 +82,13 @@
       <div>
         <p class="eyebrow">About</p>
 
-        <h2>Building practical cybersecurity and networking skills.</h2>
+        <h2>Building practical cybersecurity and infrastructure skills.</h2>
 
         <p class="section-text about-text">
           I am transitioning into networking and cybersecurity by building a hands-on homelab
-          environment. The goal is to develop practical skills that translate into professional
-          IT environments: network design, troubleshooting, documentation, Linux administration,
-          secure remote access and security monitoring.
+          environment. The project has grown from a segmented OpenWrt network into a broader
+          infrastructure lab covering virtualization, Linux administration, Docker services,
+          monitoring, documentation and troubleshooting.
         </p>
       </div>
 
@@ -115,34 +114,87 @@
       <h2>Cybersecurity Homelab</h2>
 
       <p class="section-text">
-        A segmented home network built with OpenWrt, VLANs, WireGuard VPN and Cloudflare DDNS.
-        The project is documented publicly to show both implementation and learning progression.
+        A continuously evolving homelab built to develop practical skills in networking,
+        virtualization, Linux administration, Docker, infrastructure services, monitoring
+        and cybersecurity documentation.
       </p>
 
-      <div class="project-grid">
-        <a class="project-card" href="/docs/01-OpenWrt/">
-          <h3>OpenWrt Router</h3>
-          <p>Configured a Netgear R7800 with OpenWrt as the core router and firewall platform.</p>
-          <span>Router configuration · Firewall zones · Network services</span>
-        </a>
+      <div class="phase-block">
+        <h3>Phase 1 · Network Foundation</h3>
 
-        <a class="project-card" href="/docs/02-VLANs/">
-          <h3>VLAN Segmentation</h3>
-          <p>Designed separate networks for trusted devices, guests, lab systems and rescue access.</p>
-          <span>Segmentation · Isolation · IP planning</span>
-        </a>
+        <div class="project-grid">
+          <a class="project-card" href="/docs/01-OpenWrt/">
+            <h3>OpenWrt Router</h3>
+            <p>Core routing and firewall platform for the homelab network.</p>
+            <span>Routing · Firewall zones · Network services</span>
+          </a>
 
-        <a class="project-card" href="/docs/03-WireGuard/">
-          <h3>WireGuard VPN</h3>
-          <p>Implemented secure remote access using a dedicated VPN subnet.</p>
-          <span>VPN deployment · Routing · Remote access</span>
-        </a>
+          <a class="project-card" href="/docs/02-VLANs/">
+            <h3>VLAN Segmentation</h3>
+            <p>Separated trusted, guest, lab and rescue networks using VLANs.</p>
+            <span>Segmentation · Isolation · IP planning</span>
+          </a>
 
-        <a class="project-card" href="/docs/04-Cloudflare-DDNS/">
-          <h3>Cloudflare DDNS</h3>
-          <p>Configured dynamic DNS for a stable VPN endpoint using a custom domain.</p>
-          <span>DNS · Cloudflare · Custom domain</span>
-        </a>
+          <a class="project-card" href="/docs/03-WireGuard/">
+            <h3>WireGuard VPN</h3>
+            <p>Secure remote access into the homelab using a dedicated VPN subnet.</p>
+            <span>VPN · Remote access · Secure tunneling</span>
+          </a>
+
+          <a class="project-card" href="/docs/04-Cloudflare-DDNS/">
+            <h3>Cloudflare DDNS</h3>
+            <p>Dynamic DNS integration for stable remote access using a custom domain.</p>
+            <span>DNS · Cloudflare · Remote access</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="phase-block">
+        <h3>Phase 2 · Virtualization & Infrastructure</h3>
+
+        <div class="project-grid">
+          <a class="project-card" href="/docs/10-Proxmox/">
+            <h3>Proxmox VE</h3>
+            <p>Virtualization platform used to host infrastructure services and virtual machines.</p>
+            <span>Virtualization · Storage · VM management</span>
+          </a>
+
+          <a class="project-card" href="/docs/20-Docker/">
+            <h3>Docker</h3>
+            <p>Container platform used to deploy and manage self-hosted services.</p>
+            <span>Containers · Services · Deployment</span>
+          </a>
+
+          <a class="project-card" href="/docs/20-Docker/">
+            <h3>Portainer</h3>
+            <p>Web-based Docker management platform for container administration.</p>
+            <span>Docker management · Web UI · Operations</span>
+          </a>
+
+          <a class="project-card" href="/docs/">
+            <h3>Ubuntu Server</h3>
+            <p>Primary Linux server used for infrastructure and service hosting.</p>
+            <span>Linux · SSH · Server administration</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="phase-block">
+        <h3>Phase 3 · Core Services</h3>
+
+        <div class="project-grid">
+          <a class="project-card" href="/docs/21-AdGuard-Home/">
+            <h3>AdGuard Home</h3>
+            <p>Network-wide DNS filtering and ad blocking service.</p>
+            <span>DNS security · Filtering · Privacy</span>
+          </a>
+
+          <a class="project-card" href="/docs/">
+            <h3>Uptime Kuma</h3>
+            <p>Infrastructure availability and uptime monitoring for homelab services.</p>
+            <span>Monitoring · Availability · Service checks</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -153,7 +205,8 @@
 
       <p class="section-text">
         The network is separated into dedicated VLANs for trusted devices, guest access,
-        lab systems and rescue access. Remote connectivity is handled through WireGuard.
+        lab systems and rescue access. Remote connectivity is handled through WireGuard,
+        while infrastructure services are hosted inside the virtualized homelab environment.
       </p>
 
       <div class="topology-box">
@@ -189,27 +242,27 @@
             <li>WireGuard VPN</li>
             <li>Firewall zones</li>
             <li>Network segmentation</li>
-            <li>Access control</li>
+            <li>DNS filtering</li>
           </ul>
         </div>
 
         <div class="skill-group">
-          <h3>Systems & Tools</h3>
+          <h3>Infrastructure</h3>
           <ul>
-            <li>OpenWrt</li>
-            <li>Linux</li>
-            <li>Cloudflare</li>
+            <li>Proxmox VE</li>
+            <li>Ubuntu Server</li>
+            <li>Docker</li>
+            <li>Portainer</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Monitoring & Documentation</h3>
+          <ul>
+            <li>Uptime Kuma</li>
             <li>Git & GitHub</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Professional</h3>
-          <ul>
-            <li>Documentation</li>
-            <li>Troubleshooting</li>
-            <li>Project ownership</li>
-            <li>Structured learning</li>
+            <li>MkDocs</li>
+            <li>Technical documentation</li>
           </ul>
         </div>
       </div>
@@ -225,30 +278,37 @@
           <h3>Completed</h3>
           <ul>
             <li>OpenWrt</li>
-            <li>VLANs</li>
+            <li>VLAN Segmentation</li>
             <li>WireGuard VPN</li>
             <li>Cloudflare DDNS</li>
+            <li>Proxmox VE</li>
+            <li>Ubuntu Server</li>
+            <li>Docker</li>
+            <li>Portainer</li>
+            <li>AdGuard Home</li>
+            <li>Uptime Kuma</li>
           </ul>
         </div>
 
         <div class="roadmap-card">
           <h3>In Progress</h3>
           <ul>
-            <li>Linux administration</li>
-            <li>Git workflow</li>
-            <li>Portfolio development</li>
+            <li>Linux Administration</li>
             <li>Documentation</li>
+            <li>Git Workflow</li>
+            <li>Infrastructure Monitoring</li>
           </ul>
         </div>
 
         <div class="roadmap-card">
           <h3>Planned</h3>
           <ul>
-            <li>Proxmox</li>
-            <li>Ubuntu Server</li>
-            <li>Docker</li>
+            <li>Prometheus</li>
+            <li>Grafana</li>
+            <li>Alerting</li>
             <li>Security Onion</li>
             <li>Suricata</li>
+            <li>Log Analysis</li>
           </ul>
         </div>
       </div>
