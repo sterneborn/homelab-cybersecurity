@@ -1512,6 +1512,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-06-11-proxmox-deployment-and-infrastructure-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-06-11 - Proxmox Deployment and Infrastructure Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-06-11 - Proxmox Deployment and Infrastructure Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completed-tasks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completed Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-learnings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Learnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1696,6 +1746,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2026-06-11-proxmox-deployment-and-infrastructure-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2026-06-11 - Proxmox Deployment and Infrastructure Services
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2026-06-11 - Proxmox Deployment and Infrastructure Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completed-tasks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completed Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-learnings_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Learnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1784,6 +1884,48 @@
 <li>Screenshot integration and asset management</li>
 <li>Navigation design and user experience improvements</li>
 <li>Maintaining separate presentation and documentation layers</li>
+</ul>
+<hr />
+<h2 id="2026-06-11-proxmox-deployment-and-infrastructure-services">2026-06-11 - Proxmox Deployment and Infrastructure Services</h2>
+<h3 id="completed-tasks_3">Completed Tasks</h3>
+<ul>
+<li>Installed Proxmox VE on dedicated hardware</li>
+<li>Configured ZFS storage</li>
+<li>Deployed Ubuntu Server virtual machine</li>
+<li>Verified virtual networking connectivity</li>
+<li>Installed Docker</li>
+<li>Deployed Portainer</li>
+<li>Deployed AdGuard Home</li>
+<li>Configured AdGuard Home as network DNS server</li>
+<li>Updated OpenWrt DHCP configuration</li>
+<li>Deployed Uptime Kuma</li>
+<li>Created infrastructure monitoring checks</li>
+<li>Reorganized MkDocs documentation structure</li>
+<li>Added virtualization documentation</li>
+<li>Added screenshots and technical verification steps</li>
+</ul>
+<h3 id="notes_3">Notes</h3>
+<p>This phase marked the transition from network infrastructure into virtualization and service deployment.</p>
+<p>Proxmox VE was installed on a Fujitsu Esprimo Q7010 and configured with ZFS as the primary storage backend. The use of ZFS introduced snapshot functionality, providing a safe way to experiment with new services while maintaining recovery options.</p>
+<p>An Ubuntu Server virtual machine was deployed as the primary infrastructure host. Network connectivity was verified through the Proxmox bridge configuration and VLAN 30 integration.</p>
+<p>Docker was introduced as the container platform for hosting services. Portainer was deployed to simplify container management and provide visibility into the Docker environment.</p>
+<p>AdGuard Home was then deployed as a network-wide DNS filtering service. Initial deployment required troubleshooting related to Docker networking and DNS port bindings. After resolving these issues, AdGuard Home was successfully integrated into the network and configured as the primary DNS server through OpenWrt DHCP settings.</p>
+<p>Testing confirmed successful DNS resolution from both the Ubuntu Server virtual machine and client devices on the network.</p>
+<p>Uptime Kuma was deployed to provide service monitoring and availability tracking. Monitors were created for critical infrastructure components including Ubuntu Server, Portainer, AdGuard Home and internet connectivity.</p>
+<p>Significant improvements were also made to the documentation platform. The MkDocs structure was reorganized into dedicated sections for Networking, Virtualization, Services, Security and Career Development. Additional screenshots and verification procedures were added to improve documentation quality and portfolio presentation.</p>
+<h3 id="key-learnings_3">Key Learnings</h3>
+<ul>
+<li>Proxmox VE installation and administration</li>
+<li>ZFS storage fundamentals and snapshot strategy</li>
+<li>Virtual machine deployment and networking</li>
+<li>Docker installation and container management</li>
+<li>Portainer administration</li>
+<li>DNS service deployment with AdGuard Home</li>
+<li>DHCP and DNS integration within OpenWrt</li>
+<li>Infrastructure monitoring with Uptime Kuma</li>
+<li>Technical documentation organization</li>
+<li>Git-based documentation workflows</li>
+<li>Structured troubleshooting of containerized services</li>
 </ul>
 
 

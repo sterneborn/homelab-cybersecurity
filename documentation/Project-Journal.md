@@ -87,3 +87,56 @@ Additional improvements focused on navigation and usability, creating clearer co
 * Screenshot integration and asset management
 * Navigation design and user experience improvements
 * Maintaining separate presentation and documentation layers
+
+---
+
+## 2026-06-11 - Proxmox Deployment and Infrastructure Services
+
+### Completed Tasks
+
+* Installed Proxmox VE on dedicated hardware
+* Configured ZFS storage
+* Deployed Ubuntu Server virtual machine
+* Verified virtual networking connectivity
+* Installed Docker
+* Deployed Portainer
+* Deployed AdGuard Home
+* Configured AdGuard Home as network DNS server
+* Updated OpenWrt DHCP configuration
+* Deployed Uptime Kuma
+* Created infrastructure monitoring checks
+* Reorganized MkDocs documentation structure
+* Added virtualization documentation
+* Added screenshots and technical verification steps
+
+### Notes
+
+This phase marked the transition from network infrastructure into virtualization and service deployment.
+
+Proxmox VE was installed on a Fujitsu Esprimo Q7010 and configured with ZFS as the primary storage backend. The use of ZFS introduced snapshot functionality, providing a safe way to experiment with new services while maintaining recovery options.
+
+An Ubuntu Server virtual machine was deployed as the primary infrastructure host. Network connectivity was verified through the Proxmox bridge configuration and VLAN 30 integration.
+
+Docker was introduced as the container platform for hosting services. Portainer was deployed to simplify container management and provide visibility into the Docker environment.
+
+AdGuard Home was then deployed as a network-wide DNS filtering service. Initial deployment required troubleshooting related to Docker networking and DNS port bindings. After resolving these issues, AdGuard Home was successfully integrated into the network and configured as the primary DNS server through OpenWrt DHCP settings.
+
+Testing confirmed successful DNS resolution from both the Ubuntu Server virtual machine and client devices on the network.
+
+Uptime Kuma was deployed to provide service monitoring and availability tracking. Monitors were created for critical infrastructure components including Ubuntu Server, Portainer, AdGuard Home and internet connectivity.
+
+Significant improvements were also made to the documentation platform. The MkDocs structure was reorganized into dedicated sections for Networking, Virtualization, Services, Security and Career Development. Additional screenshots and verification procedures were added to improve documentation quality and portfolio presentation.
+
+### Key Learnings
+
+* Proxmox VE installation and administration
+* ZFS storage fundamentals and snapshot strategy
+* Virtual machine deployment and networking
+* Docker installation and container management
+* Portainer administration
+* DNS service deployment with AdGuard Home
+* DHCP and DNS integration within OpenWrt
+* Infrastructure monitoring with Uptime Kuma
+* Technical documentation organization
+* Git-based documentation workflows
+* Structured troubleshooting of containerized services
