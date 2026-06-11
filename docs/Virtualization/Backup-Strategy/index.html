@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#backup-strategy" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -763,6 +768,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup Strategy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -780,6 +805,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery Process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-as-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation as Backup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1350,6 +1471,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Strategy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snapshot-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshot Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery Process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-as-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation as Backup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1366,9 +1574,69 @@
 
 
 
-  <h1>Backup Strategy</h1>
-
-
+<h1 id="backup-strategy">Backup Strategy</h1>
+<h2 id="overview">Overview</h2>
+<p>A backup and recovery strategy is essential for maintaining infrastructure stability while allowing experimentation and continuous learning.</p>
+<p>The homelab uses Proxmox snapshots as the primary recovery mechanism before major infrastructure changes.</p>
+<hr />
+<h2 id="objectives">Objectives</h2>
+<p>The backup strategy was designed to achieve the following goals:</p>
+<ul>
+<li>Reduce deployment risk</li>
+<li>Minimize recovery time</li>
+<li>Support experimentation</li>
+<li>Protect infrastructure services</li>
+<li>Enable rapid rollback</li>
+</ul>
+<hr />
+<h2 id="snapshot-strategy">Snapshot Strategy</h2>
+<p>Snapshots are created before:</p>
+<ul>
+<li>New service deployments</li>
+<li>Major configuration changes</li>
+<li>Network modifications</li>
+<li>Monitoring deployments</li>
+<li>Security tool installations</li>
+</ul>
+<p>This approach allows the environment to be restored to a known working state if a deployment introduces instability or unexpected behavior.</p>
+<hr />
+<h2 id="snapshot-management">Snapshot Management</h2>
+<p>The Proxmox snapshot interface provides a simple method for managing recovery points.</p>
+<p><img alt="Proxmox Snapshots" src="../assets/screenshots/proxmox-snapshots.png" /></p>
+<p>Examples of snapshot naming conventions:</p>
+<pre><code class="language-text">adguard-working
+adguard-production
+docker-monitoring-working
+</code></pre>
+<p>Using descriptive snapshot names makes it easier to identify stable recovery points during troubleshooting or recovery operations.</p>
+<hr />
+<h2 id="recovery-process">Recovery Process</h2>
+<p>If a deployment fails, the following process is used:</p>
+<ol>
+<li>Stop additional configuration changes.</li>
+<li>Identify the last known working snapshot.</li>
+<li>Restore the snapshot.</li>
+<li>Verify system functionality.</li>
+<li>Review the failed deployment.</li>
+<li>Reattempt the deployment if necessary.</li>
+</ol>
+<p>This process significantly reduces downtime and simplifies troubleshooting.</p>
+<hr />
+<h2 id="documentation-as-backup">Documentation as Backup</h2>
+<p>Technical documentation is also treated as a recovery mechanism.</p>
+<p>Documentation includes:</p>
+<ul>
+<li>Installation procedures</li>
+<li>Service configurations</li>
+<li>Network architecture</li>
+<li>Troubleshooting notes</li>
+<li>Verification steps</li>
+</ul>
+<p>By combining snapshots with documentation, infrastructure can be rebuilt even if recovery from a snapshot is not possible.</p>
+<hr />
+<h2 id="lessons-learned">Lessons Learned</h2>
+<p>Snapshots provide a safe way to experiment with new technologies without risking the stability of the environment.</p>
+<p>Creating snapshots before major changes has become a standard operating procedure within the homelab and greatly improves confidence when deploying new services or modifying existing infrastructure.</p>
 
 
 
