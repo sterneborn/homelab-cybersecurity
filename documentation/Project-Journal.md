@@ -90,7 +90,7 @@ Additional improvements focused on navigation and usability, creating clearer co
 
 ---
 
-## 2026-06-11 - Proxmox Deployment and Infrastructure Services
+## 2026-06-10 - Proxmox Deployment and Infrastructure Services
 
 ### Completed Tasks
 
@@ -140,3 +140,87 @@ Significant improvements were also made to the documentation platform. The MkDoc
 * Technical documentation organization
 * Git-based documentation workflows
 * Structured troubleshooting of containerized services
+
+---
+
+## 2026-06-12 – Backup Infrastructure and Recovery Strategy
+
+### Objectives
+
+The objective of this session was to implement a dedicated backup solution for the Proxmox environment and establish a foundation for enterprise-inspired backup and recovery procedures.
+
+### Activities Completed
+
+#### External Backup Storage
+
+A Kingston XS2000 1 TB SSD was provisioned as dedicated backup storage.
+
+Tasks completed:
+
+* Removed existing APFS configuration
+* Created a GPT partition table
+* Created a Linux filesystem partition
+* Formatted the partition using ext4
+* Created a dedicated mount point at `/backup`
+* Configured automatic mounting through `/etc/fstab`
+* Verified read and write functionality
+
+#### Proxmox Backup Storage
+
+The external SSD was integrated into Proxmox as storage:
+
+```text
+backup-ssd
+```
+
+This repository is used exclusively for virtual machine backups.
+
+#### Backup Verification
+
+A manual backup of the Ubuntu Server virtual machine was performed to validate the backup infrastructure.
+
+Backup Details:
+
+* VM ID: 100
+* Backup Mode: Snapshot
+* Compression: ZSTD
+
+Results:
+
+* Backup completed successfully
+* Backup archive stored on external SSD
+* Backup file verified on disk
+
+#### Automated Backup Scheduling
+
+A scheduled backup job was created within Proxmox to automate future backups.
+
+This establishes a repeatable backup process and reduces reliance on manual backups.
+
+#### Cloudflare DDNS Troubleshooting
+
+Investigated Dynamic DNS errors reported by OpenWrt.
+
+Actions performed:
+
+* Reviewed DDNS configuration
+* Created a new Cloudflare API token
+* Updated token permissions
+* Verified DNS resolution for vpn.sterneborn.org
+
+The issue appears resolved, although additional monitoring will be performed during future sessions.
+
+### Lessons Learned
+
+This session provided practical experience with:
+
+* Linux storage management
+* GPT partitioning
+* ext4 filesystem creation
+* Persistent mounting using fstab
+* Proxmox backup repositories
+* Snapshot-based VM backups
+* Backup verification procedures
+* Cloudflare DDNS troubleshooting
+
+The backup infrastructure now provides a significantly improved recovery capability for the homelab environment.
