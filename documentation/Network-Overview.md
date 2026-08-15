@@ -1,97 +1,94 @@
 # Homelab Network Overview
 
-## Network Topology
+## Current Architecture
 
-![Network Topology](assets/network-topology-v2.png)
+The current network is built around a **UniFi Cloud Gateway Ultra** with a **UniFi-managed access point**. The gateway provides routing, VLANs, and zone-based firewall policy, while UniFi-managed Wi-Fi maps wireless clients into the appropriate trust zone.
 
-
-## Objective
-
-This homelab was built to develop practical skills in:
-
-* Networking
-* Linux Administration
-* Cybersecurity
-* Virtualization
-* Infrastructure Monitoring
-* Network Security
-
-The environment is designed to simulate a small enterprise network and serve as a platform for continuous learning and experimentation.
+The design supports the wider homelab: Proxmox virtualization, containerized services, Home Assistant, DNS filtering, monitoring, remote access, and future Zigbee integration.
 
 ---
 
-## Hardware
+## Architecture at a Glance
 
-### Router
+```text
+Internet
+   |
+UniFi Cloud Gateway Ultra
+   |
+   +-- UniFi-managed Wi-Fi / access point
+   |
+   +-- Trusted VLAN
+   +-- Guest VLAN
+   +-- Lab/Servers VLAN
+   |      +-- Proxmox
+   |      +-- Docker / Portainer
+   |      +-- AdGuard Home
+   |      +-- Uptime Kuma
+   |      +-- Home Assistant integrations
+   |
+   +-- IoT VLAN
+          +-- Smart-home and connected devices
+          +-- Planned Zigbee2MQTT environment
+```
 
-* Netgear R7800
-* OpenWrt 24.10
+WireGuard provides remote access. Tailscale is currently being evaluated as a complementary option and is not documented as a replacement.
 
-### Server
+---
+
+## Network Segments
+
+| Segment | Primary role | Policy intent |
+| ------- | ------------ | ------------- |
+| Trusted | Personal and administrative clients | Controlled access to required infrastructure services |
+| Guest | Visitor and temporary clients | Internet access without access to private networks |
+| Lab/Servers | Proxmox, VMs, containers, and infrastructure services | Explicit service exposure and restricted inter-zone access |
+| IoT | Smart-home and lower-trust devices | Isolation with only required integration traffic allowed |
+
+See [VLAN Segmentation](Network/VLANs.md) for more detail.
+
+---
+
+## Core Infrastructure
+
+### Gateway and Wi-Fi
+
+* UniFi Cloud Gateway Ultra
+* UniFi-managed access point
+* Centralized network and wireless management
+* Zone-based firewall policies
+
+### Virtualization
 
 * Fujitsu Esprimo Q7010
 * Intel Core i5-10400T
 * 32 GB RAM
 * 256 GB NVMe SSD
-* 1 TB External SSD
+* 1 TB external SSD
+* Proxmox VE
 
-### Client Devices
+### Services and Projects
 
-* Windows PCs
-* macOS Laptop
-* iPhone
-* IoT Devices
-
----
-
-## Network Architecture
-
-### VLAN 10 - LAN
-
-Purpose: Trusted user devices
-
-* Network: 192.168.10.0/24
-* Gateway: 192.168.10.1
-
-### VLAN 20 - Guest
-
-Purpose: Isolated guest network
-
-* Network: 192.168.20.0/24
-* Internet access only
-
-### VLAN 30 - Lab
-
-Purpose: Virtualization and security lab
-
-* Network: 192.168.30.0/24
-* Planned services:
-
-  * Proxmox
-  * Docker
-  * Grafana
-  * Prometheus
-  * Security Onion
-
-### WireGuard VPN
-
-Purpose: Secure remote access
-
-* Network: 10.100.100.0/24
-* Gateway: 10.100.100.1
+* Home Assistant
+* Docker and Portainer
+* AdGuard Home
+* Uptime Kuma
+* Knut AI and automation
+* Borgen Audio on Raspberry Pi 4
+* Planned Zigbee coordinator and Zigbee2MQTT
 
 ---
 
-## External Services
+## Architecture History
 
-### Cloudflare
+The previous network used a Netgear R7800 running OpenWrt. It established the first segmented design and provided practical experience with VLANs, firewall zones, WireGuard, Cloudflare DDNS, and Wi-Fi troubleshooting.
 
-Used for:
+That design was later migrated to UniFi. The original topology diagram and configuration notes remain in the [OpenWrt history](Network/OpenWrt.md) so the repository continues to show the evolution of the lab.
 
-* DNS Management
-* Dynamic DNS
-* VPN Endpoint Resolution
+---
 
-### VPN Endpoint
+## Related Documentation
 
-vpn.sterneborn.org
+* [UniFi Network](Network/UniFi.md)
+* [VLAN Segmentation](Network/VLANs.md)
+* [WireGuard Remote Access](Network/WireGuard.md)
+* [OpenWrt — Previous Architecture](Network/OpenWrt.md)

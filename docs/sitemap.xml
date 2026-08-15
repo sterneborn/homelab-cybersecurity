@@ -2,94 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cv.sterneborn.org/docs/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Network-Overview/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Project-Journal/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Career/Career-Journey/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Career/Learning-Methodology/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Network/Cloudflare-DDNS/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Network/OpenWrt/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/Network/UniFi/</loc>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Network/VLANs/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Network/WireGuard/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/Projects/Borgen-Audio/</loc>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/Projects/Knut/</loc>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/Projects/Zigbee2MQTT/</loc>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Security/Log-Analysis/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Security/Security-Onion/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Security/Suricata/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/AdGuard-Home/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/Alerting/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/Docker/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/Grafana/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/Services/Home-Assistant/</loc>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/Portainer/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/Prometheus/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Services/Uptime-Kuma/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Virtualization/Backup-Strategy/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Virtualization/Proxmox/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Virtualization/Virtual-Networking/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/assets/screenshots/</loc>
-         <lastmod>2026-06-11</lastmod>
+         <lastmod>2026-08-15</lastmod>
     </url>
 </urlset>

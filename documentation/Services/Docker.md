@@ -30,7 +30,7 @@ Docker is deployed on:
 
 * Ubuntu Server
 * Running as a virtual machine on Proxmox VE
-* Connected to VLAN 30 (Lab Network)
+* Connected to the Lab/Servers network
 
 This architecture provides separation between the physical host, virtual machine, and application services.
 

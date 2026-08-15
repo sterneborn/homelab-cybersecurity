@@ -4,7 +4,7 @@
 
 Virtual networking enables communication between virtual machines, the Proxmox host, and the physical network.
 
-In this homelab, virtual networking allows services running inside virtual machines to communicate with devices on the Lab Network (VLAN 30) while maintaining the network segmentation configured on the OpenWrt router.
+In this homelab, virtual networking allows services running inside virtual machines to communicate through the Lab/Servers network while maintaining the segmentation and zone-based policies configured on the UniFi Cloud Gateway Ultra.
 
 ---
 
@@ -27,9 +27,9 @@ The current network path is:
 ```text
 Internet
     │
-OpenWrt Router
+UniFi Cloud Gateway Ultra
     │
-VLAN 30 (Lab Network)
+Lab/Servers VLAN
     │
 Proxmox Host
     │
@@ -73,7 +73,7 @@ The Ubuntu Server virtual machine is connected to the Proxmox bridge through a v
 
 ![Ubuntu VM Network Device](../assets/screenshots/ubuntu-vm-network.png)
 
-The virtual network adapter is attached to the `vmbr0` bridge, allowing the virtual machine to communicate directly with devices on VLAN 30.
+The virtual network adapter is attached to the `vmbr0` bridge, allowing the virtual machine to communicate on the Lab/Servers network.
 
 ---
 
@@ -83,11 +83,11 @@ Network connectivity was verified from the Ubuntu Server virtual machine.
 
 ![Ubuntu Network Routing](../assets/screenshots/ubuntu-network-route.png)
 
-The routing table confirms:
+The screenshot records the initial OpenWrt-era deployment and confirms:
 
 * Ubuntu Server IP address: `192.168.30.20`
 * Default gateway: `192.168.30.1`
-* VLAN 30 connectivity
+* Connectivity to the original Lab network
 * Docker network availability (`172.17.0.0/16`)
 
 Successful verification confirmed:
@@ -138,4 +138,6 @@ Virtual networking behaves similarly to physical switching and is a fundamental 
 
 Understanding bridges, virtual adapters, routing, and VLAN integration is essential when deploying services in virtualized environments.
 
-The Proxmox bridge architecture provides a simple and reliable method for integrating virtual machines into the existing network while maintaining the segmentation implemented on the OpenWrt router.
+The Proxmox bridge architecture provides a simple and reliable method for integrating virtual machines into the current network while the UniFi gateway enforces segmentation between zones.
+
+The recorded `192.168.30.0/24` addressing is retained as historical deployment evidence and should not be read as a public specification of the current VLAN address plan.

@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wireguard-vpn-deployment" class="md-skip">
+        <a href="#wireguard-remote-access" class="md-skip">
           Skip to content
         </a>
       
@@ -285,11 +285,31 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Services/Docker/" class="md-tabs__link">
+        <a href="../../Services/Home-Assistant/" class="md-tabs__link">
           
   
   
   Services
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Projects/Knut/" class="md-tabs__link">
+          
+  
+  
+  Projects
 
         </a>
       </li>
@@ -535,14 +555,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../OpenWrt/" class="md-nav__link">
+      <a href="../UniFi/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    OpenWrt
+    UniFi
   
 
     
@@ -651,10 +671,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wireguard-interface" class="md-nav__link">
+  <a href="#status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        WireGuard Interface
+        Status
       
     </span>
   </a>
@@ -662,10 +682,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#design-goals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objective
+        Design Goals
       
     </span>
   </a>
@@ -673,49 +693,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vpn-configuration" class="md-nav__link">
+  <a href="#validation-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VPN Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VPN Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Server
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Client
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DNS
+        Validation Workflow
       
     </span>
   </a>
@@ -723,10 +704,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#firewall-configuration" class="md-nav__link">
+  <a href="#tailscale-evaluation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Firewall Configuration
+        Tailscale Evaluation
       
     </span>
   </a>
@@ -734,63 +715,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting-process" class="md-nav__link">
+  <a href="#openwrt-history" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting Process
+        OpenWrt History
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initial-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initial Problem
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#investigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Investigation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolution
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verification
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -799,17 +730,6 @@
     <span class="md-ellipsis">
       
         Skills Demonstrated
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-improvements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Future Improvements
       
     </span>
   </a>
@@ -840,6 +760,34 @@
     
   
     Cloudflare DDNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenWrt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenWrt (Previous Architecture)
   
 
     
@@ -1054,6 +1002,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Services/Home-Assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1288,7 +1264,7 @@
   <span class="md-ellipsis">
     
   
-    Security
+    Projects
   
 
     
@@ -1301,6 +1277,149 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Projects/Knut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knut AI & Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Projects/Borgen-Audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Borgen Audio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Projects/Zigbee2MQTT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planned Zigbee2MQTT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1421,10 +1540,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1442,8 +1561,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1570,10 +1689,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wireguard-interface" class="md-nav__link">
+  <a href="#status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        WireGuard Interface
+        Status
       
     </span>
   </a>
@@ -1581,10 +1700,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#design-goals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objective
+        Design Goals
       
     </span>
   </a>
@@ -1592,49 +1711,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vpn-configuration" class="md-nav__link">
+  <a href="#validation-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VPN Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="VPN Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Server
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#client" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Client
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DNS
+        Validation Workflow
       
     </span>
   </a>
@@ -1642,10 +1722,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#firewall-configuration" class="md-nav__link">
+  <a href="#tailscale-evaluation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Firewall Configuration
+        Tailscale Evaluation
       
     </span>
   </a>
@@ -1653,63 +1733,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting-process" class="md-nav__link">
+  <a href="#openwrt-history" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting Process
+        OpenWrt History
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Troubleshooting Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#initial-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initial Problem
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#investigation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Investigation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolution
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verification" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verification
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1718,17 +1748,6 @@
     <span class="md-ellipsis">
       
         Skills Demonstrated
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#future-improvements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Future Improvements
       
     </span>
   </a>
@@ -1752,73 +1771,61 @@
 
 
 
-<h1 id="wireguard-vpn-deployment">WireGuard VPN Deployment</h1>
-<h2 id="wireguard-interface">WireGuard Interface</h2>
-<p><img alt="WireGuard Interface" src="../../assets/screenshots/interfaces-wan-wireguard.png" /></p>
-<h2 id="objective">Objective</h2>
-<p>Provide secure remote access to the homelab environment from external networks.</p>
+<h1 id="wireguard-remote-access">WireGuard Remote Access</h1>
+<h2 id="status">Status</h2>
+<p><strong>Current remote-access solution</strong></p>
+<p>WireGuard provides encrypted remote access to approved homelab resources. Access is governed by the same zone-based policy model used for local networks rather than treating a VPN connection as unrestricted access.</p>
+<p>Tailscale is currently being evaluated for selected device-to-device and administrative workflows. It has not replaced WireGuard.</p>
 <hr />
-<h2 id="vpn-configuration">VPN Configuration</h2>
-<h3 id="server">Server</h3>
-<p>Interface: wg0</p>
+<h2 id="design-goals">Design Goals</h2>
 <ul>
-<li>Address: 10.100.100.1/24</li>
-<li>Listen Port: UDP 51820</li>
-</ul>
-<h3 id="client">Client</h3>
-<p>iPhone</p>
-<ul>
-<li>Address: 10.100.100.2</li>
+<li>Provide secure access from external networks</li>
+<li>Limit remote clients to the services they need</li>
+<li>Keep remote access separate from guest and IoT trust zones</li>
+<li>Maintain a documented and testable recovery path</li>
+<li>Verify connectivity through tunnel state, routing, DNS, and firewall policy</li>
 </ul>
 <hr />
-<h2 id="dns">DNS</h2>
-<p>VPN Endpoint:</p>
-<p>vpn.sterneborn.org</p>
-<p>Managed through Cloudflare Dynamic DNS.</p>
+<h2 id="validation-workflow">Validation Workflow</h2>
+<p>Remote-access troubleshooting is performed layer by layer:</p>
+<ol>
+<li>Confirm that the client can reach the public endpoint.</li>
+<li>Verify that the WireGuard tunnel has a recent handshake.</li>
+<li>Check the client and server routes.</li>
+<li>Confirm DNS behavior through the tunnel.</li>
+<li>Test the relevant zone-based firewall policy.</li>
+<li>Validate access to only the intended homelab services.</li>
+</ol>
+<p>Useful WireGuard state can be inspected with:</p>
+<pre><code class="language-bash">wg show
+</code></pre>
 <hr />
-<h2 id="firewall-configuration">Firewall Configuration</h2>
-<p>WireGuard clients are permitted access to:</p>
+<h2 id="tailscale-evaluation">Tailscale Evaluation</h2>
+<p>The evaluation focuses on whether Tailscale simplifies specific remote administration scenarios without obscuring routing, policy, or operational ownership.</p>
+<p>Evaluation criteria include:</p>
 <ul>
-<li>LAN Network</li>
-<li>Lab Network</li>
-<li>Internet Gateway</li>
+<li>Device enrollment and removal</li>
+<li>Access-control clarity</li>
+<li>Compatibility with the existing VLAN and firewall model</li>
+<li>DNS behavior</li>
+<li>Observability and troubleshooting</li>
+<li>Whether it complements or duplicates the established WireGuard path</li>
 </ul>
+<p>Until that evaluation is complete, WireGuard remains the documented production remote-access method.</p>
 <hr />
-<h2 id="troubleshooting-process">Troubleshooting Process</h2>
-<h3 id="initial-problem">Initial Problem</h3>
-<p>The VPN tunnel could not be established.</p>
-<h3 id="investigation">Investigation</h3>
-<p>Used the following command:</p>
-<p>wg show</p>
-<p>Observed that no peer was loaded into the active WireGuard interface.</p>
-<h3 id="resolution">Resolution</h3>
-<p>Verified peer configuration, reloaded the interface, and confirmed successful tunnel establishment.</p>
-<h3 id="verification">Verification</h3>
-<p>Successful handshake observed:</p>
-<ul>
-<li>Peer detected</li>
-<li>Traffic transmitted</li>
-<li>Traffic received</li>
-<li>Stable connection established</li>
-</ul>
+<h2 id="openwrt-history">OpenWrt History</h2>
+<p>WireGuard was first deployed on the earlier OpenWrt router. The original OpenWrt interface screenshot is retained below as historical evidence; it is not the current gateway interface.</p>
+<p><img alt="Previous WireGuard interface on OpenWrt" src="../../assets/screenshots/interfaces-wan-wireguard.png" /></p>
+<p>That deployment provided practical experience with peer configuration, firewall rules, routing, dynamic DNS, and handshake troubleshooting. Those lessons carried forward into the UniFi migration.</p>
 <hr />
 <h2 id="skills-demonstrated">Skills Demonstrated</h2>
 <ul>
-<li>WireGuard deployment</li>
-<li>Firewall configuration</li>
-<li>Remote access design</li>
-<li>VPN troubleshooting</li>
-<li>OpenWrt administration</li>
-<li>Network diagnostics</li>
-</ul>
-<hr />
-<h2 id="future-improvements">Future Improvements</h2>
-<ul>
-<li>Additional VPN clients</li>
-<li>Multi-factor authentication</li>
-<li>Infrastructure monitoring</li>
-<li>VPN traffic analytics</li>
-<li>Security Onion integration</li>
+<li>WireGuard deployment and administration</li>
+<li>Secure remote-access design</li>
+<li>Routing and DNS troubleshooting</li>
+<li>Zone-based access control</li>
+<li>VPN migration planning</li>
+<li>Comparative evaluation of remote-access tools</li>
 </ul>
 
 

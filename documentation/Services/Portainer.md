@@ -30,7 +30,7 @@ Portainer is deployed as a Docker container on:
 
 * Ubuntu Server
 * Running on Proxmox VE
-* Connected to VLAN 30 (Lab Network)
+* Connected to the Lab/Servers network
 
 Portainer manages the local Docker environment used throughout the homelab.
 

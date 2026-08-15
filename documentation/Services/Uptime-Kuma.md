@@ -30,7 +30,7 @@ Uptime Kuma is deployed as a Docker container on:
 
 * Ubuntu Server
 * Running on Proxmox VE
-* Connected to VLAN 30 (Lab Network)
+* Connected to the Lab/Servers network
 
 The service monitors infrastructure components deployed throughout the homelab environment.
 
@@ -71,6 +71,7 @@ At the time of documentation, Uptime Kuma monitors:
 * Ubuntu Server
 * Portainer
 * AdGuard Home
+* Home Assistant
 * Internet connectivity
 
 Additional monitors will be added as the infrastructure expands.

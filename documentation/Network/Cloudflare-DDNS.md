@@ -1,8 +1,10 @@
 # Cloudflare Dynamic DNS
 
-## Cloudflare DDNS Configuration
+## OpenWrt-era Cloudflare DDNS Configuration
 
-![Cloudflare DDNS](../assets/screenshots/ddns-cloudflare.png)
+![Previous Cloudflare DDNS configuration on OpenWrt](../assets/screenshots/ddns-cloudflare.png)
+
+> **Architecture note:** The screenshot and package configuration on this page document the previous OpenWrt gateway. OpenWrt has since been replaced by UniFi; the stable-hostname design remains relevant to WireGuard remote access.
 
 ## Objective
 
@@ -28,7 +30,7 @@ Cloudflare is used for:
 vpn.sterneborn.org
 ```
 
-This hostname points to the current public WAN IP address of the OpenWrt router.
+This hostname resolves to the public WAN IP used by the remote-access endpoint.
 
 ---
 
@@ -45,12 +47,12 @@ vpn.sterneborn.org
 ↓
 Current WAN IP
 ↓
-OpenWrt WireGuard Server
+WireGuard Endpoint
 ```
 
 ---
 
-## OpenWrt Configuration
+## Previous OpenWrt Configuration
 
 Installed packages:
 
@@ -140,9 +142,11 @@ logread | grep ddns
 
 A working setup should show:
 
-* DDNS service running
+* DDNS updater running on the active platform
 * Registered IP matching WAN IP
 * WireGuard endpoint reachable through the domain name
+
+The `logread` command and OpenWrt service checks above apply to the previous gateway and are retained as implementation history.
 
 ---
 
