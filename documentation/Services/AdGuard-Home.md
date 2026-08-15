@@ -52,6 +52,8 @@ After identifying the conflict, the service was reconfigured and AdGuard Home wa
 
 The AdGuard Home dashboard provides visibility into DNS activity, blocked requests, client statistics and service health.
 
+> **Screenshot context:** These screenshots document the original AdGuard Home deployment. Dashboard totals, client addresses, and UI details are point-in-time evidence; UniFi now provides the gateway, DHCP, and firewall integration.
+
 ![AdGuard Dashboard](../assets/screenshots/adguard-dashboard.png)
 
 The dashboard allows monitoring of:
@@ -82,7 +84,7 @@ This architecture allows DNS filtering while maintaining normal internet connect
 
 Successful deployment was verified using command-line testing.
 
-Example verification:
+Original deployment verification:
 
 ```bash
 dig @192.168.30.20 google.com
@@ -94,7 +96,7 @@ The Query Log provides additional verification by displaying DNS requests receiv
 
 ![Query Log](../assets/screenshots/adguard-query-log.png)
 
-This confirmed that devices on the network were actively using AdGuard Home as their DNS server.
+This confirmed that devices were using AdGuard Home as their DNS server during the original deployment.
 
 ---
 
@@ -158,7 +160,7 @@ sudo ss -tulpn | grep :53
 
 The service was then reconfigured, allowing AdGuard Home to successfully bind to the DNS port.
 
-### DNS Testing
+### Original DNS Testing
 
 DNS functionality was verified using:
 

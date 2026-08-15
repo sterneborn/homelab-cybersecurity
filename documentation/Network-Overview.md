@@ -6,6 +6,8 @@ The current network is built around a **UniFi Cloud Gateway Ultra** with a **Uni
 
 The design supports the wider homelab: Proxmox virtualization, containerized services, Home Assistant, DNS filtering, monitoring, remote access, and future Zigbee integration.
 
+![Current UniFi homelab network topology](assets/network-topology-v2.png)
+
 ---
 
 ## Architecture at a Glance

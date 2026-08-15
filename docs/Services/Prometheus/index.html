@@ -29,7 +29,7 @@
     
     
       
-        <title>Prometheus - Cybersecurity Homelab Documentation</title>
+        <title>Prometheus (Planned) - Cybersecurity Homelab Documentation</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#prometheus" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prometheus
+              Prometheus (Planned)
             
           </span>
         </div>
@@ -1038,6 +1043,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prometheus (Planned)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1046,7 +1071,7 @@
   <span class="md-ellipsis">
     
   
-    Prometheus
+    Prometheus (Planned)
   
 
     
@@ -1055,6 +1080,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intended-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intended Role
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1075,7 +1163,7 @@
   <span class="md-ellipsis">
     
   
-    Grafana
+    Grafana (Planned)
   
 
     
@@ -1103,7 +1191,7 @@
   <span class="md-ellipsis">
     
   
-    Alerting
+    Alerting (Planned)
   
 
     
@@ -1333,7 +1421,7 @@
   <span class="md-ellipsis">
     
   
-    Security Onion
+    Security Onion (Planned)
   
 
     
@@ -1361,7 +1449,7 @@
   <span class="md-ellipsis">
     
   
-    Suricata
+    Suricata (Planned)
   
 
     
@@ -1389,7 +1477,7 @@
   <span class="md-ellipsis">
     
   
-    Log Analysis
+    Log Analysis (Planned)
   
 
     
@@ -1569,6 +1657,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intended-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intended Role
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1585,9 +1727,30 @@
 
 
 
-  <h1>Prometheus</h1>
-
-
+<h1 id="prometheus">Prometheus</h1>
+<h2 id="status">Status</h2>
+<p><strong>Planned — not currently deployed.</strong></p>
+<p>Prometheus is being considered for metrics collection beyond the availability checks already provided by Uptime Kuma.</p>
+<hr />
+<h2 id="intended-role">Intended Role</h2>
+<ul>
+<li>Collect time-series metrics from selected hosts and services</li>
+<li>Provide visibility into resource usage and service behavior</li>
+<li>Supply data to Grafana dashboards</li>
+<li>Support alerting based on measurable conditions</li>
+</ul>
+<hr />
+<h2 id="architecture-considerations">Architecture Considerations</h2>
+<p>The future deployment must fit the Lab/Servers network and the UniFi zone-based firewall model. Exporters and scrape targets will be limited to the systems that need monitoring rather than opening broad cross-zone access.</p>
+<hr />
+<h2 id="before-deployment">Before Deployment</h2>
+<ul>
+<li>Define useful metrics and retention requirements</li>
+<li>Select initial scrape targets</li>
+<li>Document authentication and firewall needs</li>
+<li>Plan storage, backup, and upgrade procedures</li>
+<li>Avoid duplicating checks already handled well by Uptime Kuma</li>
+</ul>
 
 
 

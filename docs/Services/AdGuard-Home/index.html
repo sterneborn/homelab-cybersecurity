@@ -1191,10 +1191,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dns-testing" class="md-nav__link">
+  <a href="#original-dns-testing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DNS Testing
+        Original DNS Testing
       
     </span>
   </a>
@@ -1268,7 +1268,7 @@
   <span class="md-ellipsis">
     
   
-    Prometheus
+    Prometheus (Planned)
   
 
     
@@ -1296,7 +1296,7 @@
   <span class="md-ellipsis">
     
   
-    Grafana
+    Grafana (Planned)
   
 
     
@@ -1324,7 +1324,7 @@
   <span class="md-ellipsis">
     
   
-    Alerting
+    Alerting (Planned)
   
 
     
@@ -1554,7 +1554,7 @@
   <span class="md-ellipsis">
     
   
-    Security Onion
+    Security Onion (Planned)
   
 
     
@@ -1582,7 +1582,7 @@
   <span class="md-ellipsis">
     
   
-    Suricata
+    Suricata (Planned)
   
 
     
@@ -1610,7 +1610,7 @@
   <span class="md-ellipsis">
     
   
-    Log Analysis
+    Log Analysis (Planned)
   
 
     
@@ -1950,10 +1950,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dns-testing" class="md-nav__link">
+  <a href="#original-dns-testing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DNS Testing
+        Original DNS Testing
       
     </span>
   </a>
@@ -2027,6 +2027,9 @@
 <hr />
 <h2 id="dashboard-overview">Dashboard Overview</h2>
 <p>The AdGuard Home dashboard provides visibility into DNS activity, blocked requests, client statistics and service health.</p>
+<blockquote>
+<p><strong>Screenshot context:</strong> These screenshots document the original AdGuard Home deployment. Dashboard totals, client addresses, and UI details are point-in-time evidence; UniFi now provides the gateway, DHCP, and firewall integration.</p>
+</blockquote>
 <p><img alt="AdGuard Dashboard" src="../../assets/screenshots/adguard-dashboard.png" /></p>
 <p>The dashboard allows monitoring of:</p>
 <ul>
@@ -2046,13 +2049,13 @@
 <hr />
 <h2 id="dns-verification">DNS Verification</h2>
 <p>Successful deployment was verified using command-line testing.</p>
-<p>Example verification:</p>
+<p>Original deployment verification:</p>
 <pre><code class="language-bash">dig @192.168.30.20 google.com
 </code></pre>
 <p>Responses confirmed that DNS queries were successfully processed through AdGuard Home.</p>
 <p>The Query Log provides additional verification by displaying DNS requests received from network clients.</p>
 <p><img alt="Query Log" src="../../assets/screenshots/adguard-query-log.png" /></p>
-<p>This confirmed that devices on the network were actively using AdGuard Home as their DNS server.</p>
+<p>This confirmed that devices were using AdGuard Home as their DNS server during the original deployment.</p>
 <hr />
 <h2 id="network-integration">Network Integration</h2>
 <p>The current UniFi network advertises AdGuard Home to the client networks that use it. Zone-based policies allow DNS traffic without granting broad access between Trusted, Guest, Lab/Servers, and IoT networks.</p>
@@ -2093,7 +2096,7 @@
 <pre><code class="language-bash">sudo ss -tulpn | grep :53
 </code></pre>
 <p>The service was then reconfigured, allowing AdGuard Home to successfully bind to the DNS port.</p>
-<h3 id="dns-testing">DNS Testing</h3>
+<h3 id="original-dns-testing">Original DNS Testing</h3>
 <p>DNS functionality was verified using:</p>
 <pre><code class="language-bash">dig @192.168.30.20 google.com
 </code></pre>

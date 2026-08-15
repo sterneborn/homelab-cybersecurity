@@ -29,7 +29,7 @@
     
     
       
-        <title>Log Analysis - Cybersecurity Homelab Documentation</title>
+        <title>Log Analysis (Planned) - Cybersecurity Homelab Documentation</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#log-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Log Analysis
+              Log Analysis (Planned)
             
           </span>
         </div>
@@ -1034,7 +1039,7 @@
   <span class="md-ellipsis">
     
   
-    Prometheus
+    Prometheus (Planned)
   
 
     
@@ -1062,7 +1067,7 @@
   <span class="md-ellipsis">
     
   
-    Grafana
+    Grafana (Planned)
   
 
     
@@ -1090,7 +1095,7 @@
   <span class="md-ellipsis">
     
   
-    Alerting
+    Alerting (Planned)
   
 
     
@@ -1325,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Security Onion
+    Security Onion (Planned)
   
 
     
@@ -1353,7 +1358,7 @@
   <span class="md-ellipsis">
     
   
-    Suricata
+    Suricata (Planned)
   
 
     
@@ -1380,6 +1385,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log Analysis (Planned)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1388,7 +1413,7 @@
   <span class="md-ellipsis">
     
   
-    Log Analysis
+    Log Analysis (Planned)
   
 
     
@@ -1397,6 +1422,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planned-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planned Direction
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1569,6 +1646,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#planned-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planned Direction
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1585,9 +1705,30 @@
 
 
 
-  <h1>Log Analysis</h1>
-
-
+<h1 id="log-analysis">Log Analysis</h1>
+<h2 id="status">Status</h2>
+<p><strong>Planned expansion.</strong></p>
+<p>Service-specific logs are already used during troubleshooting, but a centralized log-analysis platform is not currently documented as deployed.</p>
+<hr />
+<h2 id="current-practice">Current Practice</h2>
+<p>Troubleshooting uses the logs closest to the failing layer, including:</p>
+<ul>
+<li><code>journalctl</code> and <code>systemctl</code> for Linux services</li>
+<li>Docker container logs</li>
+<li>Proxmox task and system logs</li>
+<li>UniFi gateway and firewall events</li>
+<li>Application logs from self-hosted services</li>
+</ul>
+<hr />
+<h2 id="planned-direction">Planned Direction</h2>
+<ul>
+<li>Centralize selected logs without collecting unnecessary personal data</li>
+<li>Normalize timestamps and host identity</li>
+<li>Build repeatable searches for common failures</li>
+<li>Correlate network, host, and application events</li>
+<li>Define retention, access, and backup requirements</li>
+</ul>
+<p>The goal is useful investigation capability rather than collecting every available log by default.</p>
 
 
 

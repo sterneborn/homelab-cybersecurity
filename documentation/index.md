@@ -108,9 +108,9 @@ The current architecture has migrated to UniFi. A UniFi Cloud Gateway Ultra now 
 * [Portainer](Services/Portainer.md)
 * [AdGuard Home](Services/AdGuard-Home.md)
 * [Uptime Kuma](Services/Uptime-Kuma.md)
-* [Prometheus](Services/Prometheus.md)
-* [Grafana](Services/Grafana.md)
-* [Alerting](Services/Alerting.md)
+* [Prometheus — Planned](Services/Prometheus.md)
+* [Grafana — Planned](Services/Grafana.md)
+* [Alerting — Planned](Services/Alerting.md)
 
 ## Projects
 
@@ -120,9 +120,9 @@ The current architecture has migrated to UniFi. A UniFi Cloud Gateway Ultra now 
 
 ## Security and Career
 
-* [Security Onion](Security/Security-Onion.md)
-* [Suricata](Security/Suricata.md)
-* [Log Analysis](Security/Log-Analysis.md)
+* [Security Onion — Planned](Security/Security-Onion.md)
+* [Suricata — Planned](Security/Suricata.md)
+* [Log Analysis — Planned](Security/Log-Analysis.md)
 * [Career Journey](Career/Career-Journey.md)
 * [Learning Methodology](Career/Learning-Methodology.md)
 

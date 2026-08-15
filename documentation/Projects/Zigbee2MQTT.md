@@ -6,6 +6,8 @@
 
 The next smart-home expansion is a dedicated Zigbee coordinator with Zigbee2MQTT, integrated with Home Assistant while keeping IoT devices in their own network segment.
 
+![Planned Zigbee2MQTT architecture](../assets/zigbee2mqtt-architecture.svg)
+
 ---
 
 ## Planned Data Path

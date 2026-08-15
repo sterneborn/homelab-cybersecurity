@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Current UniFi homelab network topology</title>
+  <desc id="desc">Internet connects to a UniFi Cloud Gateway Ultra, which manages a UniFi access point, WireGuard access, zone-based firewall policy, and Trusted, Guest, Lab and Servers, and IoT VLANs.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.55"/>
+    </filter>
+    <style>
+      .title { fill: #f8fafc; font-size: 44px; font-weight: 700; }
+      .subtitle { fill: #94a3b8; font-size: 21px; font-weight: 400; }
+      .heading { fill: #f8fafc; font-size: 24px; font-weight: 700; }
+      .label { fill: #cbd5e1; font-size: 18px; font-weight: 500; }
+      .small { fill: #94a3b8; font-size: 16px; font-weight: 400; }
+      .eyebrow { fill: #38bdf8; font-size: 16px; font-weight: 700; letter-spacing: 2px; }
+      .card { fill: #111827; stroke: #334155; stroke-width: 2; }
+      .primary { fill: #0c4a6e; stroke: #38bdf8; stroke-width: 3; }
+      .line { fill: none; stroke: #38bdf8; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { fill: none; stroke: #a78bfa; stroke-width: 3; stroke-dasharray: 10 10; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="1536" height="1024" rx="34" fill="url(#background)"/>
+  <text x="72" y="78" class="eyebrow">CURRENT ARCHITECTURE</text>
+  <text x="72" y="132" class="title">UniFi Homelab Network</text>
+  <text x="72" y="169" class="subtitle">Segmented networking, zone-based policy and self-hosted infrastructure</text>
+
+  <rect x="670" y="58" width="196" height="76" rx="16" class="card"/>
+  <circle cx="708" cy="96" r="14" fill="#38bdf8"/>
+  <text x="738" y="104" class="heading">Internet</text>
+
+  <rect x="766" y="134" width="4" height="84" fill="#38bdf8"/>
+  <rect x="518" y="218" width="500" height="112" rx="20" class="primary" filter="url(#shadow)"/>
+  <text x="768" y="263" text-anchor="middle" class="heading">UniFi Cloud Gateway Ultra</text>
+  <text x="768" y="296" text-anchor="middle" class="label">Gateway · Router · Firewall · UniFi Network</text>
+
+  <rect x="72" y="224" width="328" height="100" rx="18" class="card"/>
+  <text x="98" y="264" class="heading">WireGuard</text>
+  <text x="98" y="296" class="small">Current remote access</text>
+  <rect x="400" y="272" width="118" height="4" fill="#a78bfa"/>
+
+  <rect x="1136" y="224" width="328" height="100" rx="18" class="card"/>
+  <text x="1162" y="264" class="heading">UniFi-managed Wi-Fi</text>
+  <text x="1162" y="296" class="small">Access point · VLAN-backed SSIDs</text>
+  <rect x="1018" y="272" width="118" height="4" fill="#38bdf8"/>
+
+  <rect x="766" y="330" width="4" height="60" fill="#38bdf8"/>
+  <rect x="420" y="390" width="696" height="74" rx="16" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+  <text x="768" y="421" text-anchor="middle" class="heading">Zone-based firewall policies</text>
+  <text x="768" y="448" text-anchor="middle" class="small">Default isolation with explicit access for required services</text>
+
+  <rect x="766" y="464" width="4" height="50" fill="#38bdf8"/>
+  <rect x="204" y="510" width="1128" height="4" fill="#38bdf8"/>
+  <rect x="202" y="512" width="4" height="36" fill="#38bdf8"/>
+  <rect x="578" y="512" width="4" height="36" fill="#38bdf8"/>
+  <rect x="954" y="512" width="4" height="36" fill="#38bdf8"/>
+  <rect x="1330" y="512" width="4" height="36" fill="#38bdf8"/>
+
+  <rect x="72" y="548" width="264" height="176" rx="18" class="card"/>
+  <rect x="72" y="548" width="264" height="12" rx="6" fill="#22c55e"/>
+  <text x="98" y="605" class="heading">Trusted</text>
+  <text x="98" y="640" class="label">Personal devices</text>
+  <text x="98" y="670" class="label">Admin clients</text>
+  <text x="98" y="700" class="small">Controlled service access</text>
+
+  <rect x="448" y="548" width="264" height="176" rx="18" class="card"/>
+  <rect x="448" y="548" width="264" height="12" rx="6" fill="#f59e0b"/>
+  <text x="474" y="605" class="heading">Guest</text>
+  <text x="474" y="640" class="label">Visitor Wi-Fi</text>
+  <text x="474" y="670" class="label">Internet access</text>
+  <text x="474" y="700" class="small">Private networks blocked</text>
+
+  <rect x="824" y="548" width="264" height="176" rx="18" class="card"/>
+  <rect x="824" y="548" width="264" height="12" rx="6" fill="#38bdf8"/>
+  <text x="850" y="605" class="heading">Lab / Servers</text>
+  <text x="850" y="640" class="label">Proxmox · VMs</text>
+  <text x="850" y="670" class="label">Docker · Portainer</text>
+  <text x="850" y="700" class="small">AdGuard · Uptime Kuma</text>
+
+  <rect x="1200" y="548" width="264" height="176" rx="18" class="card"/>
+  <rect x="1200" y="548" width="264" height="12" rx="6" fill="#a78bfa"/>
+  <text x="1226" y="605" class="heading">IoT</text>
+  <text x="1226" y="640" class="label">Smart-home devices</text>
+  <text x="1226" y="670" class="label">Home Assistant</text>
+  <text x="1226" y="700" class="small">Planned Zigbee2MQTT</text>
+
+  <rect x="72" y="788" width="1392" height="154" rx="22" fill="#111827" stroke="#1e293b" stroke-width="2"/>
+  <text x="104" y="834" class="eyebrow">OPERATIONS &amp; PROJECTS</text>
+  <text x="104" y="881" class="heading">Knut AI &amp; Automation</text>
+  <text x="458" y="881" class="heading">Home Assistant</text>
+  <text x="772" y="881" class="heading">Borgen Audio</text>
+  <text x="1070" y="881" class="heading">Monitoring &amp; DNS</text>
+  <text x="104" y="914" class="small">Custom workflows</text>
+  <text x="458" y="914" class="small">Local automation</text>
+  <text x="772" y="914" class="small">Pi 4 · DAC · AirPlay · Bluetooth</text>
+  <text x="1070" y="914" class="small">Uptime Kuma · AdGuard Home</text>
+</svg>

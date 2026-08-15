@@ -4,6 +4,8 @@
 
 **Borgen Audio** is a Raspberry Pi 4 audio project that combines network streaming and Bluetooth playback through a dedicated DAC. The project required integration and troubleshooting across Linux services, audio routing, and Bluetooth.
 
+![Borgen Audio architecture](../assets/borgen-audio-architecture.svg)
+
 ---
 
 ## Hardware

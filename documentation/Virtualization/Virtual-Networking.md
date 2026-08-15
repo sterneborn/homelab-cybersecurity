@@ -54,6 +54,8 @@ vmbr0
 
 The bridge connects the physical network adapter to virtual machines running on the host.
 
+> **Screenshot context:** The screenshots on this page come from the original OpenWrt-era Lab VLAN deployment. They remain useful evidence of the Proxmox bridge and VM configuration, but the displayed addressing is not the current public network design.
+
 ![Proxmox Network Bridge](../assets/screenshots/proxmox-vmbr0.png)
 
 The bridge acts similarly to a Layer 2 switch and allows virtual machines to access the network without requiring additional routing configuration.

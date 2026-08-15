@@ -8,6 +8,8 @@ The homelab now uses a **UniFi Cloud Gateway Ultra** as its gateway, router, and
 
 The UniFi deployment replaced the earlier Netgear R7800 and OpenWrt architecture. The [OpenWrt documentation](OpenWrt.md) remains available as a record of that earlier phase and the skills developed while operating it.
 
+![Current UniFi homelab network topology](../assets/network-topology-v2.png)
+
 ---
 
 ## Current Components

@@ -4,6 +4,8 @@
 
 Knut is a major custom AI and automation project within the homelab. It is an ongoing practical environment for exploring how AI-assisted workflows can interact with self-hosted services and repeatable automation while remaining observable and under operator control.
 
+![Knut AI and automation workflow](../assets/knut-workflow.svg)
+
 ---
 
 ## Project Focus

@@ -35,6 +35,10 @@ The current environment is based on UniFi networking and Proxmox virtualization.
 * **Borgen Audio** — Raspberry Pi 4 with Raspberry Pi DAC Pro, AirPlay through Shairport Sync, and Android Bluetooth audio through BlueALSA
 * **Zigbee2MQTT** — planned Zigbee coordinator, MQTT broker, and Home Assistant architecture
 
+## Current Network Topology
+
+![Current UniFi Network Topology](diagrams/network-topology.png)
+
 ## Network Segmentation
 
 | Network | Purpose |
@@ -72,7 +76,7 @@ The first segmented homelab network ran on a Netgear R7800 with OpenWrt 24.10. I
 
 That architecture was later migrated to UniFi. The old topology, screenshots, configuration notes, and project journal entries remain in the repository as evidence of the earlier implementation and the learning that informed the current design.
 
-![Previous OpenWrt Network Topology](diagrams/network-topology.png)
+![Previous OpenWrt Network Topology](diagrams/openwrt-network-topology.png)
 
 ## Documentation
 

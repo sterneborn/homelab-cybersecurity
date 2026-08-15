@@ -55,6 +55,8 @@ Separating backup storage from the primary virtualization storage improves resil
 
 A scheduled backup job has been configured within Proxmox to automatically protect critical virtual machines.
 
+> **Screenshot context:** Backup and snapshot screenshots show the configuration at the time it was validated. Current schedules, retention, and recovery points must be confirmed in Proxmox before an operational restore.
+
 ![Backup Schedule](../assets/screenshots/proxmox-backup-schedule.png)
 
 Configuration:

@@ -50,6 +50,8 @@ The service became the first dedicated monitoring platform within the homelab.
 
 The Uptime Kuma dashboard provides a centralized overview of monitored services and their operational status.
 
+> **Screenshot context:** The dashboard image is a point-in-time capture from the monitoring rollout. Availability, response times, and monitor membership must be read from the live dashboard for operational use.
+
 ![Uptime Kuma Dashboard](../assets/screenshots/uptime-kuma-dashboard.png)
 
 The dashboard displays:

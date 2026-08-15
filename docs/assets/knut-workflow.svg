@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" role="img" aria-labelledby="title desc">
+  <title id="title">Knut AI and automation workflow</title>
+  <desc id="desc">Requests and events enter Knut, operator controls guide decisions, actions integrate with approved homelab services, and logs support verification and improvement.</desc>
+  <style>
+    .bg{fill:#0f172a}.card{fill:#111827;stroke:#334155;stroke-width:2}.core{fill:#0c4a6e;stroke:#38bdf8;stroke-width:3}.line{fill:none;stroke:#38bdf8;stroke-width:4}.dash{fill:none;stroke:#a78bfa;stroke-width:3;stroke-dasharray:10 10}.h{fill:#f8fafc;font-size:26px;font-weight:700}.p{fill:#cbd5e1;font-size:18px;font-weight:500}.s{fill:#94a3b8;font-size:16px;font-weight:400}.t{fill:#f8fafc;font-size:38px;font-weight:700}.e{fill:#38bdf8;font-size:15px;font-weight:700;letter-spacing:2px}
+  </style>
+  <rect width="1400" height="640" rx="28" class="bg"/>
+  <text x="64" y="66" class="e">CUSTOM PROJECT</text>
+  <text x="64" y="116" class="t">Knut AI &amp; Automation</text>
+  <text x="64" y="150" class="s">Observable workflows with explicit operator control</text>
+  <rect x="64" y="232" width="250" height="148" rx="18" class="card"/>
+  <text x="92" y="278" class="h">Inputs</text>
+  <text x="92" y="316" class="p">Requests · Events</text>
+  <text x="92" y="348" class="s">Documented triggers</text>
+  <rect x="314" y="304" width="136" height="4" fill="#38bdf8"/>
+  <rect x="450" y="214" width="330" height="184" rx="22" class="core"/>
+  <text x="615" y="268" text-anchor="middle" class="h">Knut</text>
+  <text x="615" y="307" text-anchor="middle" class="p">AI-assisted reasoning</text>
+  <text x="615" y="339" text-anchor="middle" class="p">Automation orchestration</text>
+  <text x="615" y="371" text-anchor="middle" class="s">Incremental and reviewable</text>
+  <rect x="780" y="304" width="136" height="4" fill="#38bdf8"/>
+  <rect x="916" y="232" width="420" height="148" rx="18" class="card"/>
+  <text x="944" y="278" class="h">Approved integrations</text>
+  <text x="944" y="316" class="p">Homelab services · Automation</text>
+  <text x="944" y="348" class="s">Only documented actions</text>
+  <rect x="450" y="464" width="330" height="112" rx="18" class="card"/>
+  <text x="615" y="509" text-anchor="middle" class="h">Operator control</text>
+  <text x="615" y="542" text-anchor="middle" class="s">Review · Approval · Boundaries</text>
+  <rect x="613" y="398" width="4" height="66" fill="#a78bfa"/>
+  <rect x="916" y="464" width="420" height="112" rx="18" class="card"/>
+  <text x="944" y="509" class="h">Logs &amp; verification</text>
+  <text x="944" y="542" class="s">Troubleshoot · Learn · Improve</text>
+  <rect x="1124" y="380" width="4" height="84" fill="#a78bfa"/>
+</svg>

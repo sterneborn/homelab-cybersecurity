@@ -8,11 +8,15 @@ The Netgear R7800 and OpenWrt 24.10 platform was the homelab's earlier gateway, 
 
 This page is intentionally retained because the OpenWrt phase documents important networking, security, and troubleshooting work that informed the current design.
 
+![Previous OpenWrt network topology](../assets/openwrt-network-topology-v2.png)
+
 ---
 
 ## OpenWrt Dashboard
 
 ![OpenWrt Overview](../assets/screenshots/openwrt-overview.png)
+
+*Historical screenshot from the previous OpenWrt gateway.*
 
 ---
 

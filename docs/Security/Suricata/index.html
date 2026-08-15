@@ -29,7 +29,7 @@
     
     
       
-        <title>Suricata - Cybersecurity Homelab Documentation</title>
+        <title>Suricata (Planned) - Cybersecurity Homelab Documentation</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#suricata" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Suricata
+              Suricata (Planned)
             
           </span>
         </div>
@@ -1034,7 +1039,7 @@
   <span class="md-ellipsis">
     
   
-    Prometheus
+    Prometheus (Planned)
   
 
     
@@ -1062,7 +1067,7 @@
   <span class="md-ellipsis">
     
   
-    Grafana
+    Grafana (Planned)
   
 
     
@@ -1090,7 +1095,7 @@
   <span class="md-ellipsis">
     
   
-    Alerting
+    Alerting (Planned)
   
 
     
@@ -1325,7 +1330,7 @@
   <span class="md-ellipsis">
     
   
-    Security Onion
+    Security Onion (Planned)
   
 
     
@@ -1352,6 +1357,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suricata (Planned)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1360,7 +1385,7 @@
   <span class="md-ellipsis">
     
   
-    Suricata
+    Suricata (Planned)
   
 
     
@@ -1369,6 +1394,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1389,7 +1466,7 @@
   <span class="md-ellipsis">
     
   
-    Log Analysis
+    Log Analysis (Planned)
   
 
     
@@ -1569,6 +1646,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1585,9 +1705,29 @@
 
 
 
-  <h1>Suricata</h1>
-
-
+<h1 id="suricata">Suricata</h1>
+<h2 id="status">Status</h2>
+<p><strong>Planned evaluation — not currently deployed.</strong></p>
+<p>Suricata is planned as a hands-on intrusion-detection and network-analysis project after traffic visibility and sensor placement have been designed for the UniFi environment.</p>
+<hr />
+<h2 id="evaluation-goals">Evaluation Goals</h2>
+<ul>
+<li>Learn signature-based network detection</li>
+<li>Understand rule selection and tuning</li>
+<li>Investigate alerts against packet and log evidence</li>
+<li>Measure false positives before treating alerts as incidents</li>
+<li>Document performance and privacy considerations</li>
+</ul>
+<hr />
+<h2 id="before-deployment">Before Deployment</h2>
+<ul>
+<li>Define the traffic source and monitoring scope</li>
+<li>Select a safe sensor location</li>
+<li>Plan storage and retention</li>
+<li>Establish an alert-triage workflow</li>
+<li>Verify that monitoring does not weaken VLAN isolation</li>
+</ul>
+<p>This is roadmap work and is intentionally separated from the currently operating services.</p>
 
 
 
