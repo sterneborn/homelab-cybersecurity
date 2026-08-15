@@ -1,14 +1,13 @@
 # Screenshots
 
-This directory contains screenshots documenting the current state of the homelab environment.
+This directory contains point-in-time screenshots from different phases of the homelab. A screenshot is implementation evidence, not a live configuration record.
 
 ## Included
 
-- OpenWrt system overview
-- VLAN segmentation
-- Firewall zones and rules
-- WireGuard VPN configuration
-- Cloudflare Dynamic DNS integration
-- Network topology
+- **Historical OpenWrt:** system overview, VLAN filtering, interfaces, firewall zones and rules, WireGuard, and Cloudflare DDNS
+- **Current platforms with point-in-time values:** Proxmox, Ubuntu Server networking, Docker, Portainer, AdGuard Home, and Uptime Kuma
+- **Current topology:** maintained separately in `documentation/assets/network-topology-v2.png` and its SVG source
+
+OpenWrt screenshots are used only on pages that explicitly identify the previous architecture. Screenshots from services that remain in use include capture-context notes because versions, counters, addresses, and resource values can change.
 
 Sensitive information such as public IP addresses, API tokens, and cryptographic keys has been removed where appropriate.

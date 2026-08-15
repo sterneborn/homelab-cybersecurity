@@ -36,10 +36,11 @@ nav:
 
   - Network:
       - Overview: Network-Overview.md
-      - OpenWrt: Network/OpenWrt.md
+      - UniFi: Network/UniFi.md
       - VLANs: Network/VLANs.md
       - WireGuard: Network/WireGuard.md
       - Cloudflare DDNS: Network/Cloudflare-DDNS.md
+      - OpenWrt (Previous Architecture): Network/OpenWrt.md
 
   - Virtualization:
       - Proxmox: Virtualization/Proxmox.md
@@ -47,18 +48,24 @@ nav:
       - Backup Strategy: Virtualization/Backup-Strategy.md
 
   - Services:
+      - Home Assistant: Services/Home-Assistant.md
       - Docker: Services/Docker.md
       - Portainer: Services/Portainer.md
       - AdGuard Home: Services/AdGuard-Home.md
       - Uptime Kuma: Services/Uptime-Kuma.md
-      - Prometheus: Services/Prometheus.md
-      - Grafana: Services/Grafana.md
-      - Alerting: Services/Alerting.md
+      - Prometheus (Planned): Services/Prometheus.md
+      - Grafana (Planned): Services/Grafana.md
+      - Alerting (Planned): Services/Alerting.md
+
+  - Projects:
+      - Knut AI & Automation: Projects/Knut.md
+      - Borgen Audio: Projects/Borgen-Audio.md
+      - Planned Zigbee2MQTT: Projects/Zigbee2MQTT.md
 
   - Security:
-      - Security Onion: Security/Security-Onion.md
-      - Suricata: Security/Suricata.md
-      - Log Analysis: Security/Log-Analysis.md
+      - Security Onion (Planned): Security/Security-Onion.md
+      - Suricata (Planned): Security/Suricata.md
+      - Log Analysis (Planned): Security/Log-Analysis.md
 
   - About:
       - My Journey: Career/Career-Journey.md

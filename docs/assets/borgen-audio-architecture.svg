@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title desc">
+  <title id="title">Borgen Audio architecture</title>
+  <desc id="desc">Apple devices stream through AirPlay and Shairport Sync while Android devices stream through Bluetooth, BlueZ, and BlueALSA. Both paths use ALSA and a Raspberry Pi DAC Pro.</desc>
+  <style>
+    .bg{fill:#0f172a}.card{fill:#111827;stroke:#334155;stroke-width:2}.core{fill:#0c4a6e;stroke:#38bdf8;stroke-width:3}.line{fill:none;stroke:#38bdf8;stroke-width:4;stroke-linecap:round}.line2{fill:none;stroke:#a78bfa;stroke-width:4;stroke-linecap:round}.h{fill:#f8fafc;font-size:24px;font-weight:700}.p{fill:#cbd5e1;font-size:18px;font-weight:500}.s{fill:#94a3b8;font-size:16px;font-weight:400}.t{fill:#f8fafc;font-size:38px;font-weight:700}.e{fill:#38bdf8;font-size:15px;font-weight:700;letter-spacing:2px}
+  </style>
+  <rect width="1400" height="700" rx="28" class="bg"/>
+  <text x="64" y="66" class="e">RASPBERRY PI PROJECT</text>
+  <text x="64" y="116" class="t">Borgen Audio</text>
+  <text x="64" y="150" class="s">Two wireless audio paths, one reliable Linux output chain</text>
+  <rect x="64" y="222" width="250" height="112" rx="18" class="card"/>
+  <text x="92" y="267" class="h">Apple devices</text>
+  <text x="92" y="301" class="p">AirPlay</text>
+  <rect x="64" y="410" width="250" height="112" rx="18" class="card"/>
+  <text x="92" y="455" class="h">Android devices</text>
+  <text x="92" y="489" class="p">Bluetooth audio</text>
+  <rect x="314" y="276" width="116" height="4" fill="#38bdf8"/>
+  <rect x="314" y="464" width="116" height="4" fill="#a78bfa"/>
+  <rect x="430" y="222" width="280" height="112" rx="18" class="card"/>
+  <text x="570" y="267" text-anchor="middle" class="h">Shairport Sync</text>
+  <text x="570" y="301" text-anchor="middle" class="s">AirPlay receiver</text>
+  <rect x="430" y="410" width="280" height="112" rx="18" class="card"/>
+  <text x="570" y="451" text-anchor="middle" class="h">BlueZ + BlueALSA</text>
+  <text x="570" y="486" text-anchor="middle" class="s">Pairing · Profiles · Routing</text>
+  <rect x="710" y="276" width="102" height="4" fill="#38bdf8"/>
+  <rect x="810" y="278" width="4" height="72" fill="#38bdf8"/>
+  <rect x="710" y="464" width="102" height="4" fill="#a78bfa"/>
+  <rect x="810" y="350" width="4" height="118" fill="#a78bfa"/>
+  <rect x="812" y="294" width="204" height="112" rx="18" class="core"/>
+  <text x="914" y="340" text-anchor="middle" class="h">ALSA</text>
+  <text x="914" y="374" text-anchor="middle" class="s">Audio routing</text>
+  <rect x="1016" y="348" width="74" height="4" fill="#38bdf8"/>
+  <rect x="1090" y="258" width="246" height="184" rx="20" class="card"/>
+  <text x="1213" y="307" text-anchor="middle" class="h">Raspberry Pi 4</text>
+  <text x="1213" y="345" text-anchor="middle" class="p">DAC Pro</text>
+  <text x="1213" y="379" text-anchor="middle" class="s">Amplifier · Speakers</text>
+  <rect x="430" y="590" width="906" height="70" rx="16" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
+  <text x="883" y="619" text-anchor="middle" class="h">systemd operations</text>
+  <text x="883" y="646" text-anchor="middle" class="s">Startup ordering · Service status · Logs · Recovery</text>
+</svg>

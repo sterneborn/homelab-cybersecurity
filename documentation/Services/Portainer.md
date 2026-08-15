@@ -30,7 +30,7 @@ Portainer is deployed as a Docker container on:
 
 * Ubuntu Server
 * Running on Proxmox VE
-* Connected to VLAN 30 (Lab Network)
+* Connected to the Lab/Servers network
 
 Portainer manages the local Docker environment used throughout the homelab.
 
@@ -50,6 +50,8 @@ After deployment, connectivity and functionality were verified through the web i
 
 The Portainer dashboard provides a centralized view of the Docker environment.
 
+> **Screenshot context:** The Portainer screenshots record the original container rollout. Counts, versions, and the container list are point-in-time evidence and may differ from the live environment.
+
 ![Portainer Dashboard](../assets/screenshots/portainer-dashboard.png)
 
 The dashboard provides visibility into:
@@ -66,17 +68,17 @@ This interface simplifies infrastructure administration and provides quick acces
 
 ## Container Management
 
-Portainer is used to manage all infrastructure containers currently deployed within the homelab.
+Portainer is used to manage the homelab's Docker environment.
 
 ![Portainer Containers](../assets/screenshots/portainer-containers.png)
 
-At the time of documentation, Portainer manages:
+At the time of the captured rollout, Portainer managed:
 
 * Portainer
 * AdGuard Home
 * Uptime Kuma
 
-Additional services will be added as the homelab expands.
+The current container inventory should be verified in Portainer rather than inferred from the screenshot.
 
 ---
 

@@ -6,7 +6,7 @@ AdGuard Home was deployed as a network-wide DNS filtering solution within the ho
 
 The primary goal was to gain hands-on experience with DNS infrastructure while improving privacy, reducing unwanted content, and introducing centralized DNS management for all devices on the network.
 
-AdGuard Home became the first production service integrated directly with the OpenWrt network infrastructure.
+AdGuard Home was the first production service integrated with the homelab network and remains part of the current service stack. DHCP and network policy are now managed through UniFi.
 
 ---
 
@@ -18,7 +18,7 @@ The following objectives were defined before deployment:
 * Deploy a network-wide DNS filtering service
 * Improve privacy and reduce unwanted content
 * Gain experience troubleshooting containerized services
-* Integrate DNS services with OpenWrt
+* Integrate DNS services with the segmented network
 
 ---
 
@@ -30,9 +30,9 @@ AdGuard Home is deployed as a Docker container on:
 
 * Ubuntu Server
 * Running on Proxmox VE
-* Connected to VLAN 30 (Lab Network)
+* Connected to the Lab/Servers network
 
-The service is available to all clients through DHCP-provided DNS settings configured on the OpenWrt router.
+The service is made available to approved clients through DHCP-provided DNS settings and zone-based policy managed on the UniFi gateway.
 
 ---
 
@@ -51,6 +51,8 @@ After identifying the conflict, the service was reconfigured and AdGuard Home wa
 ## Dashboard Overview
 
 The AdGuard Home dashboard provides visibility into DNS activity, blocked requests, client statistics and service health.
+
+> **Screenshot context:** These screenshots document the original AdGuard Home deployment. Dashboard totals, client addresses, and UI details are point-in-time evidence; UniFi now provides the gateway, DHCP, and firewall integration.
 
 ![AdGuard Dashboard](../assets/screenshots/adguard-dashboard.png)
 
@@ -82,7 +84,7 @@ This architecture allows DNS filtering while maintaining normal internet connect
 
 Successful deployment was verified using command-line testing.
 
-Example verification:
+Original deployment verification:
 
 ```bash
 dig @192.168.30.20 google.com
@@ -94,13 +96,15 @@ The Query Log provides additional verification by displaying DNS requests receiv
 
 ![Query Log](../assets/screenshots/adguard-query-log.png)
 
-This confirmed that devices on the network were actively using AdGuard Home as their DNS server.
+This confirmed that devices were using AdGuard Home as their DNS server during the original deployment.
 
 ---
 
-## OpenWrt Integration
+## Network Integration
 
-After successful deployment, OpenWrt DHCP settings were updated to advertise AdGuard Home as the primary DNS server.
+The current UniFi network advertises AdGuard Home to the client networks that use it. Zone-based policies allow DNS traffic without granting broad access between Trusted, Guest, Lab/Servers, and IoT networks.
+
+During the original deployment, OpenWrt DHCP settings were updated to advertise AdGuard Home as the primary DNS server. That implementation is retained here as migration history.
 
 Clients automatically received the new DNS configuration when renewing DHCP leases.
 
@@ -156,7 +160,7 @@ sudo ss -tulpn | grep :53
 
 The service was then reconfigured, allowing AdGuard Home to successfully bind to the DNS port.
 
-### DNS Testing
+### Original DNS Testing
 
 DNS functionality was verified using:
 
@@ -177,7 +181,8 @@ The deployment of AdGuard Home provided practical experience with:
 * Docker networking
 * Port binding conflicts
 * DHCP integration
-* OpenWrt administration
+* UniFi DHCP and firewall integration
+* OpenWrt administration during the original deployment
 * Network-wide service deployment
 
 The project reinforced the importance of structured troubleshooting and verification when deploying infrastructure services.

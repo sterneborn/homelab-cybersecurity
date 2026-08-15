@@ -1,205 +1,99 @@
 # Christian Sterneborn
 
-## Aspiring Network & Cybersecurity Professional
+## Network, Infrastructure & Cybersecurity Homelab
 
-Welcome to my cybersecurity homelab portfolio.
+Welcome to the technical documentation for my current homelab and project portfolio.
 
-This repository documents my transition from industrial work into networking and cybersecurity through hands-on projects, practical implementation, structured troubleshooting, and technical documentation.
-
-The goal of this homelab is to develop real-world skills by designing, deploying, securing, monitoring, and documenting infrastructure rather than relying solely on theoretical learning.
+The environment is built for hands-on learning across networking, virtualization, Linux, self-hosted services, automation, smart-home infrastructure, and cybersecurity. The documentation records both the current architecture and the earlier systems that shaped it.
 
 ---
 
-# Current Focus
-
-I am currently focused on developing practical skills in:
-
-* Networking Fundamentals
-* OpenWrt Administration
-* VLAN Design and Segmentation
-* Linux Administration
-* Proxmox Virtualization
-* Docker Containerization
-* Infrastructure Monitoring
-* Infrastructure Documentation
-* Git and GitHub Workflows
-* Cybersecurity Fundamentals
-
----
-
-# Homelab Overview
-
-Current environment:
-
-* OpenWrt 24.10 Router
-* VLAN Segmentation
-* WireGuard VPN
-* Cloudflare Dynamic DNS
-* Proxmox Virtualization
-* Ubuntu Server VM
-* Docker Engine
-* Portainer
-* AdGuard Home
-* Uptime Kuma
-
-This environment serves as the foundation for future monitoring, logging, and security operations projects.
-
----
-
-# Current Infrastructure
+# Current Homelab
 
 ## Network
 
-* OpenWrt 24.10
-* VLAN 1 – Rescue Network
-* VLAN 10 – Trusted LAN
-* VLAN 20 – Guest Network
-* VLAN 30 – Lab Network
-* WireGuard VPN
-* Cloudflare Dynamic DNS
+* UniFi Cloud Gateway Ultra
+* UniFi-managed Wi-Fi and access point
+* Trusted, Guest, Lab/Servers, and IoT VLANs
+* Zone-based firewall policies
+* WireGuard remote access
+* Tailscale under evaluation
 
-## Virtualization
+## Virtualization and Services
 
 * Proxmox VE
-* Ubuntu Server VM
-* Virtual Networking
-* Snapshot Strategy
-
-## Services
-
-* Docker
-* Portainer
+* Home Assistant
+* Docker and Portainer
 * AdGuard Home
 * Uptime Kuma
 
-## Planned Services
+## Custom Projects
 
-* Prometheus
-* Grafana
-* Alerting
-* Security Onion
-* Suricata
-* Centralized Logging
+* **Knut** — a major custom AI and automation project
+* **Borgen Audio** — Raspberry Pi 4 audio appliance with a Raspberry Pi DAC Pro, Shairport Sync, and BlueALSA
+* **Zigbee2MQTT architecture** — planned coordinator, MQTT, and Home Assistant integration
+
+---
+
+# Architecture Evolution
+
+The network began with a Netgear R7800 running OpenWrt. That platform was used to learn VLAN configuration, firewall zones, WireGuard, dynamic DNS, Wi-Fi troubleshooting, and evidence-based network diagnostics.
+
+The current architecture has migrated to UniFi. A UniFi Cloud Gateway Ultra now provides gateway and firewall functions, and a UniFi-managed access point provides centrally managed Wi-Fi. OpenWrt remains documented as an earlier architecture rather than being erased from the project history.
+
+* [Current UniFi Network](Network/UniFi.md)
+* [Previous OpenWrt Architecture](Network/OpenWrt.md)
+* [Project Journal](Project-Journal.md)
 
 ---
 
 # Skills Demonstrated
 
-## Networking
+## Networking and Security
 
-* VLAN Configuration
-* DHCP Configuration
-* DNS Configuration
-* Routing Concepts
-* Firewall Design
-* Network Segmentation
-* VPN Deployment
+* UniFi gateway and wireless administration
+* VLAN design and segmentation
+* Zone-based firewall policy design
+* DNS and DHCP integration
+* WireGuard deployment and troubleshooting
+* Network migration and validation
 
-## Linux & Infrastructure
+## Linux and Infrastructure
 
-* Ubuntu Server Administration
-* Docker Deployment
-* Service Management
-* Command Line Operations
-* Virtualization Fundamentals
+* Proxmox virtualization
+* Ubuntu Server administration
+* Docker deployment and Portainer operations
+* Backup and recovery planning
+* `systemd`, ALSA, and BlueZ troubleshooting
 
-## Security
+## Services and Automation
 
-* Network Segmentation
-* Secure Remote Access
-* VPN Deployment
-* Firewall Policy Design
-* DNS Filtering
-
-## Documentation
-
-* Technical Documentation
-* Infrastructure Documentation
-* Troubleshooting Records
-* Change Tracking
-* Project Journaling
-
----
-
-# Technology Stack
-
-## Networking
-
-* OpenWrt
-* WireGuard
-* Cloudflare DNS
-* VLANs
-* DHCP
-* DNS
-
-## Virtualization
-
-* Proxmox VE
-* Ubuntu Server
-
-## Containerization
-
-* Docker
-* Portainer
-
-## Monitoring
-
+* Home Assistant
+* AdGuard Home
 * Uptime Kuma
+* AI-assisted workflow and automation design through Knut
+* Planned Zigbee2MQTT and MQTT integration
 
-## Version Control
+## Engineering Practice
 
-* Git
-* GitHub
-
----
-
-# Project Roadmap
-
-## Phase 1 – Network Foundation
-
-* [x] OpenWrt Deployment
-* [x] VLAN Segmentation
-* [x] Firewall Configuration
-* [x] WireGuard VPN
-* [x] Cloudflare DDNS
-
-## Phase 2 – Infrastructure & Virtualization
-
-* [x] Proxmox Installation
-* [x] Ubuntu Server VM
-* [x] Docker Deployment
-* [x] Portainer Deployment
-* [x] AdGuard Home Deployment
-* [x] Uptime Kuma Deployment
-
-## Phase 3 – Monitoring & Observability
-
-* [ ] Prometheus
-* [ ] Grafana
-* [ ] Alerting
-* [ ] Metrics Collection
-
-## Phase 4 – Security Operations
-
-* [ ] Security Onion
-* [ ] Suricata IDS
-* [ ] Log Analysis
-* [ ] Incident Detection
+* Structured troubleshooting
+* Technical documentation
+* Change tracking and project journaling
+* Git and GitHub workflows
+* Incremental testing and verification
 
 ---
 
-# Documentation
-
-## Overview
-
-* [Network Overview](00-Network-Overview.md)
+# Current Documentation
 
 ## Network
 
-* [OpenWrt](Network/OpenWrt.md)
-* [VLANs](Network/VLANs.md)
-* [WireGuard](Network/WireGuard.md)
+* [Network Overview](Network-Overview.md)
+* [UniFi Network](Network/UniFi.md)
+* [VLAN Segmentation](Network/VLANs.md)
+* [WireGuard Remote Access](Network/WireGuard.md)
 * [Cloudflare DDNS](Network/Cloudflare-DDNS.md)
+* [OpenWrt — Previous Architecture](Network/OpenWrt.md)
 
 ## Virtualization
 
@@ -209,48 +103,37 @@ This environment serves as the foundation for future monitoring, logging, and se
 
 ## Services
 
+* [Home Assistant](Services/Home-Assistant.md)
 * [Docker](Services/Docker.md)
 * [Portainer](Services/Portainer.md)
 * [AdGuard Home](Services/AdGuard-Home.md)
 * [Uptime Kuma](Services/Uptime-Kuma.md)
-* [Prometheus](Services/Prometheus.md)
-* [Grafana](Services/Grafana.md)
-* [Alerting](Services/Alerting.md)
+* [Prometheus — Planned](Services/Prometheus.md)
+* [Grafana — Planned](Services/Grafana.md)
+* [Alerting — Planned](Services/Alerting.md)
 
-## Security
+## Projects
 
-* [Security Onion](Security/Security-Onion.md)
-* [Suricata](Security/Suricata.md)
-* [Log Analysis](Security/Log-Analysis.md)
+* [Knut AI & Automation](Projects/Knut.md)
+* [Borgen Audio](Projects/Borgen-Audio.md)
+* [Planned Zigbee2MQTT Architecture](Projects/Zigbee2MQTT.md)
 
-## Career Development
+## Security and Career
 
+* [Security Onion — Planned](Security/Security-Onion.md)
+* [Suricata — Planned](Security/Suricata.md)
+* [Log Analysis — Planned](Security/Log-Analysis.md)
 * [Career Journey](Career/Career-Journey.md)
 * [Learning Methodology](Career/Learning-Methodology.md)
-
-## Journal
-
-* [Project Journal](Project-Journal.md)
 
 ---
 
 # Learning Philosophy
 
-I believe the best way to learn technology is through practical implementation, structured troubleshooting, validation, and documentation.
-
-This repository is intended to demonstrate not only technical knowledge, but also the ability to:
-
-* Solve problems methodically
-* Design infrastructure
-* Document technical systems
-* Learn independently
-* Verify solutions through testing
-* Continuously improve existing environments
+The best way to learn technology is through practical implementation, structured troubleshooting, validation, and documentation. This repository intentionally records both working systems and the migration history behind them.
 
 ---
 
 # Contact
 
-GitHub:
-
-https://github.com/sterneborn
+[GitHub](https://github.com/sterneborn)

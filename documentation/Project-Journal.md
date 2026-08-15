@@ -224,3 +224,38 @@ This session provided practical experience with:
 * Cloudflare DDNS troubleshooting
 
 The backup infrastructure now provides a significantly improved recovery capability for the homelab environment.
+
+---
+
+## 2026-08-15 – UniFi Migration and Homelab Expansion
+
+### Current State Documented
+
+* Migrated the gateway and firewall role from OpenWrt to a UniFi Cloud Gateway Ultra
+* Moved wireless management to a UniFi-managed access point
+* Organized the network into Trusted, Guest, Lab/Servers, and IoT VLANs
+* Adopted zone-based firewall policies between network segments
+* Retained WireGuard for remote access
+* Began evaluating Tailscale as a complementary remote-access option
+* Added Home Assistant to the documented service stack
+* Continued operating Proxmox, Docker, Portainer, AdGuard Home, and Uptime Kuma
+* Added Knut as a major custom AI and automation project
+* Documented the Raspberry Pi 4 Borgen Audio project
+* Planned a Zigbee coordinator and Zigbee2MQTT architecture for Home Assistant
+
+### Borgen Audio Work
+
+The Borgen Audio project combines a Raspberry Pi 4 and Raspberry Pi DAC Pro with AirPlay playback through Shairport Sync and Android Bluetooth playback through BlueALSA. Troubleshooting crossed `systemd`, ALSA, BlueZ, and audio-service configuration, reinforcing the value of validating each layer independently.
+
+### Architecture Note
+
+The OpenWrt documentation remains in the repository as a record of the original network architecture. Current documentation now clearly distinguishes that historical deployment from the UniFi environment.
+
+### Key Learnings
+
+* Network migration and policy translation
+* UniFi gateway and managed Wi-Fi administration
+* Zone-based firewall design
+* IoT segmentation and smart-home integration planning
+* AI and automation project development
+* Linux audio, Bluetooth, and service troubleshooting

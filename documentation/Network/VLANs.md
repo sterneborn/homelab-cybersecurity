@@ -1,130 +1,82 @@
 # VLAN Segmentation
 
-## VLAN Filtering Configuration
+## Status
 
-![VLAN Filtering](../assets/screenshots/vlan-filtering.png)
+**Current design on UniFi**
 
-## Objective
-
-The purpose of VLAN segmentation is to separate trusted devices, guest devices, and lab systems into different network zones.
-
-This improves security, reduces unnecessary network exposure, and creates a more realistic enterprise-style network design.
+The homelab uses VLANs to separate devices and services by role and trust level. Routing and policy enforcement are handled by the UniFi Cloud Gateway Ultra through zone-based firewall policies.
 
 ---
 
 ## VLAN Overview
 
-| VLAN    | Name     | Subnet          | Purpose                              |
-| ------- | -------- | --------------- | ------------------------------------ |
-| VLAN 1  | Recovery | 192.168.1.0/24  | Emergency access                     |
-| VLAN 10 | LAN      | 192.168.10.0/24 | Trusted devices                      |
-| VLAN 20 | Guest    | 192.168.20.0/24 | Guest and untrusted devices          |
-| VLAN 30 | Lab      | 192.168.30.0/24 | Security lab and Proxmox environment |
+| Network | Purpose | Examples |
+| ------- | ------- | -------- |
+| Trusted | Personal and administrative devices | Workstations, phones, and management clients |
+| Guest | Visitor and temporary devices | Guest Wi-Fi clients |
+| Lab/Servers | Infrastructure and test workloads | Proxmox, VMs, Docker, and self-hosted services |
+| IoT | Smart-home and lower-trust devices | Connected devices and future Zigbee integrations |
+
+VLAN identifiers and addressing are intentionally kept out of this public overview. The design focus is the trust boundary and the policy applied between segments.
 
 ---
 
-## VLAN 1 - Recovery
+## Zone-Based Firewall Model
 
-Purpose:
+The firewall starts from isolation between zones. Cross-zone communication is enabled only when a documented service or administrative workflow requires it.
 
-* Emergency router access
-* Recovery if VLAN configuration breaks
+| Source zone | Policy intent |
+| ----------- | ------------- |
+| Trusted | Permit required administration and service access; avoid unrestricted access where it is unnecessary |
+| Guest | Internet access only; block access to private networks |
+| Lab/Servers | Allow required outbound traffic; expose services only through explicit rules |
+| IoT | Isolate from Trusted and Lab/Servers; allow only required controller, DNS, and internet traffic |
+| Remote access | Limit WireGuard clients to the resources they are intended to administer or use |
 
-Gateway:
-
-```text
-192.168.1.1
-```
-
----
-
-## VLAN 10 - LAN
-
-Purpose:
-
-* Trusted personal devices
-* Daily-use devices
-
-Gateway:
-
-```text
-192.168.10.1
-```
-
-Access:
-
-* Internet access allowed
-* Access to Lab VLAN allowed
+This approach follows least privilege and makes the expected traffic flow easier to review as the homelab grows.
 
 ---
 
-## VLAN 20 - Guest
+## Wireless Segmentation
 
-Purpose:
-
-* Guest devices
-* Untrusted devices
-
-Gateway:
-
-```text
-192.168.20.1
-```
-
-Access:
-
-* Internet access allowed
-* Access to LAN blocked
-* Access to Lab blocked
+The UniFi-managed access point maps wireless networks to the appropriate VLAN. This keeps guest and IoT clients separated even when they share the same physical access point as trusted devices.
 
 ---
 
-## VLAN 30 - Lab
+## Lab/Servers Segment
 
-Purpose:
+The Lab/Servers network hosts the virtualization and service layer, including:
 
-* Proxmox
-* Linux servers
-* Docker
-* Security tools
-* Monitoring systems
+* Proxmox VE
+* Ubuntu Server workloads
+* Docker and Portainer
+* AdGuard Home
+* Uptime Kuma
+* Home Assistant integrations
 
-Gateway:
-
-```text
-192.168.30.1
-```
-
-Access:
-
-* Internet access allowed
-* Administrative access from LAN allowed
-* Future lab services hosted here
+Administrative access originates from approved clients in the Trusted zone and is controlled through firewall policy.
 
 ---
 
-## Firewall Logic
+## IoT Segment
 
-The firewall is designed around the principle of least privilege.
+The IoT network provides a dedicated trust boundary for smart-home devices. The planned Zigbee coordinator and Zigbee2MQTT architecture will integrate with Home Assistant without granting IoT devices broad access to the rest of the homelab.
 
-| Source    | Destination | Status  |
-| --------- | ----------- | ------- |
-| LAN       | Internet    | Allowed |
-| LAN       | Lab         | Allowed |
-| Guest     | Internet    | Allowed |
-| Guest     | LAN         | Blocked |
-| Guest     | Lab         | Blocked |
-| Lab       | Internet    | Allowed |
-| WireGuard | LAN         | Allowed |
-| WireGuard | Lab         | Allowed |
-| WireGuard | WAN         | Allowed |
+See [Planned Zigbee2MQTT Architecture](../Projects/Zigbee2MQTT.md).
 
 ---
 
-## Lessons Learned
+## Migration History
 
-VLANs are not only about separating devices. They are about controlling trust.
+The earlier OpenWrt design used Trusted, Guest, and Lab VLANs plus a recovery network. Its screenshots and address plan remain in the [OpenWrt documentation](OpenWrt.md) as historical implementation evidence, but they do not describe the current UniFi policy model.
 
-A flat network treats all devices as equally trusted. A segmented network allows different rules for different device groups.
+---
 
-This is a core concept in both enterprise networking and cybersecurity.
+## Skills Demonstrated
+
+* VLAN and SSID design
+* Zone-based firewall policy
+* Trust-boundary definition
+* Least-privilege network access
+* IoT isolation
+* Network migration and documentation

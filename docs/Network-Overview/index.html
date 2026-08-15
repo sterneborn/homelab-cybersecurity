@@ -18,7 +18,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../Network/OpenWrt/">
+        <link rel="next" href="../Network/UniFi/">
       
       
         
@@ -285,11 +285,31 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Services/Docker/" class="md-tabs__link">
+        <a href="../Services/Home-Assistant/" class="md-tabs__link">
           
   
   
   Services
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Projects/Knut/" class="md-tabs__link">
+          
+  
+  
+  Projects
 
         </a>
       </li>
@@ -567,10 +587,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#network-topology" class="md-nav__link">
+  <a href="#current-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Topology
+        Current Architecture
       
     </span>
   </a>
@@ -578,10 +598,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#architecture-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objective
+        Architecture at a Glance
       
     </span>
   </a>
@@ -589,22 +609,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware" class="md-nav__link">
+  <a href="#network-segments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hardware
+        Network Segments
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Hardware">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Infrastructure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Infrastructure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#router" class="md-nav__link">
+  <a href="#gateway-and-wi-fi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Router
+        Gateway and Wi-Fi
       
     </span>
   </a>
@@ -612,10 +643,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
+  <a href="#virtualization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Server
+        Virtualization
       
     </span>
   </a>
@@ -623,10 +654,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#client-devices" class="md-nav__link">
+  <a href="#services-and-projects" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Client Devices
+        Services and Projects
       
     </span>
   </a>
@@ -639,102 +670,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-architecture" class="md-nav__link">
+  <a href="#architecture-history" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Architecture
+        Architecture History
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Network Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vlan-10-lan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VLAN 10 - LAN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vlan-20-guest" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VLAN 20 - Guest
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vlan-30-lab" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VLAN 30 - Lab
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wireguard-vpn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WireGuard VPN
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-services" class="md-nav__link">
+  <a href="#related-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External Services
+        Related Documentation
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="External Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloudflare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cloudflare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vpn-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VPN Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -754,14 +707,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Network/OpenWrt/" class="md-nav__link">
+      <a href="../Network/UniFi/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    OpenWrt
+    UniFi
   
 
     
@@ -846,6 +799,34 @@
     
   
     Cloudflare DDNS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Network/OpenWrt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenWrt (Previous Architecture)
   
 
     
@@ -1068,6 +1049,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Services/Home-Assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Services/Docker/" class="md-nav__link">
         
   
@@ -1187,7 +1196,7 @@
   <span class="md-ellipsis">
     
   
-    Prometheus
+    Prometheus (Planned)
   
 
     
@@ -1215,7 +1224,7 @@
   <span class="md-ellipsis">
     
   
-    Grafana
+    Grafana (Planned)
   
 
     
@@ -1243,7 +1252,7 @@
   <span class="md-ellipsis">
     
   
-    Alerting
+    Alerting (Planned)
   
 
     
@@ -1294,7 +1303,7 @@
   <span class="md-ellipsis">
     
   
-    Security
+    Projects
   
 
     
@@ -1310,7 +1319,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Security
+    Projects
   
 
           </label>
@@ -1323,14 +1332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Security/Security-Onion/" class="md-nav__link">
+      <a href="../Projects/Knut/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Security Onion
+    Knut AI & Automation
   
 
     
@@ -1351,14 +1360,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Security/Suricata/" class="md-nav__link">
+      <a href="../Projects/Borgen-Audio/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Suricata
+    Borgen Audio
   
 
     
@@ -1379,14 +1388,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../Security/Log-Analysis/" class="md-nav__link">
+      <a href="../Projects/Zigbee2MQTT/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Log Analysis
+    Planned Zigbee2MQTT
   
 
     
@@ -1437,7 +1446,7 @@
   <span class="md-ellipsis">
     
   
-    About
+    Security
   
 
     
@@ -1450,6 +1459,149 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/Security-Onion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Onion (Planned)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/Suricata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suricata (Planned)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/Log-Analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log Analysis (Planned)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1576,10 +1728,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#network-topology" class="md-nav__link">
+  <a href="#current-architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Topology
+        Current Architecture
       
     </span>
   </a>
@@ -1587,10 +1739,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
+  <a href="#architecture-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objective
+        Architecture at a Glance
       
     </span>
   </a>
@@ -1598,22 +1750,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware" class="md-nav__link">
+  <a href="#network-segments" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Hardware
+        Network Segments
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Hardware">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Infrastructure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Infrastructure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#router" class="md-nav__link">
+  <a href="#gateway-and-wi-fi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Router
+        Gateway and Wi-Fi
       
     </span>
   </a>
@@ -1621,10 +1784,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
+  <a href="#virtualization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Server
+        Virtualization
       
     </span>
   </a>
@@ -1632,10 +1795,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#client-devices" class="md-nav__link">
+  <a href="#services-and-projects" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Client Devices
+        Services and Projects
       
     </span>
   </a>
@@ -1648,102 +1811,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-architecture" class="md-nav__link">
+  <a href="#architecture-history" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Architecture
+        Architecture History
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Network Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vlan-10-lan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VLAN 10 - LAN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vlan-20-guest" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VLAN 20 - Guest
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vlan-30-lab" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VLAN 30 - Lab
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wireguard-vpn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WireGuard VPN
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#external-services" class="md-nav__link">
+  <a href="#related-documentation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External Services
+        Related Documentation
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="External Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloudflare" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cloudflare
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vpn-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        VPN Endpoint
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1765,87 +1850,106 @@
 
 
 <h1 id="homelab-network-overview">Homelab Network Overview</h1>
-<h2 id="network-topology">Network Topology</h2>
-<p><img alt="Network Topology" src="../assets/network-topology-v2.png" /></p>
-<h2 id="objective">Objective</h2>
-<p>This homelab was built to develop practical skills in:</p>
-<ul>
-<li>Networking</li>
-<li>Linux Administration</li>
-<li>Cybersecurity</li>
-<li>Virtualization</li>
-<li>Infrastructure Monitoring</li>
-<li>Network Security</li>
-</ul>
-<p>The environment is designed to simulate a small enterprise network and serve as a platform for continuous learning and experimentation.</p>
+<h2 id="current-architecture">Current Architecture</h2>
+<p>The current network is built around a <strong>UniFi Cloud Gateway Ultra</strong> with a <strong>UniFi-managed access point</strong>. The gateway provides routing, VLANs, and zone-based firewall policy, while UniFi-managed Wi-Fi maps wireless clients into the appropriate trust zone.</p>
+<p>The design supports the wider homelab: Proxmox virtualization, containerized services, Home Assistant, DNS filtering, monitoring, remote access, and future Zigbee integration.</p>
+<p><img alt="Current UniFi homelab network topology" src="../assets/network-topology-v2.png" /></p>
 <hr />
-<h2 id="hardware">Hardware</h2>
-<h3 id="router">Router</h3>
+<h2 id="architecture-at-a-glance">Architecture at a Glance</h2>
+<pre><code class="language-text">Internet
+   |
+UniFi Cloud Gateway Ultra
+   |
+   +-- UniFi-managed Wi-Fi / access point
+   |
+   +-- Trusted VLAN
+   +-- Guest VLAN
+   +-- Lab/Servers VLAN
+   |      +-- Proxmox
+   |      +-- Docker / Portainer
+   |      +-- AdGuard Home
+   |      +-- Uptime Kuma
+   |      +-- Home Assistant integrations
+   |
+   +-- IoT VLAN
+          +-- Smart-home and connected devices
+          +-- Planned Zigbee2MQTT environment
+</code></pre>
+<p>WireGuard provides remote access. Tailscale is currently being evaluated as a complementary option and is not documented as a replacement.</p>
+<hr />
+<h2 id="network-segments">Network Segments</h2>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Primary role</th>
+<th>Policy intent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trusted</td>
+<td>Personal and administrative clients</td>
+<td>Controlled access to required infrastructure services</td>
+</tr>
+<tr>
+<td>Guest</td>
+<td>Visitor and temporary clients</td>
+<td>Internet access without access to private networks</td>
+</tr>
+<tr>
+<td>Lab/Servers</td>
+<td>Proxmox, VMs, containers, and infrastructure services</td>
+<td>Explicit service exposure and restricted inter-zone access</td>
+</tr>
+<tr>
+<td>IoT</td>
+<td>Smart-home and lower-trust devices</td>
+<td>Isolation with only required integration traffic allowed</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../Network/VLANs/">VLAN Segmentation</a> for more detail.</p>
+<hr />
+<h2 id="core-infrastructure">Core Infrastructure</h2>
+<h3 id="gateway-and-wi-fi">Gateway and Wi-Fi</h3>
 <ul>
-<li>Netgear R7800</li>
-<li>OpenWrt 24.10</li>
+<li>UniFi Cloud Gateway Ultra</li>
+<li>UniFi-managed access point</li>
+<li>Centralized network and wireless management</li>
+<li>Zone-based firewall policies</li>
 </ul>
-<h3 id="server">Server</h3>
+<h3 id="virtualization">Virtualization</h3>
 <ul>
 <li>Fujitsu Esprimo Q7010</li>
 <li>Intel Core i5-10400T</li>
 <li>32 GB RAM</li>
 <li>256 GB NVMe SSD</li>
-<li>1 TB External SSD</li>
+<li>1 TB external SSD</li>
+<li>Proxmox VE</li>
 </ul>
-<h3 id="client-devices">Client Devices</h3>
+<h3 id="services-and-projects">Services and Projects</h3>
 <ul>
-<li>Windows PCs</li>
-<li>macOS Laptop</li>
-<li>iPhone</li>
-<li>IoT Devices</li>
+<li>Home Assistant</li>
+<li>Docker and Portainer</li>
+<li>AdGuard Home</li>
+<li>Uptime Kuma</li>
+<li>Knut AI and automation</li>
+<li>Borgen Audio on Raspberry Pi 4</li>
+<li>Planned Zigbee coordinator and Zigbee2MQTT</li>
 </ul>
 <hr />
-<h2 id="network-architecture">Network Architecture</h2>
-<h3 id="vlan-10-lan">VLAN 10 - LAN</h3>
-<p>Purpose: Trusted user devices</p>
-<ul>
-<li>Network: 192.168.10.0/24</li>
-<li>Gateway: 192.168.10.1</li>
-</ul>
-<h3 id="vlan-20-guest">VLAN 20 - Guest</h3>
-<p>Purpose: Isolated guest network</p>
-<ul>
-<li>Network: 192.168.20.0/24</li>
-<li>Internet access only</li>
-</ul>
-<h3 id="vlan-30-lab">VLAN 30 - Lab</h3>
-<p>Purpose: Virtualization and security lab</p>
-<ul>
-<li>Network: 192.168.30.0/24</li>
-<li>
-<p>Planned services:</p>
-</li>
-<li>
-<p>Proxmox</p>
-</li>
-<li>Docker</li>
-<li>Grafana</li>
-<li>Prometheus</li>
-<li>Security Onion</li>
-</ul>
-<h3 id="wireguard-vpn">WireGuard VPN</h3>
-<p>Purpose: Secure remote access</p>
-<ul>
-<li>Network: 10.100.100.0/24</li>
-<li>Gateway: 10.100.100.1</li>
-</ul>
+<h2 id="architecture-history">Architecture History</h2>
+<p>The previous network used a Netgear R7800 running OpenWrt. It established the first segmented design and provided practical experience with VLANs, firewall zones, WireGuard, Cloudflare DDNS, and Wi-Fi troubleshooting.</p>
+<p>That design was later migrated to UniFi. The original topology diagram and configuration notes remain in the <a href="../Network/OpenWrt/">OpenWrt history</a> so the repository continues to show the evolution of the lab.</p>
 <hr />
-<h2 id="external-services">External Services</h2>
-<h3 id="cloudflare">Cloudflare</h3>
-<p>Used for:</p>
+<h2 id="related-documentation">Related Documentation</h2>
 <ul>
-<li>DNS Management</li>
-<li>Dynamic DNS</li>
-<li>VPN Endpoint Resolution</li>
+<li><a href="../Network/UniFi/">UniFi Network</a></li>
+<li><a href="../Network/VLANs/">VLAN Segmentation</a></li>
+<li><a href="../Network/WireGuard/">WireGuard Remote Access</a></li>
+<li><a href="../Network/OpenWrt/">OpenWrt — Previous Architecture</a></li>
 </ul>
-<h3 id="vpn-endpoint">VPN Endpoint</h3>
-<p>vpn.sterneborn.org</p>
 
 
 

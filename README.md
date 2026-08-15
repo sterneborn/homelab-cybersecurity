@@ -1,230 +1,157 @@
 # Cybersecurity Homelab
 
 ![Status](https://img.shields.io/badge/Status-Active-green)
-![OpenWrt](https://img.shields.io/badge/OpenWrt-24.10-blue)
-![WireGuard](https://img.shields.io/badge/VPN-WireGuard-orange)
-![Cloudflare](https://img.shields.io/badge/DDNS-Cloudflare-yellow)
+![Gateway](https://img.shields.io/badge/Gateway-UniFi%20Cloud%20Gateway%20Ultra-blue)
+![VPN](https://img.shields.io/badge/VPN-WireGuard-orange)
+![Virtualization](https://img.shields.io/badge/Virtualization-Proxmox-E57000)
 
-A personal cybersecurity and networking homelab built to develop practical skills in networking, Linux administration, virtualization, monitoring, and defensive security.
+A personal networking, infrastructure, automation, and cybersecurity homelab built for practical learning through implementation, troubleshooting, validation, and documentation.
 
-This repository documents the design, implementation, troubleshooting, and continuous improvement of my home lab environment.
+The current environment is based on UniFi networking and Proxmox virtualization. The repository also preserves the earlier OpenWrt architecture as part of the project's technical history.
 
----
+## Current Environment
 
-# Network Topology
+### Network
 
-![Network Topology](diagrams/network-topology.png)
+* UniFi Cloud Gateway Ultra
+* UniFi-managed Wi-Fi and access point
+* Trusted, Guest, Lab/Servers, and IoT VLANs
+* Zone-based firewall policies
+* WireGuard remote access
+* Tailscale under evaluation
 
----
+### Virtualization and Services
 
-# Objectives
+* Proxmox VE
+* Ubuntu Server
+* Home Assistant
+* Docker and Portainer
+* AdGuard Home
+* Uptime Kuma
 
-The primary goals of this project are:
+### Custom Projects
 
-* Develop strong networking fundamentals
-* Learn Linux system administration
-* Gain hands-on cybersecurity experience
-* Build practical troubleshooting skills
-* Learn virtualization and infrastructure management
-* Create a documented portfolio demonstrating technical growth
+* **Knut** — a major custom AI and automation project
+* **Borgen Audio** — Raspberry Pi 4 with Raspberry Pi DAC Pro, AirPlay through Shairport Sync, and Android Bluetooth audio through BlueALSA
+* **Zigbee2MQTT** — planned Zigbee coordinator, MQTT broker, and Home Assistant architecture
 
----
+## Current Network Topology
 
-# Current Environment
-
-## Network Infrastructure
-
-* Netgear R7800 Router
-* OpenWrt 24.10
-* Cloudflare DNS & Dynamic DNS
-* WireGuard VPN
+![Current UniFi Network Topology](diagrams/network-topology.png)
 
 ## Network Segmentation
 
-| VLAN    | Purpose         | Network         |
-| ------- | --------------- | --------------- |
-| VLAN 1  | Rescue Network  | 192.168.1.0/24  |
-| VLAN 10 | Trusted LAN     | 192.168.10.0/24 |
-| VLAN 20 | Guest Network   | 192.168.20.0/24 |
-| VLAN 30 | Lab Environment | 192.168.30.0/24 |
+| Network | Purpose |
+| ------- | ------- |
+| Trusted | Personal and administrative devices |
+| Guest | Isolated visitor access |
+| Lab/Servers | Proxmox, VMs, containers, and infrastructure services |
+| IoT | Smart-home and lower-trust devices |
 
-## Remote Access
+Inter-network access is controlled with zone-based firewall policies and explicit exceptions for required services.
 
-WireGuard VPN provides secure remote access to the lab environment.
+## Hardware
 
-VPN Network:
+### Network
 
-```text
-10.100.100.0/24
-```
+* UniFi Cloud Gateway Ultra
+* UniFi-managed access point
 
----
-
-# Hardware
-
-## Router
-
-* Netgear R7800
-* OpenWrt 24.10
-
-## Server
+### Virtualization Server
 
 * Fujitsu Esprimo Q7010
 * Intel Core i5-10400T
 * 32 GB RAM
 * 256 GB NVMe SSD
-* 1 TB External SSD
+* 1 TB external SSD
 
----
+### Audio Project
 
-# Technologies Used
+* Raspberry Pi 4
+* Raspberry Pi DAC Pro
 
-## Networking
+## Architecture History
 
-* OpenWrt
-* VLANs
-* DHCP
-* DNS
-* WireGuard
-* Cloudflare DDNS
+The first segmented homelab network ran on a Netgear R7800 with OpenWrt 24.10. It provided hands-on experience with VLANs, firewall zones, WireGuard, Cloudflare Dynamic DNS, DHCP/DNS integration, Wi-Fi configuration, and systematic network troubleshooting.
 
-## Operating Systems
+That architecture was later migrated to UniFi. The old topology, screenshots, configuration notes, and project journal entries remain in the repository as evidence of the earlier implementation and the learning that informed the current design.
 
-* Linux
-* OpenWrt
+![Previous OpenWrt Network Topology](diagrams/openwrt-network-topology.png)
 
-## Security
+## Documentation
 
-* Network Segmentation
-* Firewall Zones
-* VPN Remote Access
+The MkDocs source lives in [`documentation/`](documentation/), and generated site output is written to [`docs/`](docs/).
 
-## Planned Technologies
+### Network
 
-* Proxmox
-* Docker
-* Grafana
-* Prometheus
-* Security Onion
-* IDS/IPS
-* Centralized Logging
+* [Network Overview](documentation/Network-Overview.md)
+* [UniFi Network](documentation/Network/UniFi.md)
+* [VLAN Segmentation](documentation/Network/VLANs.md)
+* [WireGuard Remote Access](documentation/Network/WireGuard.md)
+* [Cloudflare DDNS](documentation/Network/Cloudflare-DDNS.md)
+* [OpenWrt — Previous Architecture](documentation/Network/OpenWrt.md)
 
----
+### Virtualization
 
-# Documentation
+* [Proxmox](documentation/Virtualization/Proxmox.md)
+* [Virtual Networking](documentation/Virtualization/Virtual-Networking.md)
+* [Backup Strategy](documentation/Virtualization/Backup-Strategy.md)
 
-Detailed documentation can be found in the `/docs` directory.
+### Services
 
-## Networking
+* [Home Assistant](documentation/Services/Home-Assistant.md)
+* [Docker](documentation/Services/Docker.md)
+* [Portainer](documentation/Services/Portainer.md)
+* [AdGuard Home](documentation/Services/AdGuard-Home.md)
+* [Uptime Kuma](documentation/Services/Uptime-Kuma.md)
 
-* [Network Overview](docs/00-Network-Overview.md)
-* [OpenWrt Configuration](docs/01-OpenWrt.md)
-* [VLAN Design](docs/02-VLANs.md)
-* [WireGuard Deployment](docs/03-WireGuard.md)
-* [Cloudflare DDNS](docs/04-Cloudflare-DDNS.md)
+### Projects
 
-## Virtualization
+* [Knut AI & Automation](documentation/Projects/Knut.md)
+* [Borgen Audio](documentation/Projects/Borgen-Audio.md)
+* [Planned Zigbee2MQTT Architecture](documentation/Projects/Zigbee2MQTT.md)
 
-* [Proxmox](docs/10-Proxmox.md)
-* [Virtual Networking](docs/11-Virtual-Networking.md)
-* [Backup Strategy](docs/12-Backup-Strategy.md)
+### Project Tracking
 
-## Containers
+* [Project Journal](documentation/Project-Journal.md)
+* [Learning Methodology](documentation/Career/Learning-Methodology.md)
 
-* [Docker](docs/20-Docker.md)
-* [AdGuard Home](docs/21-AdGuard-Home.md)
+## Troubleshooting Philosophy
 
-## Monitoring
+1. Identify the problem.
+2. Collect relevant information.
+3. Form testable hypotheses.
+4. Test and verify each layer.
+5. Implement the solution.
+6. Record the result and lessons learned.
 
-* [Prometheus](docs/30-Prometheus.md)
-* [Grafana](docs/31-Grafana.md)
-* [Alerting](docs/32-Alerting.md)
+This repository intentionally documents both successful implementations and the troubleshooting processes behind them.
 
-## Security Operations
+## Roadmap
 
-* [Security Onion](docs/40-Security-Onion.md)
-* [Suricata](docs/41-Suricata.md)
-* [Log Analysis](docs/42-Log-Analysis.md)
+### Operating
 
-## Learning & Project Tracking
+* [x] UniFi gateway and managed Wi-Fi
+* [x] Trusted, Guest, Lab/Servers, and IoT segmentation
+* [x] Zone-based firewall policy
+* [x] WireGuard remote access
+* [x] Proxmox virtualization
+* [x] Docker and Portainer
+* [x] Home Assistant
+* [x] AdGuard Home and Uptime Kuma
+* [x] Knut and Borgen Audio projects
 
-* [Learning Methodology](docs/99-Learning-Methodology.md)
-* [Project Journal](docs/Project-Journal.md)
+### Evaluating and Planned
 
----
+* [ ] Complete Tailscale evaluation
+* [ ] Deploy Zigbee coordinator and Zigbee2MQTT architecture
+* [ ] Expand Prometheus, Grafana, and alerting
+* [ ] Continue Security Onion, Suricata, and log-analysis work
 
-# Troubleshooting Philosophy
-
-A structured troubleshooting methodology is used throughout the project:
-
-1. Identify the problem
-2. Collect relevant information
-3. Form hypotheses
-4. Test and verify
-5. Document findings
-6. Implement solutions
-7. Record lessons learned
-
-This repository intentionally documents both successful implementations and troubleshooting processes.
-
----
-
-# Use of AI
-
-AI tools are used as learning, research, documentation, and troubleshooting assistants.
-
-All recommendations are independently verified through testing, log analysis, validation, and documentation before implementation.
-
-Core principle:
-
-> Trust, but verify.
-
----
-
-# Roadmap
-
-## Phase 1 - Network Foundation
-
-* [x] OpenWrt Deployment
-* [x] VLAN Segmentation
-* [x] Firewall Configuration
-* [x] WireGuard VPN
-* [x] Cloudflare Dynamic DNS
-
-## Phase 2 - Virtualization
-
-* [ ] Proxmox Installation
-* [ ] Virtual Machine Deployment
-* [ ] Virtual Network Design
-
-## Phase 3 - Monitoring
-
-* [ ] Grafana
-* [ ] Prometheus
-* [ ] System Metrics
-* [ ] Network Monitoring
-
-## Phase 4 - Security Operations
-
-* [ ] Security Onion
-* [ ] IDS/IPS
-* [ ] Log Analysis
-* [ ] Incident Detection
-
----
-
-# Learning Journey
-
-This repository serves as both a technical lab and a record of my progress as I transition into networking and cybersecurity.
-
-The focus is not only on building infrastructure, but also on developing the ability to design, troubleshoot, secure, and document real-world systems.
-
----
-
-# Author
+## Author
 
 **Christian Sterneborn**
 
 Aspiring Network & Cybersecurity Professional
 
-GitHub: https://github.com/sterneborn
+[GitHub](https://github.com/sterneborn)

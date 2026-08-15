@@ -30,7 +30,7 @@ Docker is deployed on:
 
 * Ubuntu Server
 * Running as a virtual machine on Proxmox VE
-* Connected to VLAN 30 (Lab Network)
+* Connected to the Lab/Servers network
 
 This architecture provides separation between the physical host, virtual machine, and application services.
 
@@ -50,6 +50,8 @@ The installation provides a platform for deploying and managing containerized ap
 
 Docker Engine was successfully installed and verified on the Ubuntu Server virtual machine.
 
+> **Screenshot context:** The terminal screenshots are retained as deployment evidence. Package versions, container names, and the running container set may differ from the live environment.
+
 ![Docker Version](../assets/screenshots/docker-version.png)
 
 Verification confirmed that Docker was installed correctly and available through the command-line interface.
@@ -58,17 +60,17 @@ Verification confirmed that Docker was installed correctly and available through
 
 ## Running Containers
 
-Docker currently hosts multiple infrastructure services used throughout the homelab environment.
+Docker hosts multiple infrastructure services used throughout the homelab environment.
 
 ![Running Containers](../assets/screenshots/docker-ps.png)
 
-At the time of documentation, the following services were deployed as Docker containers:
+At the time of the captured deployment, the following services were running as Docker containers:
 
 * Portainer
 * AdGuard Home
 * Uptime Kuma
 
-Additional services will be added as the homelab expands into monitoring and security operations.
+The live container inventory is managed through Portainer and is not inferred from the historical terminal capture.
 
 ---
 

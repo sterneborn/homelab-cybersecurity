@@ -37,6 +37,8 @@ The system serves as the dedicated virtualization host for the homelab environme
 
 The Proxmox summary dashboard provides an overview of resource utilization, storage capacity, uptime, and overall system health.
 
+> **Screenshot context:** The Proxmox screenshots document the deployed platform at the time of capture. Resource values, VM state, and interface details are point-in-time evidence rather than a live inventory.
+
 ![Proxmox Summary](../assets/screenshots/proxmox-summary.png)
 
 This dashboard is used to monitor:
@@ -110,8 +112,8 @@ Current responsibilities:
 * Portainer
 * AdGuard Home
 * Uptime Kuma
-* Future monitoring services
-* Future security tooling
+
+Home Assistant and other projects integrate with the wider homelab, but their placement is not inferred from this original VM screenshot.
 
 This VM acts as the foundation for most services deployed within the homelab.
 
