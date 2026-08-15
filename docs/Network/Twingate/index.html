@@ -12,13 +12,13 @@
         <meta name="author" content="Christian Sterneborn">
 
 
-        <link rel="canonical" href="https://cv.sterneborn.org/docs/Services/Alerting/">
+        <link rel="canonical" href="https://cv.sterneborn.org/docs/Network/Twingate/">
 
 
-        <link rel="prev" href="../Grafana/">
+        <link rel="prev" href="../VLANs/">
 
 
-        <link rel="next" href="../../Projects/Knut/">
+        <link rel="next" href="../WireGuard/">
 
 
 
@@ -29,7 +29,7 @@
 
 
 
-        <title>Alerting (Planned) - Cybersecurity Homelab Documentation</title>
+        <title>Twingate Zero Trust Access - Cybersecurity Homelab Documentation</title>
 
 
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
 
 
-        <a href="#alerting" class="md-skip">
+        <a href="#twingate-zero-trust-access" class="md-skip">
           Skip to content
         </a>
 
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
 
-              Alerting (Planned)
+              Twingate Zero Trust Access
 
           </span>
         </div>
@@ -241,7 +241,9 @@
 
 
 
-      <li class="md-tabs__item">
+
+
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../Network-Overview/" class="md-tabs__link">
 
 
@@ -281,10 +283,8 @@
 
 
 
-
-
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Home-Assistant/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Services/Home-Assistant/" class="md-tabs__link">
 
 
 
@@ -477,14 +477,19 @@
 
 
 
-    <li class="md-nav__item md-nav__item--nested">
 
 
 
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
 
 
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 
 
 
@@ -502,7 +507,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
 
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
 
@@ -548,7 +553,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Network/UniFi/" class="md-nav__link">
+      <a href="../UniFi/" class="md-nav__link">
 
 
 
@@ -576,7 +581,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Network/VLANs/" class="md-nav__link">
+      <a href="../VLANs/" class="md-nav__link">
 
 
 
@@ -603,8 +608,35 @@
 
 
 
-    <li class="md-nav__item">
-      <a href="../../Network/Twingate/" class="md-nav__link">
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Twingate Zero Trust Access
+
+
+
+  </span>
+
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
 
 
 
@@ -620,6 +652,158 @@
 
 
       </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Status
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Purpose
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Architecture
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#connector-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Connector Deployment
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#access-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Access Flow
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#vlan-50-design" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        VLAN 50 Design
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#policy-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Policy Layers
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#validation-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Validation Approach
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Security Considerations
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#troubleshooting-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Troubleshooting Approach
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#skills-demonstrated" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Skills Demonstrated
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Related Documentation
+
+    </span>
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+
     </li>
 
 
@@ -632,7 +816,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Network/WireGuard/" class="md-nav__link">
+      <a href="../WireGuard/" class="md-nav__link">
 
 
 
@@ -660,7 +844,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Network/Cloudflare-DDNS/" class="md-nav__link">
+      <a href="../Cloudflare-DDNS/" class="md-nav__link">
 
 
 
@@ -688,7 +872,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Network/OpenWrt/" class="md-nav__link">
+      <a href="../OpenWrt/" class="md-nav__link">
 
 
 
@@ -875,19 +1059,14 @@
 
 
 
+    <li class="md-nav__item md-nav__item--nested">
 
 
 
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
 
 
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-
-
-
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-
-
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
 
 
 
@@ -905,7 +1084,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
 
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
 
@@ -923,7 +1102,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Home-Assistant/" class="md-nav__link">
+      <a href="../../Services/Home-Assistant/" class="md-nav__link">
 
 
 
@@ -951,7 +1130,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Docker/" class="md-nav__link">
+      <a href="../../Services/Docker/" class="md-nav__link">
 
 
 
@@ -979,7 +1158,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Portainer/" class="md-nav__link">
+      <a href="../../Services/Portainer/" class="md-nav__link">
 
 
 
@@ -1007,7 +1186,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../AdGuard-Home/" class="md-nav__link">
+      <a href="../../Services/AdGuard-Home/" class="md-nav__link">
 
 
 
@@ -1035,7 +1214,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Uptime-Kuma/" class="md-nav__link">
+      <a href="../../Services/Uptime-Kuma/" class="md-nav__link">
 
 
 
@@ -1063,7 +1242,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Prometheus/" class="md-nav__link">
+      <a href="../../Services/Prometheus/" class="md-nav__link">
 
 
 
@@ -1091,7 +1270,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Grafana/" class="md-nav__link">
+      <a href="../../Services/Grafana/" class="md-nav__link">
 
 
 
@@ -1118,35 +1297,8 @@
 
 
 
-
-
-    <li class="md-nav__item md-nav__item--active">
-
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-
-
-
-
-
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-
-
-
-  <span class="md-ellipsis">
-
-
-    Alerting (Planned)
-
-
-
-  </span>
-
-
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Services/Alerting/" class="md-nav__link">
 
 
 
@@ -1162,59 +1314,6 @@
 
 
       </a>
-
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-
-
-
-
-
-
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-
-        Status
-
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#design-goals" class="md-nav__link">
-    <span class="md-ellipsis">
-
-        Design Goals
-
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#planned-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-
-        Planned Workflow
-
-    </span>
-  </a>
-
-</li>
-
-    </ul>
-
-</nav>
-
     </li>
 
 
@@ -1721,10 +1820,10 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#design-goals" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Design Goals
+        Purpose
 
     </span>
   </a>
@@ -1732,10 +1831,109 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#planned-workflow" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Planned Workflow
+        Architecture
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#connector-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Connector Deployment
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#access-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Access Flow
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#vlan-50-design" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        VLAN 50 Design
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#policy-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Policy Layers
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#validation-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Validation Approach
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Security Considerations
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#troubleshooting-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Troubleshooting Approach
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#skills-demonstrated" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Skills Demonstrated
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Related Documentation
 
     </span>
   </a>
@@ -1759,30 +1957,107 @@
 
 
 
-<h1 id="alerting">Alerting</h1>
+<h1 id="twingate-zero-trust-access">Twingate Zero Trust Access</h1>
 <h2 id="status">Status</h2>
-<p><strong>Planned — not currently deployed as a separate alerting stack.</strong></p>
-<p>Uptime Kuma currently provides service visibility, while Prometheus and Grafana provide metrics and dashboards. A broader, documented alerting workflow remains under development.</p>
-<hr />
-<h2 id="design-goals">Design Goals</h2>
-<ul>
-<li>Alert on actionable service or infrastructure conditions</li>
-<li>Avoid excessive or duplicate notifications</li>
-<li>Include enough context to begin troubleshooting</li>
-<li>Define ownership and recovery steps for each alert</li>
-<li>Test delivery without creating alert fatigue</li>
-</ul>
-<hr />
-<h2 id="planned-workflow">Planned Workflow</h2>
-<pre><code class="language-text">Metrics or service check
-        |
-Alert condition
-        |
-Notification channel
-        |
-Operator verification and documented response
+<p><strong>Operating.</strong> A Twingate Connector runs as a native systemd service in a dedicated Debian LXC on Proxmox.</p>
+<h2 id="purpose">Purpose</h2>
+<p>Twingate provides an identity- and Resource-based route to approved homelab services. It complements the established WireGuard VPN by solving a different access problem: a remote user requests a defined Resource instead of joining a broad client network.</p>
+<h2 id="architecture">Architecture</h2>
+<pre><code class="language-text">Remote client
+    |
+Twingate service
+    |
+Outbound Connector tunnel
+    |
+Debian LXC Connector
+Remote Access VLAN 50
+    |
+UniFi zone-based policy
+    |
+Approved internal Resource
+    |
+Optional host firewall restrictions
 </code></pre>
-<p>No notification platform is listed as current until it has been deployed and tested.</p>
+<p>The Connector initiates outbound connections. No inbound port from the internet is opened for it.</p>
+<h2 id="connector-deployment">Connector Deployment</h2>
+<p>The Connector is installed natively in a dedicated Debian LXC and managed by systemd. A separate container provides a clear operational boundary for service health, updates, logging, and troubleshooting without mixing the access component with application workloads.</p>
+<p>No Connector token, account information, internal host address, or Twingate network URL is stored in this public repository.</p>
+<h2 id="access-flow">Access Flow</h2>
+<ol>
+<li>A remote client requests a configured Resource through Twingate.</li>
+<li>Twingate evaluates the request and uses the outbound Connector path.</li>
+<li>The Connector routes from VLAN 50 toward the approved internal Resource.</li>
+<li>UniFi policy must allow the Connector host's flow to that Resource.</li>
+<li>The destination host firewall can restrict the allowed service further.</li>
+<li>Stateful return traffic follows the permitted connection back through the Connector.</li>
+</ol>
+<p>The initial protected Resource is the Lab / Servers network. Home Assistant, SSH, and n8n are examples of services allowed at the host layer. This does not imply that individual Twingate per-application Resources or Twingate-side port restrictions have been configured.</p>
+<h2 id="vlan-50-design">VLAN 50 Design</h2>
+<p>VLAN 50 is the Connector's security segment, not a traditional VPN client network. Remote clients never receive a VLAN 50 address and do not become general members of the local segment.</p>
+<p>The Connector is isolated there so its traffic has a distinct policy source. A Resource can remain in VLAN 30 because the Connector uses local routing to reach it. Routing alone is insufficient: the UniFi policy and any destination host firewall must also permit the intended flow.</p>
+<h2 id="policy-layers">Policy Layers</h2>
+<p>Access is limited through several independent layers:</p>
+<ol>
+<li>Twingate identity and Resource authorization.</li>
+<li>Connector isolation in VLAN 50.</li>
+<li>UniFi zone-based policy from the Connector host to approved Resources.</li>
+<li>Host-level rules such as UFW for allowed services.</li>
+<li>Application authentication and authorization where applicable.</li>
+</ol>
+<p>This design avoids treating a successful remote connection as unrestricted internal access.</p>
+<h2 id="validation-approach">Validation Approach</h2>
+<p>Validation is based on expected and denied outcomes:</p>
+<ul>
+<li>confirm the Connector service is active under systemd,</li>
+<li>confirm the Connector can establish its outbound connection,</li>
+<li>test a remote client against an approved Resource,</li>
+<li>confirm the intended service responds,</li>
+<li>test that unrelated services or destinations remain unavailable,</li>
+<li>check UniFi, host-firewall, and application evidence,</li>
+<li>verify that no inbound Connector port is exposed.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Screenshot status</p>
+<p>A redacted Twingate Remote Network screenshot has not been added. The page intentionally contains no broken placeholder or simulated product screenshot.</p>
+</div>
+<h2 id="security-considerations">Security Considerations</h2>
+<ul>
+<li>Connector credentials and tokens remain outside Git.</li>
+<li>The public documentation omits the network URL, personal accounts, and internal Connector address.</li>
+<li>The Connector uses an outbound-only connection model.</li>
+<li>VLAN and firewall policy limit lateral reach.</li>
+<li>Host rules remain relevant even when Twingate authorizes a Resource.</li>
+<li>WireGuard remains available as a separate access route with a different trust and routing model.</li>
+</ul>
+<h2 id="troubleshooting-approach">Troubleshooting Approach</h2>
+<p>Troubleshooting proceeds from the narrowest observable layer outward:</p>
+<ol>
+<li>Confirm client identity and the requested Resource.</li>
+<li>Check Twingate client state and name resolution.</li>
+<li>Confirm Connector service status and outbound connectivity.</li>
+<li>Verify routing from VLAN 50 to the Resource network.</li>
+<li>Inspect UniFi policy for the Connector source and Resource destination.</li>
+<li>Inspect UFW or another host firewall for the required service.</li>
+<li>Test application health locally and through the remote path.</li>
+<li>Record the failing layer, change, result, and rollback.</li>
+</ol>
+<h2 id="skills-demonstrated">Skills Demonstrated</h2>
+<ul>
+<li>Debian and systemd service operation</li>
+<li>Proxmox LXC deployment</li>
+<li>VLAN and zone-based firewall design</li>
+<li>Zero Trust access concepts</li>
+<li>Layered policy troubleshooting</li>
+<li>Validation of permitted and denied flows</li>
+<li>Security-conscious technical documentation</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../VLANs/">VLAN Segmentation</a></li>
+<li><a href="../UniFi/">UniFi Network</a></li>
+<li><a href="../WireGuard/">WireGuard Remote Access</a></li>
+<li><a href="../../Security/Security-Practices/">Security Practices</a></li>
+</ul>
 
 
 

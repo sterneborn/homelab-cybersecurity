@@ -3,459 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Christian Sterneborn | Network, Infrastructure &amp; Cybersecurity Portfolio</title>
-
-  <meta
-    name="description"
-    content="Network, infrastructure and cybersecurity portfolio featuring UniFi, VLANs, Proxmox, Home Assistant, Docker, monitoring, AI automation and hands-on Linux projects."
-  />
-
+  <title>Christian Sterneborn | IT Support, Networking &amp; Infrastructure</title>
+  <meta name="description" content="Christian Sterneborn's IT support, networking, infrastructure and cybersecurity portfolio: a documented UniFi and Proxmox homelab built for practical operations and troubleshooting." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="canonical" href="https://cv.sterneborn.org/" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Christian Sterneborn | IT Support, Networking &amp; Infrastructure" />
+  <meta property="og:description" content="A practical portfolio covering structured troubleshooting, segmented networking, Linux operations, secure remote access and technical documentation." />
+  <meta property="og:url" content="https://cv.sterneborn.org/" />
+  <meta property="og:image" content="https://cv.sterneborn.org/assets/img/network-topology.png" />
+  <meta property="og:image:alt" content="Diagram of Christian Sterneborn's segmented UniFi homelab" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Christian Sterneborn | IT Support, Networking &amp; Infrastructure" />
+  <meta name="twitter:description" content="Practical IT operations, networking, Linux and cybersecurity work documented in an active homelab." />
+  <meta name="twitter:image" content="https://cv.sterneborn.org/assets/img/network-topology.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-  <header class="site-header" id="home">
-    <nav class="nav">
-      <a href="#home" class="logo">Christian Sterneborn</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
+  <header class="site-header" id="home">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#home" class="logo" aria-label="Christian Sterneborn, home">Christian Sterneborn</a>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#approach">Approach</a>
         <a href="#environment">Environment</a>
         <a href="#projects">Projects</a>
         <a href="#network">Network</a>
-        <a href="#skills">Skills</a>
-        <a href="#roadmap">Roadmap</a>
+        <a href="#security">Security</a>
         <a href="/docs/">Documentation</a>
-        <a href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">GitHub</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <section class="hero">
-      <p class="eyebrow">Network, Infrastructure &amp; Cybersecurity Portfolio</p>
-
-      <h1>A hands-on homelab built around secure infrastructure and useful automation.</h1>
-
+    <section class="hero" aria-labelledby="hero-heading">
+      <p class="eyebrow">IT Support · Networking · Infrastructure · Cybersecurity</p>
+      <h1 id="hero-heading">I build, operate and troubleshoot secure IT infrastructure.</h1>
       <p class="hero-description">
-        Building and documenting a segmented UniFi network, Proxmox virtualization,
-        self-hosted services, smart-home infrastructure, AI automation and practical
-        Linux projects.
+        I am moving from industry into IT and building practical experience by operating a segmented UniFi and Proxmox homelab. The work connects client, network, server and application troubleshooting with controlled changes and clear documentation.
       </p>
-
       <div class="hero-actions">
-        <a class="button primary" href="#projects">View Homelab</a>
-        <a class="button secondary" href="/docs/">Browse Documentation</a>
+        <a class="button primary" href="#projects">View practical work</a>
+        <a class="button secondary" href="/docs/">Browse documentation</a>
       </div>
-
-      <div class="stats">
-        <div>
-          <strong>UniFi</strong>
-          <span>Gateway &amp; Managed Wi-Fi</span>
-        </div>
-
-        <div>
-          <strong>4</strong>
-          <span>Segmented Network Zones</span>
-        </div>
-
-        <div>
-          <strong>Proxmox</strong>
-          <span>Virtualization Platform</span>
-        </div>
-
-        <div>
-          <strong>Knut</strong>
-          <span>AI &amp; Automation Project</span>
-        </div>
+      <div class="stats" aria-label="Current homelab highlights">
+        <div><strong>5</strong><span>Segmented Networks</span></div>
+        <div><strong>Twingate</strong><span>Zero Trust Access</span></div>
+        <div><strong>Proxmox</strong><span>Virtualization Platform</span></div>
+        <div><strong>Monitoring</strong><span>Prometheus, Grafana &amp; Uptime</span></div>
       </div>
     </section>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section about-grid" id="about">
       <div>
         <p class="eyebrow">About</p>
-
-        <h2>Building practical infrastructure and cybersecurity skills.</h2>
-
+        <h2>Practical experience, built through operation.</h2>
         <p class="section-text about-text">
-          I am transitioning into networking and cybersecurity by building, operating and
-          documenting a hands-on homelab. What began as an OpenWrt network has evolved into
-          a UniFi-based environment covering segmented networking, virtualization, Linux,
-          containers, monitoring, home automation and custom AI projects.
+          This homelab is where I practise methodical troubleshooting, secure network design, Linux and service operations, change control, verification and technical documentation. It is an active learning environment with enterprise-inspired working methods—not a claim of production-scale engineering experience.
         </p>
       </div>
-
-      <aside class="profile-card">
-        <img
-          src="assets/img/christian.png"
-          alt="Portrait of Christian Sterneborn"
-          class="profile-image"
-        />
-
+      <aside class="profile-card" aria-label="Candidate profile">
+        <img src="assets/img/christian.png" alt="Portrait of Christian Sterneborn" class="profile-image" loading="lazy" decoding="async" />
         <h3>Christian Sterneborn</h3>
-
-        <p>
-          Aspiring Network &amp; Cybersecurity Engineer developing practical experience through
-          infrastructure projects, structured troubleshooting and technical documentation.
-        </p>
+        <p>Candidate for IT technician, support, service desk, NOC and junior network or infrastructure roles, with hands-on experience across the full troubleshooting path.</p>
       </aside>
+    </section>
+
+    <section class="section" id="approach">
+      <p class="eyebrow">Working Approach</p>
+      <h2>How I approach technical work.</h2>
+      <div class="strength-grid">
+        <article class="strength-card"><span class="card-number" aria-hidden="true">01</span><h3>Structured troubleshooting</h3><p>Define expected behavior, gather evidence across layers, test one hypothesis at a time and verify the result.</p></article>
+        <article class="strength-card"><span class="card-number" aria-hidden="true">02</span><h3>Clear technical documentation</h3><p>Record architecture, decisions, validation steps and lessons so that work can be understood and repeated.</p></article>
+        <article class="strength-card"><span class="card-number" aria-hidden="true">03</span><h3>Secure-by-default design</h3><p>Start with segmentation and explicit access, then add only the policy exceptions each service requires.</p></article>
+        <article class="strength-card"><span class="card-number" aria-hidden="true">04</span><h3>Practical operations and maintenance</h3><p>Operate services, monitor health, manage changes and keep recovery paths in view—not just complete initial installs.</p></article>
+      </div>
     </section>
 
     <section class="section" id="environment">
       <p class="eyebrow">Current Environment</p>
-
-      <h2>The homelab today.</h2>
-
-      <p class="section-text">
-        The current environment combines centralized UniFi networking, four trust zones,
-        Proxmox virtualization, self-hosted services, secure remote access and automation.
-      </p>
-
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Network</h3>
-          <ul>
-            <li>UniFi Cloud Gateway Ultra</li>
-            <li>UniFi Managed Wi-Fi / AP</li>
-            <li>Four VLAN Segments</li>
-            <li>Zone-Based Firewall</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Infrastructure</h3>
-          <ul>
-            <li>Proxmox VE</li>
-            <li>Ubuntu Server</li>
-            <li>Docker</li>
-            <li>Portainer</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Services</h3>
-          <ul>
-            <li>Home Assistant</li>
-            <li>AdGuard Home</li>
-            <li>Uptime Kuma</li>
-            <li>Infrastructure Monitoring</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Access &amp; Automation</h3>
-          <ul>
-            <li>WireGuard Remote Access</li>
-            <li>Tailscale Evaluation</li>
-            <li>Knut AI &amp; Automation</li>
-            <li>Planned Zigbee2MQTT</li>
-          </ul>
-        </div>
+      <h2>A working stack across network, server and application layers.</h2>
+      <p class="section-text">The environment combines five VLAN segments, two distinct remote-access models, virtualization, Linux, containers, monitoring, automation and smart-home services.</p>
+      <div class="info-grid">
+        <article class="info-card"><h3>Network</h3><ul><li>UniFi Cloud Gateway Ultra</li><li>UniFi U7 Lite access point</li><li>Five VLAN segments</li><li>Zone-based firewall</li></ul></article>
+        <article class="info-card"><h3>Infrastructure</h3><ul><li>Proxmox VE</li><li>Ubuntu Server</li><li>Debian LXC</li><li>Docker &amp; Portainer</li></ul></article>
+        <article class="info-card"><h3>Monitoring &amp; Services</h3><ul><li>Prometheus &amp; Node Exporter</li><li>Grafana, Uptime Kuma &amp; SmokePing</li><li>Home Assistant &amp; AdGuard Home</li><li>n8n automation</li></ul></article>
+        <article class="info-card"><h3>Secure Access</h3><ul><li>Twingate resource access</li><li>Dedicated Connector VLAN</li><li>WireGuard VPN</li><li>Layered network and host policy</li></ul></article>
       </div>
     </section>
 
     <section class="section" id="projects">
       <p class="eyebrow">Featured Work</p>
-
-      <h2>Homelab projects.</h2>
-
-      <p class="section-text">
-        Each project is used to develop practical skills through implementation,
-        troubleshooting, validation and documentation.
-      </p>
-
-      <div class="phase-block">
-        <h3>Network &amp; Remote Access</h3>
-
-        <div class="project-grid">
-          <a class="project-card" href="/docs/Network/UniFi/">
-            <h3>UniFi Network</h3>
-            <p>Current gateway, firewall and managed wireless architecture built around a UniFi Cloud Gateway Ultra.</p>
-            <span>Gateway · Managed Wi-Fi · Zone policies</span>
-          </a>
-
-          <a class="project-card" href="/docs/Network/VLANs/">
-            <h3>VLAN Segmentation</h3>
-            <p>Trusted, Guest, Lab/Servers and IoT networks separated by role and trust.</p>
-            <span>Segmentation · Isolation · Least privilege</span>
-          </a>
-
-          <a class="project-card" href="/docs/Network/WireGuard/">
-            <h3>WireGuard Remote Access</h3>
-            <p>Established remote-access path, with Tailscale currently being evaluated as a complementary option.</p>
-            <span>VPN · Secure access · Evaluation</span>
-          </a>
-
-          <a class="project-card" href="/docs/Network/OpenWrt/">
-            <h3>OpenWrt Migration History</h3>
-            <p>The earlier network architecture and the VLAN, firewall, VPN and Wi-Fi lessons carried into UniFi.</p>
-            <span>Architecture history · Migration · Troubleshooting</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="phase-block">
-        <h3>Virtualization &amp; Services</h3>
-
-        <div class="project-grid">
-          <a class="project-card" href="/docs/Virtualization/Proxmox/">
-            <h3>Proxmox VE</h3>
-            <p>Virtualization platform for infrastructure services, virtual machines, storage and recovery workflows.</p>
-            <span>Virtualization · Storage · VM management</span>
-          </a>
-
-          <a class="project-card" href="/docs/Services/Home-Assistant/">
-            <h3>Home Assistant</h3>
-            <p>Locally managed home automation integrated with the segmented IoT environment.</p>
-            <span>Automation · Integrations · IoT</span>
-          </a>
-
-          <a class="project-card" href="/docs/Services/Docker/">
-            <h3>Docker &amp; Portainer</h3>
-            <p>Container deployment and day-to-day service administration on the virtualized server platform.</p>
-            <span>Containers · Operations · Service management</span>
-          </a>
-
-          <a class="project-card" href="/docs/Services/AdGuard-Home/">
-            <h3>AdGuard Home</h3>
-            <p>Network-wide DNS filtering integrated with DHCP and the current segmentation model.</p>
-            <span>DNS security · Filtering · Privacy</span>
-          </a>
-
-          <a class="project-card" href="/docs/Services/Uptime-Kuma/">
-            <h3>Uptime Kuma</h3>
-            <p>Availability monitoring for critical homelab systems and self-hosted services.</p>
-            <span>Monitoring · Availability · Service checks</span>
-          </a>
-
-          <a class="project-card" href="/docs/Virtualization/Backup-Strategy/">
-            <h3>Backup Strategy</h3>
-            <p>Backup, snapshot and recovery planning for the virtualized infrastructure.</p>
-            <span>Recovery · Resilience · Validation</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="phase-block">
-        <h3>Custom Projects</h3>
-
-        <div class="project-grid">
-          <a class="project-card" href="/docs/Projects/Knut/">
-            <h3>Knut</h3>
-            <p>A major custom AI and automation project focused on useful, observable and operator-controlled workflows.</p>
-            <span>AI · Automation · Systems integration</span>
-          </a>
-
-          <a class="project-card" href="/docs/Projects/Borgen-Audio/">
-            <h3>Borgen Audio</h3>
-            <p>Raspberry Pi 4 and DAC Pro audio system with AirPlay through Shairport Sync and Android Bluetooth through BlueALSA.</p>
-            <span>Raspberry Pi · ALSA · BlueZ · systemd</span>
-          </a>
-
-          <a class="project-card" href="/docs/Projects/Zigbee2MQTT/">
-            <h3>Planned Zigbee2MQTT</h3>
-            <p>A planned Zigbee coordinator, MQTT and Home Assistant architecture for local smart-home integration.</p>
-            <span>Planned · Zigbee · MQTT · Home Assistant</span>
-          </a>
-        </div>
+      <h2>Implemented systems and documented decisions.</h2>
+      <p class="section-text">Operating work is presented first. Planned projects remain visible as future learning, but are clearly separated from the current environment.</p>
+      <div class="project-grid">
+        <a class="project-card featured" href="/docs/Network/Twingate/">
+          <span class="status operating">Operating</span><h3>Twingate Zero Trust Access</h3>
+          <p>A native systemd Connector in a dedicated Debian LXC and isolated VLAN 50 provides resource-based access through explicit UniFi and host-firewall policy, without an inbound internet port.</p>
+          <span class="card-tags">Zero Trust · Debian LXC · Outbound Connector</span>
+        </a>
+        <a class="project-card" href="/docs/Network/WireGuard/">
+          <span class="status operating">Operating</span><h3>WireGuard VPN</h3>
+          <p>A separate, established tunnel- and routing-based remote-access path with a different use case from Twingate.</p>
+          <span class="card-tags">VPN · Routing · Remote access</span>
+        </a>
+        <a class="project-card" href="/docs/Network/UniFi/">
+          <span class="status current">Current</span><h3>UniFi Network</h3>
+          <p>Gateway, managed Wi-Fi, five VLANs and zone-based policy designed around explicit service access.</p>
+          <span class="card-tags">Gateway · Wi-Fi · Firewall policy</span>
+        </a>
+        <a class="project-card" href="/docs/Virtualization/Proxmox/">
+          <span class="status operating">Operating</span><h3>Proxmox &amp; Linux</h3>
+          <p>Virtual machines and containers supporting infrastructure, services, backup and recovery workflows.</p>
+          <span class="card-tags">Virtualization · Linux · Recovery</span>
+        </a>
+        <a class="project-card" href="/docs/Services/Prometheus/">
+          <span class="status operating">Operating</span><h3>Monitoring Stack</h3>
+          <p>Prometheus, Node Exporter, Grafana, Uptime Kuma and SmokePing provide complementary metrics, availability and latency views.</p>
+          <span class="card-tags">Metrics · Dashboards · Troubleshooting</span>
+        </a>
+        <a class="project-card" href="/docs/Projects/Knut/">
+          <span class="status current">Current</span><h3>Knut &amp; n8n Automation</h3>
+          <p>Operator-controlled automation work focused on useful workflows, observability and systems integration.</p>
+          <span class="card-tags">Automation · Integration · Operations</span>
+        </a>
+        <a class="project-card" href="/docs/Projects/Zigbee2MQTT/">
+          <span class="status planned">Planned</span><h3>Zigbee2MQTT</h3>
+          <p>A future Zigbee coordinator, MQTT broker and Home Assistant integration architecture.</p>
+          <span class="card-tags">Zigbee · MQTT · Home Assistant</span>
+        </a>
+        <a class="project-card" href="/docs/Network/OpenWrt/">
+          <span class="status historical">Historical</span><h3>OpenWrt Architecture</h3>
+          <p>The earlier routing, VLAN, firewall, WireGuard and Wi-Fi design retained as documented project history.</p>
+          <span class="card-tags">Migration · Networking · Lessons learned</span>
+        </a>
       </div>
     </section>
 
     <section class="section" id="network">
       <p class="eyebrow">Network Architecture</p>
-
-      <h2>Four networks, separated by trust.</h2>
-
-      <p class="section-text">
-        The UniFi Cloud Gateway Ultra routes between dedicated VLANs and applies
-        zone-based firewall policies. The UniFi-managed access point maps wireless
-        clients into the appropriate network without weakening those boundaries.
-      </p>
-
-      <div class="topology-box">
-        <a href="assets/img/network-topology.png" target="_blank" rel="noopener">
-          <img
-            src="assets/img/network-topology.png"
-            alt="Current UniFi homelab network topology"
-            class="topology-image"
-          />
+      <h2>Five networks, separated by role and trust.</h2>
+      <p class="section-text">The UniFi gateway routes between dedicated VLANs and applies zone-based policy. Twingate and WireGuard provide separate remote-access models without weakening the segment boundaries.</p>
+      <figure class="topology-box">
+        <a href="assets/img/network-topology.svg" target="_blank" rel="noopener" aria-label="Open the network topology diagram at full size">
+          <img src="assets/img/network-topology.svg" alt="Five-segment UniFi topology showing separate Twingate and WireGuard remote-access paths" class="topology-image" loading="lazy" decoding="async" />
         </a>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Trusted</h3>
-          <p>Personal and administrative clients with controlled access to required infrastructure.</p>
-        </div>
-
-        <div class="skill-group">
-          <h3>Guest</h3>
-          <p>Visitor devices with internet access and isolation from private networks.</p>
-        </div>
-
-        <div class="skill-group">
-          <h3>Lab/Servers</h3>
-          <p>Proxmox, virtual machines, containers and infrastructure services.</p>
-        </div>
-
-        <div class="skill-group">
-          <h3>IoT</h3>
-          <p>Smart-home and lower-trust devices with only required integration traffic allowed.</p>
-        </div>
+        <figcaption>Twingate clients request approved resources through an outbound Connector in VLAN 50; they do not receive an address in that VLAN.</figcaption>
+      </figure>
+      <div class="network-grid">
+        <article class="network-card trusted"><span>VLAN 10</span><h3>Trusted</h3><p>Personal and administrative clients with controlled access to approved services.</p></article>
+        <article class="network-card guest"><span>VLAN 20</span><h3>Guest</h3><p>Visitor devices with internet access and isolation from private networks.</p></article>
+        <article class="network-card lab"><span>VLAN 30</span><h3>Lab / Servers</h3><p>Proxmox, virtual machines, containers and explicitly exposed infrastructure services.</p></article>
+        <article class="network-card iot"><span>VLAN 40</span><h3>IoT</h3><p>Smart-home and lower-trust devices with only required integration exceptions.</p></article>
+        <article class="network-card remote"><span>VLAN 50</span><h3>Remote Access</h3><p>Dedicated Twingate Connector segment. Remote clients do not connect directly to this VLAN.</p></article>
       </div>
     </section>
 
-    <section class="section">
-      <p class="eyebrow">Architecture History</p>
-
-      <h2>From OpenWrt to UniFi.</h2>
-
-      <p class="section-text">
-        The Netgear R7800 and OpenWrt environment was the original routing, firewall,
-        wireless and VPN platform. It established the lab's first segmented design and
-        provided extensive troubleshooting experience. The current UniFi architecture
-        is the next stage of that work, while the OpenWrt documentation remains available
-        as a technical record rather than being presented as the active network.
-      </p>
-
-      <div class="hero-actions">
-        <a class="button secondary" href="/docs/Network/OpenWrt/">View OpenWrt History</a>
-        <a class="button secondary" href="/docs/Network/UniFi/">View Current UniFi Network</a>
+    <section class="section" id="security">
+      <p class="eyebrow">Security Practices</p>
+      <h2>Layered controls backed by operational habits.</h2>
+      <div class="security-layout">
+        <p class="section-text">The lab uses VLAN segmentation, UniFi zone-based policy, host-level UFW rules, Twingate resource access and a separate WireGuard path. Least-privilege exceptions connect only the services that need to communicate.</p>
+        <ul class="check-list">
+          <li>Credential hygiene through Bitwarden-based password management and unique credentials</li>
+          <li>Secrets and tokens kept outside public files; screenshots reviewed and redacted</li>
+          <li>Backup and recovery planning with verification after controlled changes</li>
+        </ul>
       </div>
-    </section>
-
-    <section class="section" id="skills">
-      <p class="eyebrow">Skills</p>
-
-      <h2>Technical skills demonstrated.</h2>
-
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Networking</h3>
-          <ul>
-            <li>UniFi Administration</li>
-            <li>VLAN &amp; SSID Design</li>
-            <li>Zone-Based Firewalls</li>
-            <li>WireGuard VPN</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Infrastructure</h3>
-          <ul>
-            <li>Proxmox VE</li>
-            <li>Ubuntu Server</li>
-            <li>Docker &amp; Portainer</li>
-            <li>Backup Planning</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Automation &amp; Services</h3>
-          <ul>
-            <li>Knut</li>
-            <li>Home Assistant</li>
-            <li>AdGuard Home</li>
-            <li>Uptime Kuma</li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Linux &amp; Engineering</h3>
-          <ul>
-            <li>systemd / ALSA / BlueZ</li>
-            <li>Structured Troubleshooting</li>
-            <li>Git &amp; GitHub</li>
-            <li>Technical Documentation</li>
-          </ul>
-        </div>
-      </div>
+      <a class="text-link" href="/docs/Security/Security-Practices/">Read the documented security practices →</a>
     </section>
 
     <section class="section" id="roadmap">
-      <p class="eyebrow">Roadmap</p>
-
-      <h2>Current state and next steps.</h2>
-
+      <p class="eyebrow">Current State</p>
+      <h2>Operating systems first, future work second.</h2>
       <div class="roadmap-grid">
-        <div class="roadmap-card">
-          <h3>Operating</h3>
-          <ul>
-            <li>UniFi Gateway &amp; Wi-Fi</li>
-            <li>VLAN &amp; Firewall Segmentation</li>
-            <li>WireGuard Remote Access</li>
-            <li>Proxmox &amp; Container Services</li>
-            <li>Home Assistant</li>
-            <li>Knut &amp; Borgen Audio</li>
-          </ul>
-        </div>
-
-        <div class="roadmap-card">
-          <h3>Evaluating</h3>
-          <ul>
-            <li>Tailscale</li>
-            <li>Infrastructure Monitoring</li>
-            <li>Automation Workflows</li>
-            <li>Documentation Improvements</li>
-          </ul>
-        </div>
-
-        <div class="roadmap-card">
-          <h3>Planned</h3>
-          <ul>
-            <li>Zigbee Coordinator</li>
-            <li>Zigbee2MQTT &amp; MQTT Broker</li>
-            <li>Prometheus &amp; Grafana</li>
-            <li>Security Onion &amp; Suricata</li>
-            <li>Centralized Log Analysis</li>
-          </ul>
-        </div>
+        <article class="roadmap-card"><span class="status operating">Operating</span><h3>Network &amp; Operations</h3><ul><li>UniFi gateway and managed Wi-Fi</li><li>Five VLAN segments and zone-based policies</li><li>Twingate and WireGuard</li><li>Proxmox, Docker and core services</li><li>Prometheus and Grafana</li><li>Home Assistant, n8n and Knut</li></ul></article>
+        <article class="roadmap-card"><span class="status planned">Planned / In Progress</span><h3>Next Learning</h3><ul><li>Refine alerting workflows</li><li>Zigbee coordinator and Zigbee2MQTT</li><li>Security Onion and Suricata</li><li>Centralized log analysis</li><li>Continued documentation improvement</li></ul></article>
       </div>
     </section>
 
     <section class="section documentation" id="documentation">
-      <div>
-        <p class="eyebrow">Documentation</p>
-
-        <h2>Explore the complete project documentation.</h2>
-
-        <p>
-          Detailed architecture notes, screenshots, troubleshooting records and project
-          journal entries are available in the documentation portal.
-        </p>
-      </div>
-
-      <div class="buttons">
-        <a class="button primary" href="/docs/">Browse Documentation</a>
-
-        <a
-          class="button secondary"
-          href="https://github.com/sterneborn/homelab-cybersecurity"
-          target="_blank"
-          rel="noopener"
-        >
-          View GitHub Repository
-        </a>
-      </div>
+      <div><p class="eyebrow">Documentation</p><h2>See the architecture, evidence and troubleshooting notes.</h2><p>Detailed implementation notes, validation steps, screenshots and journal entries are available in the documentation portal.</p></div>
+      <div class="buttons"><a class="button primary" href="/docs/">Browse documentation</a><a class="button secondary" href="https://github.com/sterneborn/homelab-cybersecurity" target="_blank" rel="noopener">View GitHub repository</a></div>
     </section>
 
     <section class="section" id="contact">
-      <p class="eyebrow">Contact</p>
-
-      <h2>Connect with me.</h2>
-
-      <div class="contact-links">
-        <a href="https://github.com/sterneborn" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/sterneborn/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:c.sterneborn@gmail.com">Email</a>
-      </div>
+      <p class="eyebrow">Contact</p><h2>Let's connect.</h2>
+      <div class="contact-links"><a href="https://github.com/sterneborn" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/sterneborn/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:c.sterneborn@gmail.com">Email</a></div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Christian Sterneborn · Network, Infrastructure &amp; Cybersecurity Portfolio</p>
-  </footer>
+  <footer><p>© 2026 Christian Sterneborn · IT Support, Networking &amp; Infrastructure Portfolio</p></footer>
 </body>
 </html>

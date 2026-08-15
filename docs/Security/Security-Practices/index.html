@@ -12,13 +12,13 @@
         <meta name="author" content="Christian Sterneborn">
 
 
-        <link rel="canonical" href="https://cv.sterneborn.org/docs/Services/Alerting/">
+        <link rel="canonical" href="https://cv.sterneborn.org/docs/Security/Security-Practices/">
 
 
-        <link rel="prev" href="../Grafana/">
+        <link rel="prev" href="../../Projects/Zigbee2MQTT/">
 
 
-        <link rel="next" href="../../Projects/Knut/">
+        <link rel="next" href="../Security-Onion/">
 
 
 
@@ -29,7 +29,7 @@
 
 
 
-        <title>Alerting (Planned) - Cybersecurity Homelab Documentation</title>
+        <title>Security Practices - Cybersecurity Homelab Documentation</title>
 
 
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
 
 
-        <a href="#alerting" class="md-skip">
+        <a href="#security-practices" class="md-skip">
           Skip to content
         </a>
 
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
 
-              Alerting (Planned)
+              Security Practices
 
           </span>
         </div>
@@ -281,10 +281,8 @@
 
 
 
-
-
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Home-Assistant/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Services/Home-Assistant/" class="md-tabs__link">
 
 
 
@@ -323,8 +321,10 @@
 
 
 
-      <li class="md-tabs__item">
-        <a href="../../Security/Security-Practices/" class="md-tabs__link">
+
+
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
 
 
 
@@ -875,19 +875,14 @@
 
 
 
+    <li class="md-nav__item md-nav__item--nested">
 
 
 
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
 
 
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-
-
-
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-
-
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
 
 
 
@@ -905,7 +900,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
 
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
 
@@ -923,7 +918,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Home-Assistant/" class="md-nav__link">
+      <a href="../../Services/Home-Assistant/" class="md-nav__link">
 
 
 
@@ -951,7 +946,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Docker/" class="md-nav__link">
+      <a href="../../Services/Docker/" class="md-nav__link">
 
 
 
@@ -979,7 +974,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Portainer/" class="md-nav__link">
+      <a href="../../Services/Portainer/" class="md-nav__link">
 
 
 
@@ -1007,7 +1002,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../AdGuard-Home/" class="md-nav__link">
+      <a href="../../Services/AdGuard-Home/" class="md-nav__link">
 
 
 
@@ -1035,7 +1030,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Uptime-Kuma/" class="md-nav__link">
+      <a href="../../Services/Uptime-Kuma/" class="md-nav__link">
 
 
 
@@ -1063,7 +1058,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Prometheus/" class="md-nav__link">
+      <a href="../../Services/Prometheus/" class="md-nav__link">
 
 
 
@@ -1091,7 +1086,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../Grafana/" class="md-nav__link">
+      <a href="../../Services/Grafana/" class="md-nav__link">
 
 
 
@@ -1118,35 +1113,8 @@
 
 
 
-
-
-    <li class="md-nav__item md-nav__item--active">
-
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-
-
-
-
-
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-
-
-
-  <span class="md-ellipsis">
-
-
-    Alerting (Planned)
-
-
-
-  </span>
-
-
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Services/Alerting/" class="md-nav__link">
 
 
 
@@ -1162,59 +1130,6 @@
 
 
       </a>
-
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-
-
-
-
-
-
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    <span class="md-ellipsis">
-
-        Status
-
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#design-goals" class="md-nav__link">
-    <span class="md-ellipsis">
-
-        Design Goals
-
-    </span>
-  </a>
-
-</li>
-
-        <li class="md-nav__item">
-  <a href="#planned-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-
-        Planned Workflow
-
-    </span>
-  </a>
-
-</li>
-
-    </ul>
-
-</nav>
-
     </li>
 
 
@@ -1386,14 +1301,19 @@
 
 
 
-    <li class="md-nav__item md-nav__item--nested">
 
 
 
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
 
 
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+
+
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
 
 
 
@@ -1411,7 +1331,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
 
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
 
@@ -1428,8 +1348,35 @@
 
 
 
-    <li class="md-nav__item">
-      <a href="../../Security/Security-Practices/" class="md-nav__link">
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Security Practices
+
+
+
+  </span>
+
+
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+
+      <a href="./" class="md-nav__link md-nav__link--active">
 
 
 
@@ -1445,6 +1392,158 @@
 
 
       </a>
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+
+
+
+
+
+
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Status
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#network-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Network Segmentation
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#zone-based-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Zone-Based Firewall
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#host-level-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Host-Level Firewall
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#twingate-connector-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Twingate Connector Isolation
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#wireguard" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        WireGuard
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#least-privilege-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Least-Privilege Exceptions
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#credential-and-secret-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Credential and Secret Handling
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#screenshot-redaction" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Screenshot Redaction
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#backup-and-recovery-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Backup and Recovery Validation
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#change-and-troubleshooting-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Change and Troubleshooting Workflow
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Related Documentation
+
+    </span>
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+
     </li>
 
 
@@ -1457,7 +1556,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Security/Security-Onion/" class="md-nav__link">
+      <a href="../Security-Onion/" class="md-nav__link">
 
 
 
@@ -1485,7 +1584,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Security/Suricata/" class="md-nav__link">
+      <a href="../Suricata/" class="md-nav__link">
 
 
 
@@ -1513,7 +1612,7 @@
 
 
     <li class="md-nav__item">
-      <a href="../../Security/Log-Analysis/" class="md-nav__link">
+      <a href="../Log-Analysis/" class="md-nav__link">
 
 
 
@@ -1721,10 +1820,10 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#design-goals" class="md-nav__link">
+  <a href="#network-segmentation" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Design Goals
+        Network Segmentation
 
     </span>
   </a>
@@ -1732,10 +1831,109 @@
 </li>
 
         <li class="md-nav__item">
-  <a href="#planned-workflow" class="md-nav__link">
+  <a href="#zone-based-firewall" class="md-nav__link">
     <span class="md-ellipsis">
 
-        Planned Workflow
+        Zone-Based Firewall
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#host-level-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Host-Level Firewall
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#twingate-connector-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Twingate Connector Isolation
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#wireguard" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        WireGuard
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#least-privilege-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Least-Privilege Exceptions
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#credential-and-secret-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Credential and Secret Handling
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#screenshot-redaction" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Screenshot Redaction
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#backup-and-recovery-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Backup and Recovery Validation
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#change-and-troubleshooting-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Change and Troubleshooting Workflow
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Related Documentation
 
     </span>
   </a>
@@ -1759,30 +1957,46 @@
 
 
 
-<h1 id="alerting">Alerting</h1>
+<h1 id="security-practices">Security Practices</h1>
 <h2 id="status">Status</h2>
-<p><strong>Planned — not currently deployed as a separate alerting stack.</strong></p>
-<p>Uptime Kuma currently provides service visibility, while Prometheus and Grafana provide metrics and dashboards. A broader, documented alerting workflow remains under development.</p>
-<hr />
-<h2 id="design-goals">Design Goals</h2>
+<p><strong>Current working practices.</strong> These controls are applied in an active homelab using enterprise-inspired methods and are documented without implying organization-wide production ownership.</p>
+<h2 id="network-segmentation">Network Segmentation</h2>
+<p>Five VLANs separate Trusted, Guest, Lab / Servers, IoT, and Remote Access roles. Segmentation reduces unnecessary reachability and creates clear sources and destinations for policy decisions.</p>
+<h2 id="zone-based-firewall">Zone-Based Firewall</h2>
+<p>UniFi zone-based policies default to isolation between roles and add explicit exceptions for required traffic. Stateful return traffic is permitted for an allowed connection, but unrelated unsolicited traffic is not made generally available.</p>
+<h2 id="host-level-firewall">Host-Level Firewall</h2>
+<p>Host controls such as UFW provide a second policy boundary near the service. A gateway rule can make a route possible while the host firewall limits the reachable application. Home Assistant, SSH, and n8n are examples of services permitted for the Twingate Connector at the host layer.</p>
+<h2 id="twingate-connector-isolation">Twingate Connector Isolation</h2>
+<p>The Twingate Connector runs in a dedicated Debian LXC in VLAN 50. It initiates outbound connections and requires no inbound internet port. Remote clients do not join VLAN 50; the segment exists to isolate the Connector and make its access rules explicit.</p>
+<h2 id="wireguard">WireGuard</h2>
+<p>WireGuard remains an established VPN route for use cases suited to tunnel- and routing-based access. It is maintained as a separate model from Twingate and does not remove the need for gateway, host, and application controls.</p>
+<h2 id="least-privilege-exceptions">Least-Privilege Exceptions</h2>
+<p>Required integrations are opened narrowly. Validation includes both the flow that should work and a representative flow that should remain blocked. Exceptions are documented so they can be reviewed and removed when no longer needed.</p>
+<h2 id="credential-and-secret-handling">Credential and Secret Handling</h2>
+<p>Credential hygiene uses Bitwarden-based password management, unique credentials, and careful handling of secrets outside the public repository. Bitwarden is a security routine, not presented as a standalone homelab service or an enterprise IAM platform.</p>
+<p>Tokens, private keys, account identifiers, and sensitive network values are excluded from Git. Public examples use descriptions rather than live credentials.</p>
+<h2 id="screenshot-redaction">Screenshot Redaction</h2>
+<p>Screenshots are point-in-time evidence and are reviewed before publication. Public IP addresses, MAC addresses, serial numbers, email addresses, personal client names, tokens, keys, QR codes, and unnecessary internal addresses are masked or excluded.</p>
+<p>Historical OpenWrt screenshots are labelled as historical and are never reused as if they were current UniFi evidence.</p>
+<h2 id="backup-and-recovery-validation">Backup and Recovery Validation</h2>
+<p>Backups, snapshots, and scheduled jobs are part of the operating model. Recovery thinking includes verifying that a backup completed, understanding where it is stored, documenting dependencies, and planning restoration tests rather than assuming that a backup file is sufficient.</p>
+<h2 id="change-and-troubleshooting-workflow">Change and Troubleshooting Workflow</h2>
+<ol>
+<li>Define expected behavior and scope.</li>
+<li>Capture relevant evidence before the change.</li>
+<li>Form a testable hypothesis.</li>
+<li>Make one controlled change with a rollback path.</li>
+<li>Test the intended outcome and important denied paths.</li>
+<li>Review network, host, and application evidence.</li>
+<li>Record the result and follow-up work.</li>
+</ol>
+<h2 id="related-documentation">Related Documentation</h2>
 <ul>
-<li>Alert on actionable service or infrastructure conditions</li>
-<li>Avoid excessive or duplicate notifications</li>
-<li>Include enough context to begin troubleshooting</li>
-<li>Define ownership and recovery steps for each alert</li>
-<li>Test delivery without creating alert fatigue</li>
+<li><a href="../../Network/Twingate/">Twingate Zero Trust Access</a></li>
+<li><a href="../../Network/VLANs/">VLAN Segmentation</a></li>
+<li><a href="../../Virtualization/Backup-Strategy/">Backup Strategy</a></li>
+<li><a href="../../Career/Learning-Methodology/">Learning Methodology</a></li>
 </ul>
-<hr />
-<h2 id="planned-workflow">Planned Workflow</h2>
-<pre><code class="language-text">Metrics or service check
-        |
-Alert condition
-        |
-Notification channel
-        |
-Operator verification and documented response
-</code></pre>
-<p>No notification platform is listed as current until it has been deployed and tested.</p>
 
 
 

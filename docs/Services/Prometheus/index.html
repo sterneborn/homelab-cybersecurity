@@ -2,108 +2,107 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    
+
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      
+
         <meta name="description" content="Technical documentation for a hands-on cybersecurity and networking homelab.">
-      
-      
+
+
         <meta name="author" content="Christian Sterneborn">
-      
-      
+
+
         <link rel="canonical" href="https://cv.sterneborn.org/docs/Services/Prometheus/">
-      
-      
+
+
         <link rel="prev" href="../Uptime-Kuma/">
-      
-      
+
+
         <link rel="next" href="../Grafana/">
-      
-      
-        
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+
+
+
+
+
+      <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
-    
-    
-      
-        <title>Prometheus (Planned) - Cybersecurity Homelab Documentation</title>
-      
-    
-    
+
+
+
+        <title>Prometheus - Cybersecurity Homelab Documentation</title>
+
+
+
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
-      
-        
+
+
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
 
 
-    
-    
-      
-    
-    
-      
-        
-        
+
+
+
+
+
+
+
+
+
+
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
 
-    
-    
+
+
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+
+
+
   </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue">
-  
-    
+
+
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
+
+
         <a href="#prometheus" class="md-skip">
           Skip to content
         </a>
-      
+
     </div>
     <div data-md-component="announce">
-      
+
     </div>
-    
-    
-      
+
+
+
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Cybersecurity Homelab Documentation" class="md-header__button md-logo" aria-label="Cybersecurity Homelab Documentation" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+  <img src="../../assets/favicon.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -115,35 +114,35 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-            
-              Prometheus (Planned)
-            
+
+              Prometheus
+
           </span>
         </div>
       </div>
     </div>
-    
-      
+
+
         <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
+
+
+
+
     <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
-    
-  
+
+
 </form>
-      
-    
-    
+
+
+
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-      
-      
+
+
+
+
+
         <label class="md-header__button md-icon" for="__search">
-          
+
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
@@ -152,21 +151,21 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
-        
+
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
+
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
-      
+
         <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
+
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -180,1576 +179,1716 @@
     </div>
   </div>
 </div>
-      
-    
-    
+
+
+
   </nav>
-  
+
 </header>
-    
+
     <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
+
+
+
+
+
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
+
+
+
+
+
+
     <li class="md-tabs__item">
       <a href="https://cv.sterneborn.org" class="md-tabs__link">
-        
-  
-  
-    
-  
+
+
+
+
+
   ← Portfolio
 
       </a>
     </li>
-  
 
-      
-        
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-tabs__item">
       <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
+
+
+
+
+
   Home
 
       </a>
     </li>
-  
 
-      
-        
-  
-  
-  
-  
-    
-    
+
+
+
+
+
+
+
+
+
       <li class="md-tabs__item">
         <a href="../../Network-Overview/" class="md-tabs__link">
-          
-  
-  
+
+
+
   Network
 
         </a>
       </li>
-    
-  
 
-      
-        
-  
-  
-  
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
       <li class="md-tabs__item">
         <a href="../../Virtualization/Proxmox/" class="md-tabs__link">
-          
-  
-  
+
+
+
   Virtualization
 
         </a>
       </li>
-    
-  
 
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../Home-Assistant/" class="md-tabs__link">
-          
-  
-  
+
+
+
   Services
 
         </a>
       </li>
-    
-  
 
-      
-        
-  
-  
-  
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
       <li class="md-tabs__item">
         <a href="../../Projects/Knut/" class="md-tabs__link">
-          
-  
-  
+
+
+
   Projects
 
         </a>
       </li>
-    
-  
 
-      
-        
-  
-  
-  
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
       <li class="md-tabs__item">
-        <a href="../../Security/Security-Onion/" class="md-tabs__link">
-          
-  
-  
+        <a href="../../Security/Security-Practices/" class="md-tabs__link">
+
+
+
   Security
 
         </a>
       </li>
-    
-  
 
-      
-        
-  
-  
-  
-  
-    
-    
+
+
+
+
+
+
+
+
+
+
       <li class="md-tabs__item">
         <a href="../../Career/Career-Journey/" class="md-tabs__link">
-          
-  
-  
+
+
+
   About
 
         </a>
       </li>
-    
-  
 
-      
-        
-  
-  
-  
-  
+
+
+
+
+
+
+
+
     <li class="md-tabs__item">
       <a href="../../Project-Journal/" class="md-tabs__link">
-        
-  
-  
-    
-  
+
+
+
+
+
   Project Journal
 
       </a>
     </li>
-  
 
-      
+
+
     </ul>
   </div>
 </nav>
-          
-        
-      
+
+
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
-          
-            
-              
+
+
+
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
 
 
-  
+
+
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Cybersecurity Homelab Documentation" class="md-nav__button md-logo" aria-label="Cybersecurity Homelab Documentation" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+  <img src="../../assets/favicon.svg" alt="logo">
 
     </a>
     Cybersecurity Homelab Documentation
   </label>
-  
+
   <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="https://cv.sterneborn.org" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ← Portfolio
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    ← Portfolio
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Home
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Network
-  
 
-    
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Network
+
+
+
   </span>
-  
-  
+
+
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-        
+
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
+
+
     Network
-  
+
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Network-Overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Overview
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Network/UniFi/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    UniFi
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    UniFi
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Network/VLANs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VLANs
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    VLANs
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../Network/Twingate/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Twingate Zero Trust Access
+
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Network/WireGuard/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    WireGuard
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    WireGuard
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Network/Cloudflare-DDNS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cloudflare DDNS
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Cloudflare DDNS
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Network/OpenWrt/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OpenWrt (Previous Architecture)
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    OpenWrt (Previous Architecture)
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
+
+
+
           </ul>
         </nav>
-      
+
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Virtualization
-  
 
-    
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+
+
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Virtualization
+
+
+
   </span>
-  
-  
+
+
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-        
+
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            
-  
+
+
     Virtualization
-  
+
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Virtualization/Proxmox/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Proxmox
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Proxmox
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Virtualization/Virtual-Networking/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Virtual Networking
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Virtual Networking
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Virtualization/Backup-Strategy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Backup Strategy
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Backup Strategy
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
+
+
+
           </ul>
         </nav>
-      
+
     </li>
-  
 
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Services
-  
 
-    
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+
+
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Services
+
+
+
   </span>
-  
-  
+
+
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-        
+
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            
-  
+
+
     Services
-  
+
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../Home-Assistant/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home Assistant
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Home Assistant
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Docker
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Docker
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../Portainer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Portainer
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Portainer
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../AdGuard-Home/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AdGuard Home
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    AdGuard Home
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../Uptime-Kuma/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Uptime Kuma
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Uptime Kuma
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Prometheus (Planned)
-  
 
-    
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Prometheus
+
+
+
   </span>
-  
-  
+
+
 
           <span class="md-nav__icon md-icon"></span>
         </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Prometheus (Planned)
-  
 
-    
+      <a href="./" class="md-nav__link md-nav__link--active">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Prometheus
+
+
+
   </span>
-  
-  
+
+
 
       </a>
-      
-        
+
+
 
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
+
+
+
+
+
+
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
+
         <li class="md-nav__item">
   <a href="#status" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#intended-role" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Intended Role
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture Considerations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#before-deployment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Before Deployment
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+        Status
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#operational-role" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Operational Role
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#monitoring-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Monitoring Relationships
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#troubleshooting-use" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Troubleshooting Use
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#network-and-access" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Network and Access
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Operations
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Related Documentation
+
+    </span>
+  </a>
+
+</li>
+
+    </ul>
+
+</nav>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../Grafana/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Grafana (Planned)
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Grafana
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../Alerting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Alerting (Planned)
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Alerting (Planned)
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
+
+
+
           </ul>
         </nav>
-      
+
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Projects
-  
 
-    
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+
+
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Projects
+
+
+
   </span>
-  
-  
+
+
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-        
+
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            
-  
+
+
     Projects
-  
+
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Projects/Knut/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Knut AI & Automation
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Knut AI & Automation
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Projects/Borgen-Audio/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Borgen Audio
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Borgen Audio
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Projects/Zigbee2MQTT/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Planned Zigbee2MQTT
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Planned Zigbee2MQTT
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
+
+
+
           </ul>
         </nav>
-      
+
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Security
-  
 
-    
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+
+
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Security
+
+
+
   </span>
-  
-  
+
+
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-        
+
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            
-  
+
+
     Security
-  
+
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="../../Security/Security-Practices/" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+    Security Practices
+
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Security/Security-Onion/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Security Onion (Planned)
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Security Onion (Planned)
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Security/Suricata/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Suricata (Planned)
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Suricata (Planned)
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Security/Log-Analysis/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Log Analysis (Planned)
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Log Analysis (Planned)
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
+
+
+
           </ul>
         </nav>
-      
+
     </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    About
-  
 
-    
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+
+
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+    About
+
+
+
   </span>
-  
-  
+
+
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-        
+
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            
-  
+
+
     About
-  
+
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Career/Career-Journey/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    My Journey
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    My Journey
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
-              
-                
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Career/Learning-Methodology/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Learning Methodology
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Learning Methodology
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-              
-            
+
+
+
           </ul>
         </nav>
-      
-    </li>
-  
 
-    
-      
-      
-  
-  
-  
-  
+    </li>
+
+
+
+
+
+
+
+
+
     <li class="md-nav__item">
       <a href="../../Project-Journal/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Project Journal
-  
 
-    
+
+
+  <span class="md-ellipsis">
+
+
+    Project Journal
+
+
+
   </span>
-  
-  
+
+
 
       </a>
     </li>
-  
 
-    
+
+
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
-            
-            
-              
+
+
+
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
+
 
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
+
+
+
+
+
+
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
+
         <li class="md-nav__item">
   <a href="#status" class="md-nav__link">
     <span class="md-ellipsis">
-      
+
         Status
-      
+
     </span>
   </a>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#intended-role" class="md-nav__link">
+  <a href="#operational-role" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Intended Role
-      
+
+        Operational Role
+
     </span>
   </a>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#architecture-considerations" class="md-nav__link">
+  <a href="#monitoring-relationships" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Architecture Considerations
-      
+
+        Monitoring Relationships
+
     </span>
   </a>
-  
+
 </li>
-      
+
         <li class="md-nav__item">
-  <a href="#before-deployment" class="md-nav__link">
+  <a href="#troubleshooting-use" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Before Deployment
-      
+
+        Troubleshooting Use
+
     </span>
   </a>
-  
+
 </li>
-      
+
+        <li class="md-nav__item">
+  <a href="#network-and-access" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Network and Access
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#operations" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Operations
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Related Documentation
+
+    </span>
+  </a>
+
+</li>
+
     </ul>
-  
+
 </nav>
                   </div>
                 </div>
               </div>
-            
-          
-          
+
+
+
             <div class="md-content" data-md-component="content">
-              
+
               <article class="md-content__inner md-typeset">
-                
-                  
+
+
 
 
 
 <h1 id="prometheus">Prometheus</h1>
 <h2 id="status">Status</h2>
-<p><strong>Planned — not currently deployed.</strong></p>
-<p>Prometheus is being considered for metrics collection beyond the availability checks already provided by Uptime Kuma.</p>
-<hr />
-<h2 id="intended-role">Intended Role</h2>
+<p><strong>Operating.</strong> Prometheus is installed and collecting metrics in the current homelab.</p>
+<h2 id="operational-role">Operational Role</h2>
+<p>Prometheus collects time-series metrics from selected hosts and services. Node Exporter provides host-level visibility such as system resource and operating-system metrics. The resulting data helps distinguish a transient availability issue from a resource, host, or service trend.</p>
+<h2 id="monitoring-relationships">Monitoring Relationships</h2>
+<p>The monitoring tools have complementary roles:</p>
 <ul>
-<li>Collect time-series metrics from selected hosts and services</li>
-<li>Provide visibility into resource usage and service behavior</li>
-<li>Supply data to Grafana dashboards</li>
-<li>Support alerting based on measurable conditions</li>
+<li><strong>Prometheus</strong> collects and stores metrics for querying and trend analysis.</li>
+<li><strong>Node Exporter</strong> exposes selected host metrics to Prometheus.</li>
+<li><strong>Grafana</strong> visualizes Prometheus data in operational dashboards.</li>
+<li><strong>Uptime Kuma</strong> focuses on availability and endpoint checks.</li>
+<li><strong>SmokePing</strong> provides latency and packet-loss history.</li>
 </ul>
-<hr />
-<h2 id="architecture-considerations">Architecture Considerations</h2>
-<p>The future deployment must fit the Lab/Servers network and the UniFi zone-based firewall model. Exporters and scrape targets will be limited to the systems that need monitoring rather than opening broad cross-zone access.</p>
-<hr />
-<h2 id="before-deployment">Before Deployment</h2>
+<p>Together they provide more context than a single up/down signal.</p>
+<h2 id="troubleshooting-use">Troubleshooting Use</h2>
+<p>Prometheus data is used to compare the time of an incident with host or service behavior. A typical investigation can ask:</p>
+<ol>
+<li>Did the endpoint fail, slow down, or remain reachable?</li>
+<li>Did CPU, memory, storage, or another host metric change at the same time?</li>
+<li>Was the symptom isolated to one service or visible across the host or network?</li>
+<li>Do Uptime Kuma and SmokePing observations support the same conclusion?</li>
+</ol>
+<p>Metrics support a diagnosis but do not replace service logs, network evidence, or controlled testing.</p>
+<h2 id="network-and-access">Network and Access</h2>
+<p>Prometheus runs within the segmented environment. Scrape access is limited to documented targets, and cross-network flows are opened only where collection requires them. The public documentation intentionally omits internal addresses, authentication data, and exposed ports.</p>
+<p>Administrative and dashboard access remains subject to the network's zone-based and host-level controls.</p>
+<h2 id="operations">Operations</h2>
 <ul>
-<li>Define useful metrics and retention requirements</li>
-<li>Select initial scrape targets</li>
-<li>Document authentication and firewall needs</li>
-<li>Plan storage, backup, and upgrade procedures</li>
-<li>Avoid duplicating checks already handled well by Uptime Kuma</li>
+<li>Keep scrape targets purposeful and documented.</li>
+<li>Review failed scrapes as both monitoring and connectivity signals.</li>
+<li>Track storage and retention needs.</li>
+<li>Include configuration and data requirements in backup planning.</li>
+<li>Validate the monitoring path after network or host-firewall changes.</li>
+</ul>
+<p>Alerting beyond current service checks remains an area for continued development; this page does not claim a complete Alertmanager deployment.</p>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../Grafana/">Grafana</a></li>
+<li><a href="../Uptime-Kuma/">Uptime Kuma</a></li>
+<li><a href="../Alerting/">Alerting — Planned / In Progress</a></li>
+<li><a href="../../Network-Overview/">Network Overview</a></li>
 </ul>
 
 
@@ -1763,67 +1902,67 @@
 
 
 
-                
+
               </article>
             </div>
-          
-          
+
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
+
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
+
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
   Back to top
 </button>
-        
+
       </main>
-      
+
         <footer class="md-footer">
-  
+
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
-  
-  
+
+
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
     </a>
-  
+
 </div>
-      
-        
+
+
 <div class="md-social">
-  
-    
-    
-    
-    
+
+
+
+
+
     <a href="https://cv.sterneborn.org" target="_blank" rel="noopener" title="Back to Portfolio" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272h16v176c0 35.3 28.7 64 64 64h288c35.3 0 64-28.7 64-64V272h16c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1zM240 320h32c26.5 0 48 21.5 48 48v96H192v-96c0-26.5 21.5-48 48-48"/></svg>
     </a>
-  
+
 </div>
-      
+
     </div>
   </div>
 </footer>
-      
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    
-    
-    
-      
-      
+
+
+
+
+
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
+
+
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-    
+
+
   </body>
 </html>

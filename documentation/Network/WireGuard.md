@@ -2,75 +2,50 @@
 
 ## Status
 
-**Current remote-access solution**
+**Operating — established VPN path.**
 
-WireGuard provides encrypted remote access to approved homelab resources. Access is governed by the same zone-based policy model used for local networks rather than treating a VPN connection as unrestricted access.
+WireGuard remains part of the homelab and provides a tunnel- and routing-based remote-access model. It is maintained separately from Twingate rather than being described as the only remote-access solution.
 
-Tailscale is currently being evaluated for selected device-to-device and administrative workflows. It has not replaced WireGuard.
+## Role
 
----
+WireGuard is useful when a conventional VPN tunnel and explicit network routing are appropriate. Access depends on the configured tunnel, routes, gateway policy, and destination service controls.
 
-## Design Goals
+## WireGuard and Twingate
 
-* Provide secure access from external networks
-* Limit remote clients to the services they need
-* Keep remote access separate from guest and IoT trust zones
-* Maintain a documented and testable recovery path
-* Verify connectivity through tunnel state, routing, DNS, and firewall policy
+| Model | WireGuard | Twingate |
+| --- | --- | --- |
+| Access concept | Tunnel- and routing-based VPN | Identity- and Resource-based access |
+| Local component | VPN endpoint and routes | Outbound Connector |
+| Client network behavior | Uses configured VPN addressing and routes | Does not join VLAN 50 |
+| Policy focus | Tunnel peers, routes, firewall rules | Identity, Resource, Connector, and layered firewall policy |
 
----
+The two paths have different operational uses. See [Twingate Zero Trust Access](Twingate.md) for the Connector design.
 
-## Validation Workflow
+## Validation Approach
 
-Remote-access troubleshooting is performed layer by layer:
+1. Confirm the peer and tunnel state.
+2. Verify the intended client routes.
+3. Check gateway policy for the VPN source.
+4. Test only the destinations and services expected for the use case.
+5. Confirm unrelated paths remain unavailable.
+6. Record evidence without publishing keys or sensitive addresses.
 
-1. Confirm that the client can reach the public endpoint.
-2. Verify that the WireGuard tunnel has a recent handshake.
-3. Check the client and server routes.
-4. Confirm DNS behavior through the tunnel.
-5. Test the relevant zone-based firewall policy.
-6. Validate access to only the intended homelab services.
+## Security Considerations
 
-Useful WireGuard state can be inspected with:
+* Private keys and peer secrets stay outside the public repository.
+* VPN reachability does not replace destination authentication or host-firewall policy.
+* Allowed routes and firewall rules should remain no broader than the use case requires.
+* Changes are tested from both the remote client and the destination side.
 
-```bash
-wg show
-```
+## Historical OpenWrt Evidence
 
----
+![Historical OpenWrt WireGuard interface](../assets/screenshots/interfaces-wan-wireguard.png)
 
-## Tailscale Evaluation
+*Point-in-time implementation evidence from the previous OpenWrt architecture. It is not a current UniFi screenshot and may include values that no longer represent the active network.*
 
-The evaluation focuses on whether Tailscale simplifies specific remote administration scenarios without obscuring routing, policy, or operational ownership.
+## Related Documentation
 
-Evaluation criteria include:
-
-* Device enrollment and removal
-* Access-control clarity
-* Compatibility with the existing VLAN and firewall model
-* DNS behavior
-* Observability and troubleshooting
-* Whether it complements or duplicates the established WireGuard path
-
-Until that evaluation is complete, WireGuard remains the documented production remote-access method.
-
----
-
-## OpenWrt History
-
-WireGuard was first deployed on the earlier OpenWrt router. The original OpenWrt interface screenshot is retained below as historical evidence; it is not the current gateway interface.
-
-![Previous WireGuard interface on OpenWrt](../assets/screenshots/interfaces-wan-wireguard.png)
-
-That deployment provided practical experience with peer configuration, firewall rules, routing, dynamic DNS, and handshake troubleshooting. Those lessons carried forward into the UniFi migration.
-
----
-
-## Skills Demonstrated
-
-* WireGuard deployment and administration
-* Secure remote-access design
-* Routing and DNS troubleshooting
-* Zone-based access control
-* VPN migration planning
-* Comparative evaluation of remote-access tools
+* [Twingate Zero Trust Access](Twingate.md)
+* [Network Overview](../Network-Overview.md)
+* [UniFi Network](UniFi.md)
+* [OpenWrt — Previous Architecture](OpenWrt.md)

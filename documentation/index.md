@@ -1,139 +1,86 @@
-# Christian Sterneborn
+# Cybersecurity Homelab Documentation
 
-## Network, Infrastructure & Cybersecurity Homelab
+This documentation records an active, structured homelab used to build practical experience in IT support, networking, Linux, infrastructure operations, automation, and cybersecurity. It focuses on what is running, how the parts connect, how changes are validated, and what was learned during troubleshooting.
 
-Welcome to the technical documentation for my current homelab and project portfolio.
+!!! success "Current environment"
+    UniFi networking, five VLAN segments, Twingate and WireGuard remote access, Proxmox virtualization, core self-hosted services, and the Prometheus/Grafana monitoring stack are operating now.
 
-The environment is built for hands-on learning across networking, virtualization, Linux, self-hosted services, automation, smart-home infrastructure, and cybersecurity. The documentation records both the current architecture and the earlier systems that shaped it.
+## Current Architecture
 
----
+![Current UniFi homelab topology with five VLANs and two remote-access paths](assets/network-topology.svg)
 
-# Current Homelab
+The UniFi Cloud Gateway Ultra provides routing and zone-based policy for five networks:
 
-## Network
+| VLAN | Name | Primary role |
+| ---: | --- | --- |
+| 10 | Trusted | Personal and administrative clients |
+| 20 | Guest | Internet-only visitor access |
+| 30 | Lab / Servers | Proxmox, virtual machines, containers, and services |
+| 40 | IoT | Smart-home and lower-trust devices |
+| 50 | Remote Access | Dedicated Twingate Connector infrastructure |
 
-* UniFi Cloud Gateway Ultra
-* UniFi-managed Wi-Fi and access point
-* Trusted, Guest, Lab/Servers, and IoT VLANs
-* Zone-based firewall policies
-* WireGuard remote access
-* Tailscale under evaluation
+Twingate provides resource-based Zero Trust access through an outbound-only Connector in a Debian LXC. WireGuard remains a separate, established tunnel- and routing-based VPN path. Remote Twingate clients do not join VLAN 50.
 
-## Virtualization and Services
+## Operating Platforms and Services
 
-* Proxmox VE
-* Home Assistant
-* Docker and Portainer
-* AdGuard Home
-* Uptime Kuma
+* **Networking:** UniFi Cloud Gateway Ultra, UniFi U7 Lite, VLAN segmentation, and zone-based firewall policy
+* **Virtualization:** Proxmox VE, Ubuntu Server, and Debian LXC workloads
+* **Containers:** Docker and Portainer
+* **Core services:** Home Assistant, AdGuard Home, and n8n
+* **Monitoring:** Prometheus, Node Exporter, Grafana, Uptime Kuma, and SmokePing
+* **Remote access:** Twingate and WireGuard, used as distinct access models
+* **Custom work:** Knut AI and automation, plus Borgen Audio
 
-## Custom Projects
+## Working Method
 
-* **Knut** — a major custom AI and automation project
-* **Borgen Audio** — Raspberry Pi 4 audio appliance with a Raspberry Pi DAC Pro, Shairport Sync, and BlueALSA
-* **Zigbee2MQTT architecture** — planned coordinator, MQTT, and Home Assistant integration
+The repository demonstrates four habits relevant to support and junior infrastructure roles:
 
----
+1. **Structured troubleshooting** across client, network, host, and application layers.
+2. **Clear documentation** of architecture, changes, evidence, and outcomes.
+3. **Secure-by-default design** using segmentation and explicit exceptions.
+4. **Practical operations** including monitoring, maintenance, backup, and recovery validation.
 
-# Architecture Evolution
+## Security Practices
 
-The network began with a Netgear R7800 running OpenWrt. That platform was used to learn VLAN configuration, firewall zones, WireGuard, dynamic DNS, Wi-Fi troubleshooting, and evidence-based network diagnostics.
+Network segmentation, zone-based firewall rules, host-level UFW controls, Connector isolation, least-privilege access exceptions, screenshot redaction, and secret handling are documented in [Security Practices](Security/Security-Practices.md).
 
-The current architecture has migrated to UniFi. A UniFi Cloud Gateway Ultra now provides gateway and firewall functions, and a UniFi-managed access point provides centrally managed Wi-Fi. OpenWrt remains documented as an earlier architecture rather than being erased from the project history.
+Credential hygiene uses Bitwarden-based password management, unique credentials, and careful handling of secrets outside the public repository. Bitwarden is a working practice rather than a standalone infrastructure project.
 
-* [Current UniFi Network](Network/UniFi.md)
-* [Previous OpenWrt Architecture](Network/OpenWrt.md)
-* [Project Journal](Project-Journal.md)
+## Documentation Map
 
----
-
-# Skills Demonstrated
-
-## Networking and Security
-
-* UniFi gateway and wireless administration
-* VLAN design and segmentation
-* Zone-based firewall policy design
-* DNS and DHCP integration
-* WireGuard deployment and troubleshooting
-* Network migration and validation
-
-## Linux and Infrastructure
-
-* Proxmox virtualization
-* Ubuntu Server administration
-* Docker deployment and Portainer operations
-* Backup and recovery planning
-* `systemd`, ALSA, and BlueZ troubleshooting
-
-## Services and Automation
-
-* Home Assistant
-* AdGuard Home
-* Uptime Kuma
-* AI-assisted workflow and automation design through Knut
-* Planned Zigbee2MQTT and MQTT integration
-
-## Engineering Practice
-
-* Structured troubleshooting
-* Technical documentation
-* Change tracking and project journaling
-* Git and GitHub workflows
-* Incremental testing and verification
-
----
-
-# Current Documentation
-
-## Network
+### Network
 
 * [Network Overview](Network-Overview.md)
 * [UniFi Network](Network/UniFi.md)
 * [VLAN Segmentation](Network/VLANs.md)
+* [Twingate Zero Trust Access](Network/Twingate.md)
 * [WireGuard Remote Access](Network/WireGuard.md)
 * [Cloudflare DDNS](Network/Cloudflare-DDNS.md)
 * [OpenWrt — Previous Architecture](Network/OpenWrt.md)
 
-## Virtualization
+### Virtualization and Services
 
-* [Proxmox](Virtualization/Proxmox.md)
+* [Proxmox VE](Virtualization/Proxmox.md)
 * [Virtual Networking](Virtualization/Virtual-Networking.md)
 * [Backup Strategy](Virtualization/Backup-Strategy.md)
+* [Docker](Services/Docker.md) and [Portainer](Services/Portainer.md)
+* [Home Assistant](Services/Home-Assistant.md) and [AdGuard Home](Services/AdGuard-Home.md)
+* [Uptime Kuma](Services/Uptime-Kuma.md), [Prometheus](Services/Prometheus.md), and [Grafana](Services/Grafana.md)
+* [Alerting — Planned / In Progress](Services/Alerting.md)
 
-## Services
-
-* [Home Assistant](Services/Home-Assistant.md)
-* [Docker](Services/Docker.md)
-* [Portainer](Services/Portainer.md)
-* [AdGuard Home](Services/AdGuard-Home.md)
-* [Uptime Kuma](Services/Uptime-Kuma.md)
-* [Prometheus — Planned](Services/Prometheus.md)
-* [Grafana — Planned](Services/Grafana.md)
-* [Alerting — Planned](Services/Alerting.md)
-
-## Projects
+### Projects and Security Learning
 
 * [Knut AI & Automation](Projects/Knut.md)
 * [Borgen Audio](Projects/Borgen-Audio.md)
 * [Planned Zigbee2MQTT Architecture](Projects/Zigbee2MQTT.md)
-
-## Security and Career
-
 * [Security Onion — Planned](Security/Security-Onion.md)
 * [Suricata — Planned](Security/Suricata.md)
 * [Log Analysis — Planned](Security/Log-Analysis.md)
-* [Career Journey](Career/Career-Journey.md)
-* [Learning Methodology](Career/Learning-Methodology.md)
 
----
+## Architecture History
 
-# Learning Philosophy
+The original segmented network used OpenWrt. Its diagrams and screenshots remain available as clearly labelled historical evidence. They are not presented as current UniFi configuration.
 
-The best way to learn technology is through practical implementation, structured troubleshooting, validation, and documentation. This repository intentionally records both working systems and the migration history behind them.
+## Portfolio Relevance
 
----
-
-# Contact
-
-[GitHub](https://github.com/sterneborn)
+This project supports roles such as IT Support Technician, IT Technician, Service Desk, NOC Technician, and junior network, infrastructure, or cybersecurity operations positions. It demonstrates a practical ability to build, operate, troubleshoot, verify, and explain working technical systems.
