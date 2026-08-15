@@ -4,7 +4,7 @@
 
 **Planned — not currently deployed as a separate alerting stack.**
 
-Uptime Kuma currently provides service visibility. A broader alerting workflow will be evaluated alongside Prometheus and Grafana.
+Uptime Kuma currently provides service visibility, while Prometheus and Grafana provide metrics and dashboards. A broader, documented alerting workflow remains under development.
 
 ---
 

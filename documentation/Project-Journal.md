@@ -236,7 +236,7 @@ The backup infrastructure now provides a significantly improved recovery capabil
 * Organized the network into Trusted, Guest, Lab/Servers, and IoT VLANs
 * Adopted zone-based firewall policies between network segments
 * Retained WireGuard for remote access
-* Began evaluating Tailscale as a complementary remote-access option
+* Retained WireGuard as the established VPN path while preparing a separate resource-based access model
 * Added Home Assistant to the documented service stack
 * Continued operating Proxmox, Docker, Portainer, AdGuard Home, and Uptime Kuma
 * Added Knut as a major custom AI and automation project
@@ -259,3 +259,35 @@ The OpenWrt documentation remains in the repository as a record of the original 
 * IoT segmentation and smart-home integration planning
 * AI and automation project development
 * Linux audio, Bluetooth, and service troubleshooting
+
+---
+
+## 2026-08-15 – Twingate and Remote Access Segmentation
+
+### Completed Work
+
+* Added VLAN 50 as a dedicated Remote Access segment
+* Deployed a Twingate Connector in a separate Debian LXC on Proxmox
+* Installed the Connector as a native systemd service
+* Verified its outbound-only connection model without opening an inbound internet port
+* Added the initial protected Lab / Servers Resource
+* Applied UniFi policy from the Connector host to approved internal Resources
+* Used host-firewall rules to limit access to required services, including Home Assistant, SSH, and n8n where applicable
+* Verified remote access through the complete client, Connector, network-policy, host-firewall, and application path
+
+### Architecture Decision
+
+VLAN 50 isolates Connector infrastructure; it is not an address pool for remote clients. A remote client requests an approved Resource through Twingate, while the Connector routes locally to that Resource under explicit UniFi and host-level policy. WireGuard remains available as a separate VPN model.
+
+### Security and Documentation
+
+Connector credentials, account details, internal addresses, and tokens were excluded from public material. Validation included both allowed access and representative denied paths so that the new route was not treated as broad internal access.
+
+### Key Learnings
+
+* Resource-based remote access architecture
+* Debian LXC and systemd service operation
+* Dedicated Connector segmentation
+* UniFi zone-policy troubleshooting
+* Host-firewall enforcement
+* Secure validation and public documentation

@@ -90,7 +90,7 @@ Uptime Kuma provides several advantages:
 * Historical availability tracking
 * Simple deployment and administration
 
-The platform serves as an introduction to monitoring concepts that will later be expanded through Prometheus and Grafana.
+The platform provides availability-focused checks that complement the operating Prometheus metrics and Grafana dashboard stack.
 
 ---
 
@@ -142,4 +142,4 @@ The deployment of Uptime Kuma introduced practical monitoring concepts and provi
 
 Monitoring availability, response times and service status reinforced the importance of observability in modern infrastructure environments.
 
-Uptime Kuma now serves as the foundation for future monitoring initiatives and prepares the environment for the introduction of Prometheus, Grafana and alerting workflows.
+Uptime Kuma remains the availability-focused part of a broader monitoring environment that now includes Prometheus, Node Exporter, Grafana, and SmokePing. More complete alerting workflows remain under development.

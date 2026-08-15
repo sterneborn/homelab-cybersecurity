@@ -1,100 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
   <title id="title">Current UniFi homelab network topology</title>
-  <desc id="desc">Internet connects to a UniFi Cloud Gateway Ultra, which manages a UniFi access point, WireGuard access, zone-based firewall policy, and Trusted, Guest, Lab and Servers, and IoT VLANs.</desc>
+  <desc id="desc">Internet connects to a UniFi Cloud Gateway Ultra and zone-based firewall serving five VLANs. WireGuard is a separate VPN path. A remote client uses the Twingate service and an outbound Connector in VLAN 50 to reach approved resources in VLAN 30 without joining VLAN 50.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0f172a"/>
-      <stop offset="1" stop-color="#020617"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity="0.55"/>
-    </filter>
-    <style>
-      .title { fill: #f8fafc; font-size: 44px; font-weight: 700; }
-      .subtitle { fill: #94a3b8; font-size: 21px; font-weight: 400; }
-      .heading { fill: #f8fafc; font-size: 24px; font-weight: 700; }
-      .label { fill: #cbd5e1; font-size: 18px; font-weight: 500; }
-      .small { fill: #94a3b8; font-size: 16px; font-weight: 400; }
-      .eyebrow { fill: #38bdf8; font-size: 16px; font-weight: 700; letter-spacing: 2px; }
-      .card { fill: #111827; stroke: #334155; stroke-width: 2; }
-      .primary { fill: #0c4a6e; stroke: #38bdf8; stroke-width: 3; }
-      .line { fill: none; stroke: #38bdf8; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-      .dash { fill: none; stroke: #a78bfa; stroke-width: 3; stroke-dasharray: 10 10; stroke-linecap: round; }
-    </style>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#050913"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#020617" flood-opacity="0.52"/></filter>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#45c6f4"/></marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#b59cf6"/></marker>
+    <style>.title{fill:#f8fbff;font:700 44px Inter,system-ui,sans-serif}.subtitle{fill:#a8b5c7;font:400 20px Inter,system-ui,sans-serif}.heading{fill:#f8fbff;font:700 22px Inter,system-ui,sans-serif}.label{fill:#c7d2e1;font:500 17px Inter,system-ui,sans-serif}.small{fill:#a8b5c7;font:400 15px Inter,system-ui,sans-serif}.eyebrow{fill:#45c6f4;font:700 15px Inter,system-ui,sans-serif;letter-spacing:2px}.vlan{fill:#a8b5c7;font:700 14px Inter,system-ui,sans-serif;letter-spacing:1px}.card{fill:#111b2e;stroke:#2a3c55;stroke-width:2}.primary{fill:#0c4a6e;stroke:#45c6f4;stroke-width:3}.line{fill:none;stroke:#45c6f4;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.access{fill:none;stroke:#b59cf6;stroke-width:3;stroke-dasharray:9 8;stroke-linecap:round;stroke-linejoin:round}.policy{fill:#172554;stroke:#60a5fa;stroke-width:2}</style>
   </defs>
-
-  <rect width="1536" height="1024" rx="34" fill="url(#background)"/>
-  <text x="72" y="78" class="eyebrow">CURRENT ARCHITECTURE</text>
-  <text x="72" y="132" class="title">UniFi Homelab Network</text>
-  <text x="72" y="169" class="subtitle">Segmented networking, zone-based policy and self-hosted infrastructure</text>
-
-  <rect x="670" y="58" width="196" height="76" rx="16" class="card"/>
-  <circle cx="708" cy="96" r="14" fill="#38bdf8"/>
-  <text x="738" y="104" class="heading">Internet</text>
-
-  <rect x="766" y="134" width="4" height="84" fill="#38bdf8"/>
-  <rect x="518" y="218" width="500" height="112" rx="20" class="primary" filter="url(#shadow)"/>
-  <text x="768" y="263" text-anchor="middle" class="heading">UniFi Cloud Gateway Ultra</text>
-  <text x="768" y="296" text-anchor="middle" class="label">Gateway · Router · Firewall · UniFi Network</text>
-
-  <rect x="72" y="224" width="328" height="100" rx="18" class="card"/>
-  <text x="98" y="264" class="heading">WireGuard</text>
-  <text x="98" y="296" class="small">Current remote access</text>
-  <rect x="400" y="272" width="118" height="4" fill="#a78bfa"/>
-
-  <rect x="1136" y="224" width="328" height="100" rx="18" class="card"/>
-  <text x="1162" y="264" class="heading">UniFi-managed Wi-Fi</text>
-  <text x="1162" y="296" class="small">Access point · VLAN-backed SSIDs</text>
-  <rect x="1018" y="272" width="118" height="4" fill="#38bdf8"/>
-
-  <rect x="766" y="330" width="4" height="60" fill="#38bdf8"/>
-  <rect x="420" y="390" width="696" height="74" rx="16" fill="#172554" stroke="#60a5fa" stroke-width="2"/>
-  <text x="768" y="421" text-anchor="middle" class="heading">Zone-based firewall policies</text>
-  <text x="768" y="448" text-anchor="middle" class="small">Default isolation with explicit access for required services</text>
-
-  <rect x="766" y="464" width="4" height="50" fill="#38bdf8"/>
-  <rect x="204" y="510" width="1128" height="4" fill="#38bdf8"/>
-  <rect x="202" y="512" width="4" height="36" fill="#38bdf8"/>
-  <rect x="578" y="512" width="4" height="36" fill="#38bdf8"/>
-  <rect x="954" y="512" width="4" height="36" fill="#38bdf8"/>
-  <rect x="1330" y="512" width="4" height="36" fill="#38bdf8"/>
-
-  <rect x="72" y="548" width="264" height="176" rx="18" class="card"/>
-  <rect x="72" y="548" width="264" height="12" rx="6" fill="#22c55e"/>
-  <text x="98" y="605" class="heading">Trusted</text>
-  <text x="98" y="640" class="label">Personal devices</text>
-  <text x="98" y="670" class="label">Admin clients</text>
-  <text x="98" y="700" class="small">Controlled service access</text>
-
-  <rect x="448" y="548" width="264" height="176" rx="18" class="card"/>
-  <rect x="448" y="548" width="264" height="12" rx="6" fill="#f59e0b"/>
-  <text x="474" y="605" class="heading">Guest</text>
-  <text x="474" y="640" class="label">Visitor Wi-Fi</text>
-  <text x="474" y="670" class="label">Internet access</text>
-  <text x="474" y="700" class="small">Private networks blocked</text>
-
-  <rect x="824" y="548" width="264" height="176" rx="18" class="card"/>
-  <rect x="824" y="548" width="264" height="12" rx="6" fill="#38bdf8"/>
-  <text x="850" y="605" class="heading">Lab / Servers</text>
-  <text x="850" y="640" class="label">Proxmox · VMs</text>
-  <text x="850" y="670" class="label">Docker · Portainer</text>
-  <text x="850" y="700" class="small">AdGuard · Uptime Kuma</text>
-
-  <rect x="1200" y="548" width="264" height="176" rx="18" class="card"/>
-  <rect x="1200" y="548" width="264" height="12" rx="6" fill="#a78bfa"/>
-  <text x="1226" y="605" class="heading">IoT</text>
-  <text x="1226" y="640" class="label">Smart-home devices</text>
-  <text x="1226" y="670" class="label">Home Assistant</text>
-  <text x="1226" y="700" class="small">Planned Zigbee2MQTT</text>
-
-  <rect x="72" y="788" width="1392" height="154" rx="22" fill="#111827" stroke="#1e293b" stroke-width="2"/>
-  <text x="104" y="834" class="eyebrow">OPERATIONS &amp; PROJECTS</text>
-  <text x="104" y="881" class="heading">Knut AI &amp; Automation</text>
-  <text x="458" y="881" class="heading">Home Assistant</text>
-  <text x="772" y="881" class="heading">Borgen Audio</text>
-  <text x="1070" y="881" class="heading">Monitoring &amp; DNS</text>
-  <text x="104" y="914" class="small">Custom workflows</text>
-  <text x="458" y="914" class="small">Local automation</text>
-  <text x="772" y="914" class="small">Pi 4 · DAC · AirPlay · Bluetooth</text>
-  <text x="1070" y="914" class="small">Uptime Kuma · AdGuard Home</text>
+  <rect width="1600" height="1100" rx="34" fill="url(#background)"/><text x="64" y="66" class="eyebrow">CURRENT ARCHITECTURE</text><text x="64" y="116" class="title">UniFi Homelab Network</text><text x="64" y="151" class="subtitle">Five segmented networks · layered policy · two distinct remote-access models</text>
+  <rect x="690" y="50" width="220" height="68" rx="16" class="card"/><circle cx="730" cy="84" r="13" fill="#45c6f4"/><text x="762" y="92" class="heading">Internet</text><path d="M800 118V200" class="line" marker-end="url(#arrow-cyan)"/>
+  <rect x="535" y="200" width="530" height="104" rx="20" class="primary" filter="url(#shadow)"/><text x="800" y="243" text-anchor="middle" class="heading">UniFi Cloud Gateway Ultra</text><text x="800" y="275" text-anchor="middle" class="label">Gateway · Router · UniFi Network</text>
+  <rect x="50" y="206" width="270" height="92" rx="18" class="card"/><text x="76" y="245" class="heading">WireGuard VPN</text><text x="76" y="275" class="small">Separate tunnel + routing path</text><path d="M320 252H535" class="access" marker-end="url(#arrow-purple)"/>
+  <rect x="1280" y="206" width="270" height="92" rx="18" class="card"/><text x="1306" y="245" class="heading">UniFi U7 Lite</text><text x="1306" y="275" class="small">Managed AP · VLAN-backed SSIDs</text><path d="M1065 252H1280" class="line" marker-end="url(#arrow-cyan)"/>
+  <path d="M800 304V352" class="line"/><rect x="445" y="352" width="710" height="78" rx="16" class="policy"/><text x="800" y="383" text-anchor="middle" class="heading">UniFi zone-based firewall</text><text x="800" y="412" text-anchor="middle" class="small">Default isolation · explicit required access · stateful return traffic</text><path d="M800 430V470M180 470H1420M180 470V502M490 470V502M800 470V502M1110 470V502M1420 470V502" class="line"/>
+  <rect x="40" y="502" width="280" height="212" rx="18" class="card"/><rect x="40" y="502" width="280" height="10" rx="5" fill="#57d394"/><text x="66" y="548" class="vlan">VLAN 10</text><text x="66" y="584" class="heading">Trusted</text><text x="66" y="618" class="label">Personal devices</text><text x="66" y="647" class="label">Administrative clients</text><text x="66" y="681" class="small">Approved service access</text>
+  <rect x="350" y="502" width="280" height="212" rx="18" class="card"/><rect x="350" y="502" width="280" height="10" rx="5" fill="#f5c451"/><text x="376" y="548" class="vlan">VLAN 20</text><text x="376" y="584" class="heading">Guest</text><text x="376" y="618" class="label">Visitor devices</text><text x="376" y="647" class="label">Internet only</text><text x="376" y="681" class="small">Private networks blocked</text>
+  <rect x="660" y="502" width="280" height="212" rx="18" class="card"/><rect x="660" y="502" width="280" height="10" rx="5" fill="#45c6f4"/><text x="686" y="548" class="vlan">VLAN 30</text><text x="686" y="584" class="heading">Lab / Servers</text><text x="686" y="618" class="label">Proxmox · VMs · Docker</text><text x="686" y="647" class="label">Approved Resources</text><text x="686" y="681" class="small">Host firewalls narrow services</text>
+  <rect x="970" y="502" width="280" height="212" rx="18" class="card"/><rect x="970" y="502" width="280" height="10" rx="5" fill="#b59cf6"/><text x="996" y="548" class="vlan">VLAN 40</text><text x="996" y="584" class="heading">IoT</text><text x="996" y="618" class="label">Smart-home devices</text><text x="996" y="647" class="label">Home Assistant</text><text x="996" y="681" class="small">Required exceptions only</text>
+  <rect x="1280" y="502" width="280" height="212" rx="18" fill="#171b31" stroke="#fb7185" stroke-width="2"/><rect x="1280" y="502" width="280" height="10" rx="5" fill="#fb7185"/><text x="1306" y="548" class="vlan">VLAN 50</text><text x="1306" y="584" class="heading">Remote Access</text><rect x="1304" y="604" width="232" height="64" rx="12" fill="#27223d" stroke="#b59cf6" stroke-width="2"/><text x="1420" y="631" text-anchor="middle" class="label">Debian LXC Connector</text><text x="1420" y="654" text-anchor="middle" class="small">Native systemd service</text><text x="1306" y="695" class="small">Connector only · no client address</text>
+  <rect x="1015" y="58" width="200" height="64" rx="15" class="card"/><text x="1115" y="85" text-anchor="middle" class="heading">Remote client</text><text x="1115" y="107" text-anchor="middle" class="small">Does not join VLAN 50</text><rect x="1300" y="58" width="235" height="64" rx="15" class="card"/><text x="1418" y="85" text-anchor="middle" class="heading">Twingate service</text><text x="1418" y="107" text-anchor="middle" class="small">Identity + Resource decision</text><path d="M1215 90H1300" class="access" marker-end="url(#arrow-purple)"/><path d="M1536 636H1572V90H1535" class="access" marker-end="url(#arrow-purple)"/><text x="1298" y="151" class="small">Outbound Connector connection</text>
+  <path d="M1420 668V754H800V714" class="access" marker-end="url(#arrow-purple)"/><rect x="972" y="730" width="290" height="42" rx="10" fill="#27223d" stroke="#b59cf6"/><text x="1117" y="757" text-anchor="middle" class="small">Only approved Resource flows</text>
+  <rect x="60" y="824" width="1480" height="206" rx="22" fill="#111b2e" stroke="#26364d" stroke-width="2"/><text x="92" y="866" class="eyebrow">LAB / SERVERS AND OPERATIONS</text><text x="92" y="912" class="heading">Proxmox &amp; Linux</text><text x="425" y="912" class="heading">Core Services</text><text x="790" y="912" class="heading">Monitoring</text><text x="1170" y="912" class="heading">Automation</text><text x="92" y="946" class="small">VMs · Debian LXC · Ubuntu</text><text x="425" y="946" class="small">Home Assistant · AdGuard</text><text x="790" y="946" class="small">Prometheus · Grafana</text><text x="1170" y="946" class="small">n8n · Knut</text><text x="92" y="979" class="small">Docker · Portainer · backups</text><text x="425" y="979" class="small">SSH · self-hosted apps</text><text x="790" y="979" class="small">Uptime Kuma · SmokePing</text><text x="1170" y="979" class="small">Controlled workflows</text><text x="800" y="1010" text-anchor="middle" class="small">Secrets, tokens, private addresses and account details intentionally omitted</text>
 </svg>

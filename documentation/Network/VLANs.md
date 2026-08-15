@@ -2,81 +2,61 @@
 
 ## Status
 
-**Current design on UniFi**
+**Operating — five networks managed by UniFi.**
 
-The homelab uses VLANs to separate devices and services by role and trust level. Routing and policy enforcement are handled by the UniFi Cloud Gateway Ultra through zone-based firewall policies.
+Segmentation separates devices and services by role and trust. Routing between segments is possible only when the gateway policy permits the flow, and host firewalls can restrict it further.
 
----
+## Current VLANs
 
-## VLAN Overview
+| VLAN | Name | Role | Policy intent |
+| ---- | ---- | ---- | ------------- |
+| 10 | Trusted | Personal and administrative clients | Controlled access to approved services |
+| 20 | Guest | Visitor devices | Internet only |
+| 30 | Lab / Servers | Proxmox, VMs and services | Explicitly exposed infrastructure services |
+| 40 | IoT | Smart-home and lower-trust devices | Isolation with required integration exceptions |
+| 50 | Remote Access | Twingate Connector infrastructure | Connector-only segment with explicit access to approved Resources |
 
-| Network | Purpose | Examples |
-| ------- | ------- | -------- |
-| Trusted | Personal and administrative devices | Workstations, phones, and management clients |
-| Guest | Visitor and temporary devices | Guest Wi-Fi clients |
-| Lab/Servers | Infrastructure and test workloads | Proxmox, VMs, Docker, and self-hosted services |
-| IoT | Smart-home and lower-trust devices | Connected devices and future Zigbee integrations |
+## VLAN 10 — Trusted
 
-VLAN identifiers and addressing are intentionally kept out of this public overview. The design focus is the trust boundary and the policy applied between segments.
+Trusted contains personal and administrative clients. Its higher trust does not imply unrestricted access; connections to infrastructure remain limited to approved services.
 
----
+## VLAN 20 — Guest
 
-## Zone-Based Firewall Model
+Guest is intended for visitor devices. It provides internet access while blocking private-network access.
 
-The firewall starts from isolation between zones. Cross-zone communication is enabled only when a documented service or administrative workflow requires it.
+## VLAN 30 — Lab / Servers
 
-| Source zone | Policy intent |
-| ----------- | ------------- |
-| Trusted | Permit required administration and service access; avoid unrestricted access where it is unnecessary |
-| Guest | Internet access only; block access to private networks |
-| Lab/Servers | Allow required outbound traffic; expose services only through explicit rules |
-| IoT | Isolate from Trusted and Lab/Servers; allow only required controller, DNS, and internet traffic |
-| Remote access | Limit WireGuard clients to the resources they are intended to administer or use |
+Lab / Servers contains Proxmox, virtual machines, containers, monitoring, and self-hosted applications. Services are exposed explicitly rather than by opening the full segment.
 
-This approach follows least privilege and makes the expected traffic flow easier to review as the homelab grows.
+## VLAN 40 — IoT
 
----
+IoT contains smart-home and lower-trust devices. Required integrations with Home Assistant are handled as narrow exceptions. The planned Zigbee2MQTT architecture will follow the same model.
 
-## Wireless Segmentation
+## VLAN 50 — Remote Access
 
-The UniFi-managed access point maps wireless networks to the appropriate VLAN. This keeps guest and IoT clients separated even when they share the same physical access point as trusted devices.
+Remote Access contains the dedicated Debian LXC Twingate Connector. The segment reduces the Connector's exposure to normal client and server traffic and makes the source of Connector-to-Resource flows clear in UniFi policy.
 
----
+Twingate clients do **not** join VLAN 50 and do not receive a VLAN 50 address. A client requests an approved Resource through Twingate; the Connector then reaches that Resource using local routing and explicit policy. The Resource can remain in VLAN 30.
 
-## Lab/Servers Segment
+The Connector host is permitted to reach approved internal Resources at the UniFi layer. Host firewalls can narrow the flow to the required service. This separates route availability from service authorization.
 
-The Lab/Servers network hosts the virtualization and service layer, including:
+!!! note "Screenshot status"
+    A current `unifi-networks-vlan50.png` capture is pending. No placeholder is embedded here, and historical OpenWrt images are not reused as UniFi evidence.
 
-* Proxmox VE
-* Ubuntu Server workloads
-* Docker and Portainer
-* AdGuard Home
-* Uptime Kuma
-* Home Assistant integrations
+## Validation
 
-Administrative access originates from approved clients in the Trusted zone and is controlled through firewall policy.
+Validation checks both intended access and isolation:
 
----
+* confirm a device receives the expected network assignment,
+* verify Guest cannot reach private networks,
+* verify only required IoT integration flows,
+* confirm the Twingate Connector reaches an approved Resource,
+* confirm the same path does not imply broad access to other services,
+* verify remote clients remain outside the local VLAN addressing model.
 
-## IoT Segment
+## Related Documentation
 
-The IoT network provides a dedicated trust boundary for smart-home devices. The planned Zigbee coordinator and Zigbee2MQTT architecture will integrate with Home Assistant without granting IoT devices broad access to the rest of the homelab.
-
-See [Planned Zigbee2MQTT Architecture](../Projects/Zigbee2MQTT.md).
-
----
-
-## Migration History
-
-The earlier OpenWrt design used Trusted, Guest, and Lab VLANs plus a recovery network. Its screenshots and address plan remain in the [OpenWrt documentation](OpenWrt.md) as historical implementation evidence, but they do not describe the current UniFi policy model.
-
----
-
-## Skills Demonstrated
-
-* VLAN and SSID design
-* Zone-based firewall policy
-* Trust-boundary definition
-* Least-privilege network access
-* IoT isolation
-* Network migration and documentation
+* [Network Overview](../Network-Overview.md)
+* [UniFi Network](UniFi.md)
+* [Twingate Zero Trust Access](Twingate.md)
+* [Security Practices](../Security/Security-Practices.md)

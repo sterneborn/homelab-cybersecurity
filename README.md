@@ -2,60 +2,63 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-green)
 ![Gateway](https://img.shields.io/badge/Gateway-UniFi%20Cloud%20Gateway%20Ultra-blue)
+![Zero Trust](https://img.shields.io/badge/Zero%20Trust-Twingate-6c5ce7)
 ![VPN](https://img.shields.io/badge/VPN-WireGuard-orange)
 ![Virtualization](https://img.shields.io/badge/Virtualization-Proxmox-E57000)
 
-A personal networking, infrastructure, automation, and cybersecurity homelab built for practical learning through implementation, troubleshooting, validation, and documentation.
+A structured, active homelab for practical IT support, networking, infrastructure, and cybersecurity learning. The work emphasizes implementation, methodical troubleshooting, validation, operations, and clear technical documentation.
 
-The current environment is based on UniFi networking and Proxmox virtualization. The repository also preserves the earlier OpenWrt architecture as part of the project's technical history.
+The current environment uses UniFi networking and Proxmox virtualization. The repository also preserves the earlier OpenWrt architecture as project history.
 
 ## Current Environment
 
-### Network
+### Network and Remote Access
 
-* UniFi Cloud Gateway Ultra
-* UniFi-managed Wi-Fi and access point
-* Trusted, Guest, Lab/Servers, and IoT VLANs
-* Zone-based firewall policies
-* WireGuard remote access
-* Tailscale under evaluation
+* UniFi Cloud Gateway Ultra and UniFi U7 Lite access point
+* Five segmented networks: VLAN 10 Trusted, VLAN 20 Guest, VLAN 30 Lab / Servers, VLAN 40 IoT, and VLAN 50 Remote Access
+* UniFi zone-based firewall policies and host-level firewall restrictions
+* Twingate resource-based Zero Trust access through a dedicated Debian LXC Connector in VLAN 50
+* WireGuard as a separate, established tunnel- and routing-based VPN path
 
-### Virtualization and Services
+Remote clients do not join VLAN 50. The VLAN isolates the Twingate Connector, which initiates outbound connections and reaches only approved internal resources through explicit policy layers.
 
-* Proxmox VE
-* Ubuntu Server
-* Home Assistant
+### Virtualization, Services, and Automation
+
+* Proxmox VE and Ubuntu Server
 * Docker and Portainer
-* AdGuard Home
-* Uptime Kuma
+* Home Assistant and AdGuard Home
+* Uptime Kuma and SmokePing
+* Prometheus, Node Exporter, and Grafana
+* n8n workflow automation
 
 ### Custom Projects
 
-* **Knut** — a major custom AI and automation project
+* **Knut** — a custom AI and automation project
 * **Borgen Audio** — Raspberry Pi 4 with Raspberry Pi DAC Pro, AirPlay through Shairport Sync, and Android Bluetooth audio through BlueALSA
 * **Zigbee2MQTT** — planned Zigbee coordinator, MQTT broker, and Home Assistant architecture
 
 ## Current Network Topology
 
-![Current UniFi Network Topology](diagrams/network-topology.png)
+![Current UniFi network topology with five VLANs, Twingate and WireGuard](diagrams/network-topology.png)
 
 ## Network Segmentation
 
-| Network | Purpose |
-| ------- | ------- |
-| Trusted | Personal and administrative devices |
-| Guest | Isolated visitor access |
-| Lab/Servers | Proxmox, VMs, containers, and infrastructure services |
-| IoT | Smart-home and lower-trust devices |
+| VLAN | Network | Purpose |
+| ---: | ------- | ------- |
+| 10 | Trusted | Personal and administrative clients |
+| 20 | Guest | Isolated visitor access |
+| 30 | Lab / Servers | Proxmox, VMs, containers, and infrastructure services |
+| 40 | IoT | Smart-home and lower-trust devices |
+| 50 | Remote Access | Dedicated Twingate Connector security segment |
 
-Inter-network access is controlled with zone-based firewall policies and explicit exceptions for required services.
+Inter-network access is controlled with zone-based firewall policies and explicit exceptions. Host firewalls add service-level restrictions where required.
 
 ## Hardware
 
 ### Network
 
 * UniFi Cloud Gateway Ultra
-* UniFi-managed access point
+* UniFi U7 Lite access point
 
 ### Virtualization Server
 
@@ -74,9 +77,9 @@ Inter-network access is controlled with zone-based firewall policies and explici
 
 The first segmented homelab network ran on a Netgear R7800 with OpenWrt 24.10. It provided hands-on experience with VLANs, firewall zones, WireGuard, Cloudflare Dynamic DNS, DHCP/DNS integration, Wi-Fi configuration, and systematic network troubleshooting.
 
-That architecture was later migrated to UniFi. The old topology, screenshots, configuration notes, and project journal entries remain in the repository as evidence of the earlier implementation and the learning that informed the current design.
+That architecture was later migrated to UniFi. The old topology, screenshots, configuration notes, and journal entries remain as evidence of the earlier implementation and the learning that informed the current design.
 
-![Previous OpenWrt Network Topology](diagrams/openwrt-network-topology.png)
+![Previous OpenWrt network topology](diagrams/openwrt-network-topology.png)
 
 ## Documentation
 
@@ -87,6 +90,7 @@ The MkDocs source lives in [`documentation/`](documentation/), and generated sit
 * [Network Overview](documentation/Network-Overview.md)
 * [UniFi Network](documentation/Network/UniFi.md)
 * [VLAN Segmentation](documentation/Network/VLANs.md)
+* [Twingate Zero Trust Access](documentation/Network/Twingate.md)
 * [WireGuard Remote Access](documentation/Network/WireGuard.md)
 * [Cloudflare DDNS](documentation/Network/Cloudflare-DDNS.md)
 * [OpenWrt — Previous Architecture](documentation/Network/OpenWrt.md)
@@ -104,9 +108,12 @@ The MkDocs source lives in [`documentation/`](documentation/), and generated sit
 * [Portainer](documentation/Services/Portainer.md)
 * [AdGuard Home](documentation/Services/AdGuard-Home.md)
 * [Uptime Kuma](documentation/Services/Uptime-Kuma.md)
+* [Prometheus](documentation/Services/Prometheus.md)
+* [Grafana](documentation/Services/Grafana.md)
 
-### Projects
+### Security and Projects
 
+* [Security Practices](documentation/Security/Security-Practices.md)
 * [Knut AI & Automation](documentation/Projects/Knut.md)
 * [Borgen Audio](documentation/Projects/Borgen-Audio.md)
 * [Planned Zigbee2MQTT Architecture](documentation/Projects/Zigbee2MQTT.md)
@@ -118,40 +125,39 @@ The MkDocs source lives in [`documentation/`](documentation/), and generated sit
 
 ## Troubleshooting Philosophy
 
-1. Identify the problem.
-2. Collect relevant information.
-3. Form testable hypotheses.
-4. Test and verify each layer.
-5. Implement the solution.
-6. Record the result and lessons learned.
+1. Define the problem and expected behavior.
+2. Collect evidence from the client, network, host, and application layers.
+3. Form and test one hypothesis at a time.
+4. Make a controlled change.
+5. Verify the result and recovery path.
+6. Document the outcome and lessons learned.
 
-This repository intentionally documents both successful implementations and the troubleshooting processes behind them.
+## Security Practices
+
+The environment uses segmentation, zone-based and host-level firewalls, least-privilege exceptions, separate remote-access models, tested backup workflows, and careful handling of public evidence. Credential hygiene is supported through Bitwarden-based password management, unique credentials, and keeping secrets outside the public repository.
 
 ## Roadmap
 
 ### Operating
 
 * [x] UniFi gateway and managed Wi-Fi
-* [x] Trusted, Guest, Lab/Servers, and IoT segmentation
-* [x] Zone-based firewall policy
-* [x] WireGuard remote access
-* [x] Proxmox virtualization
-* [x] Docker and Portainer
-* [x] Home Assistant
-* [x] AdGuard Home and Uptime Kuma
-* [x] Knut and Borgen Audio projects
+* [x] Five VLAN segments and zone-based firewall policies
+* [x] Twingate Zero Trust access
+* [x] WireGuard VPN
+* [x] Proxmox, Docker, and core services
+* [x] Prometheus, Node Exporter, Grafana, Uptime Kuma, and SmokePing
+* [x] Home Assistant, n8n, Knut, and Borgen Audio
 
-### Evaluating and Planned
+### Planned or In Progress
 
-* [ ] Complete Tailscale evaluation
+* [ ] Refine alerting workflows
 * [ ] Deploy Zigbee coordinator and Zigbee2MQTT architecture
-* [ ] Expand Prometheus, Grafana, and alerting
 * [ ] Continue Security Onion, Suricata, and log-analysis work
 
 ## Author
 
 **Christian Sterneborn**
 
-Aspiring Network & Cybersecurity Professional
+IT support, networking, and junior infrastructure candidate
 
 [GitHub](https://github.com/sterneborn)

@@ -29,6 +29,10 @@
          <lastmod>2026-08-15</lastmod>
     </url>
     <url>
+         <loc>https://cv.sterneborn.org/docs/Network/Twingate/</loc>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
          <loc>https://cv.sterneborn.org/docs/Network/UniFi/</loc>
          <lastmod>2026-08-15</lastmod>
     </url>
@@ -58,6 +62,10 @@
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/Security/Security-Onion/</loc>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/Security/Security-Practices/</loc>
          <lastmod>2026-08-15</lastmod>
     </url>
     <url>
@@ -110,6 +118,10 @@
     </url>
     <url>
          <loc>https://cv.sterneborn.org/docs/assets/screenshots/</loc>
+         <lastmod>2026-08-15</lastmod>
+    </url>
+    <url>
+         <loc>https://cv.sterneborn.org/docs/assets/screenshots/UNIFI-CAPTURE-CHECKLIST/</loc>
          <lastmod>2026-08-15</lastmod>
     </url>
 </urlset>
